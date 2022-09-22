@@ -1,10 +1,11 @@
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_ttf.h>
-
+#ifdef defined __GNUC__
+//#include <SDL2/SDL.h>
+#elif defined _MSC_VER
+#include <SDL.h>
+#endif
 int main(int argc, char** argv) {
 	SDL_Window* window;
 	SDL_Event exit;
-
 	// SDL2の初期化
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
 		SDL_Quit();
