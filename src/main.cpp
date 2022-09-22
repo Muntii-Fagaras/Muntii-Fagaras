@@ -1,7 +1,8 @@
-#ifdef defined __GNUC__
-//#include <SDL2/SDL.h>
-#elif defined _MSC_VER
-#include <SDL.h>
+#ifdef __GNUC__
+		#include <SDL2/SDL.h>
+	#endif
+#ifdef _MSC_VER
+	#include <SDL.h>
 #endif
 int main(int argc, char** argv) {
 	SDL_Window* window;
