@@ -61,13 +61,13 @@ meson compile -C builddir
 pip install meson ninja
 ```
 
-pipからダウンロードする
-2. pipのパスを通す
+pipからダウンロードします。
+2. pipのパスを通していない場合通します。
 3. mesonでVisual Studioのsln
 
 ```shell
 meson setup --backend vs builddir
 ```
 
-を生成する
+を生成します
 4. 生成したファイルから、slnを起動する
