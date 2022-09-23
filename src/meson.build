@@ -14,13 +14,13 @@ vorbis=dependency('vorbis',disabler: true)
 freetype2=dependency('freetype2',disabler: true)
 # コンパイラによってコンパイルオプションを変更する
 if meson.get_compiler('cpp').get_id() == 'gcc'
-  extra_args = []
+  extra_args = ['-lSDL2_ttf','lSDL2main','-lSDL2']
 else
   extra_args = ['/U USING_GENERATED_CONFIG_H']
 endif
 
 # 実行ファイル
-executable('sdlrun', 'main.cpp',
+executable('main', 'main.cpp',
            win_subsystem: 'windows',
            dependencies: [sdl2_dep,sdl2_image_dep,sdl2_mixer_dep,sdl2_ttf_dep,libpng,ogg,vorbis,freetype2,zlib])
 
