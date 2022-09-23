@@ -4,6 +4,8 @@
 
 ### xmakeでプロジェクトのビルドをする方法
 
+xmakeを使いビルドします。
+[xmake](https://xmake.io/#/)にアクセスし、
 ```shell
 xmake project -k vsxmake
 ```
