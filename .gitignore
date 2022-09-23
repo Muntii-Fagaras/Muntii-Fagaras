@@ -1,3 +1,7 @@
+# xmake
+.xmake/
+vsxmake2022/
+build/
 # meson
 */subprojects/*
 # https://github.com/github/gitignore/blob/main/C%2B%2B.gitignore

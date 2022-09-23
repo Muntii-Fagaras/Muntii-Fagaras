@@ -1,8 +1,8 @@
-#ifdef __GNUC__
-		#include <SDL2/SDL.h>
-	#endif
+﻿#ifdef __GNUC__
+#include <SDL2/SDL.h>
+#endif
 #ifdef _MSC_VER
-	#include <SDL.h>
+#include <SDL.h>
 #endif
 int main(int argc, char** argv) {
 	SDL_Window* window;
@@ -12,8 +12,6 @@ int main(int argc, char** argv) {
 		SDL_Quit();
 		return 1;
 	}
-	
-	// Windowの作成、TTFの初期化に失敗したとき
 	if ((window = SDL_CreateWindow("Tajpado", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1280, 720, SDL_WINDOW_RESIZABLE)) == NULL) {
 		SDL_Quit();
 		return 1;
@@ -26,7 +24,7 @@ int main(int argc, char** argv) {
 	//背景をクリア
 	SDL_RenderClear(renderer);
 	//フォントを読み込む
-	
+
 	while (1)
 	{
 		//閉じるボタンで閉じれるようにする
