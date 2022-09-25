@@ -4,11 +4,18 @@
 
 ### xmakeでプロジェクトのビルドをする方法
 
-xmakeを使いビルドします。
-[xmake](https://xmake.io/#/)にアクセスし、
+1. xmakeを使いビルドします。
+[xmake](https://xmake.io/#/guide/installation)にアクセスし、お使いの環境にあったxmakeをインストールします。
+
+2. インストールが完了したら本プロジェクトのsrcディレクトリへ移動して、
+
 ```shell
 xmake project -k vsxmake
 ```
+
+とコマンドを実行すると、visual studioのslnが含まれたファイルが生成されます。
+
+3. 出来上がったファイルをダブルクリックすると、ビルドができます。
 
 ### Linux編
 
@@ -62,6 +69,7 @@ pip install meson ninja
 ```
 
 pipからダウンロードします。
+
 2. pipのパスを通していない場合通します。
 3. mesonでVisual Studioのsln
 
@@ -70,4 +78,4 @@ meson setup --backend vs builddir
 ```
 
 を生成します
-4. 生成したファイルから、slnを起動する
+4. 生成したファイルから、slnを起動します。

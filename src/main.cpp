@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
 	SDL_Rect time_rect{
 		time_rect.x = 520,
 		time_rect.y = 260,
-		time_rect.w = 300,
+		time_rect.w = 150,
 		time_rect.h = 90
 	};
 	// load_fileコンストラクタ
@@ -60,7 +60,7 @@ int main(int argc, char** argv) {
 		}
 		SDL_RenderCopy(renderer,
 		SDL_CreateTextureFromSurface(renderer,
-			TTF_RenderUTF8_Blended(font,u8"ねこちゃん", SDL_Color{ 0,120, 120, 120 })),NULL, &time_rect);
+			TTF_RenderUTF8_Blended(font,reinterpret_cast<const char*>(u8"ねこ"), SDL_Color{ 0,120, 120, 120 })),NULL, &time_rect);
 		// 画面に反映させる
 		SDL_RenderPresent(renderer);
 		SDL_Delay(10);
