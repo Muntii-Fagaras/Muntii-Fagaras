@@ -19,8 +19,11 @@ else
   extra_args = ['/U USING_GENERATED_CONFIG_H']
 endif
 
+class=library('mylib','class/load_file.cpp')
+
 # 実行ファイル
 executable('main', 'main.cpp',
            win_subsystem: 'windows',
+           link_with: class,
            dependencies: [sdl2_dep,sdl2_image_dep,sdl2_mixer_dep,sdl2_ttf_dep,libpng,ogg,vorbis,freetype2,zlib])
 

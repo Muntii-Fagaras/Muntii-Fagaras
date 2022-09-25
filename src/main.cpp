@@ -3,6 +3,7 @@
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_mixer.h>
+#include "class/load_file.hpp"
 #endif
 #ifdef _MSC_VER
 #include <SDL.h>
@@ -24,6 +25,8 @@ int main(int argc, char** argv) {
 		time_rect.w = 300,
 		time_rect.h = 90
 	};
+	// load_fileコンストラクタ
+	load_file loading("test");
 	// SDL2の初期化
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
 		SDL_Quit();
