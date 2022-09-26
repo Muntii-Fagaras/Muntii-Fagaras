@@ -8,6 +8,7 @@
 
 ## メンバー
 - [312k](https://github.com/312k)
+- [demiida](https://github.com/demiida)
 
 ## ビルド方法
 
