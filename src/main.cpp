@@ -3,21 +3,19 @@
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_mixer.h>
-#include "class/load_file.hpp"
 #endif
 #ifdef _MSC_VER
 #include <SDL.h>
 #include <SDL_ttf.h>
 #include <SDL_image.h>
 #include <SDL_mixer.h>
-#include "class/load_file.hpp"
 #endif
+#include "class/load_file.hpp"
+#include "class/text.hpp"
 int main(int argc, char** argv) {
 	SDL_Window* window;
 	// 終了イベント
 	SDL_Event exit;
-	// フォント
-	TTF_Font* font = NULL;
 	// 文字列描画構造体
 	SDL_Rect time_rect{
 		time_rect.x = 520,
@@ -25,8 +23,8 @@ int main(int argc, char** argv) {
 		time_rect.w = 150,
 		time_rect.h = 90
 	};
-	// load_fileコンストラクタ
-	load_file loading("test");
+	// 
+	
 	// SDL2の初期化
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
 		SDL_Quit();
@@ -45,10 +43,8 @@ int main(int argc, char** argv) {
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 	//背景をクリア
 	SDL_RenderClear(renderer);
-	if ((font = TTF_OpenFont("HackGen-Regular.ttf", 50)) == NULL) {
-		SDL_Quit();
-		return 1;
-	}
+	text test;
+	test.load_file_with_chk("HackGen-Regular.ttf", 50);
 	while (1)
 	{
 		//背景をクリア
@@ -60,7 +56,7 @@ int main(int argc, char** argv) {
 		}
 		SDL_RenderCopy(renderer,
 		SDL_CreateTextureFromSurface(renderer,
-			TTF_RenderUTF8_Blended(font,reinterpret_cast<const char*>(u8"ねこ"), SDL_Color{ 0,120, 120, 120 })),NULL, &time_rect);
+			TTF_RenderUTF8_Blended(test.font,reinterpret_cast<const char*>(u8"ねこ"), SDL_Color{ 0,120, 120, 120 })),NULL, &time_rect);
 		// 画面に反映させる
 		SDL_RenderPresent(renderer);
 		SDL_Delay(10);

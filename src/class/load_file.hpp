@@ -3,6 +3,6 @@
 
 class load_file{
 	public:
-		load_file(std::string path);
+		std::string load_file_with_chk(std::string path);
 	private:
 };
