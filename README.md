@@ -4,7 +4,8 @@
 
 ## 現在の開発状況
 
-![スクリーンショット 2022-09-23 214504](https://user-images.githubusercontent.com/55316963/191963071-3acdc839-d0fc-42cb-b9c1-4d79c5587b22.png)
+![スクリーンショット 2022-10-02 160841](https://user-images.githubusercontent.com/55316963/193442478-8d9e14be-458a-4850-9447-d8f4c5862206.png)
+
 
 ## メンバー
 - [312k](https://github.com/312k)
