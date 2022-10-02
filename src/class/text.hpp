@@ -18,6 +18,13 @@
 class text:public load_file{
 	public:
 		TTF_Font* font;
-		void load_file_with_chk(std::string path,int font_size);
+		SDL_Rect rect{
+		rect.x = 520,
+		rect.y = 260,
+		rect.w = 0,
+		rect.h = 0
+	};
+		void load(std::string path,int font_size);
+		SDL_Texture* draw(SDL_Renderer* renderer,TTF_Font* font,std::string text,int x,int y);
 	private:
 };

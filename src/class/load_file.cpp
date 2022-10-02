@@ -1,6 +1,6 @@
 #include "load_file.hpp"
 #include <iostream>
 
-std::string load_file(std::string file){
+std::string load(std::string file){
 	return file;
 }
