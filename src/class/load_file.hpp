@@ -3,6 +3,6 @@
 
 class load_file{
 	public:
-		load_file(std::string path);
+		std::string load(std::string path);
 	private:
 };

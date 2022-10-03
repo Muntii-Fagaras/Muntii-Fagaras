@@ -3,30 +3,20 @@
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_mixer.h>
-#include "class/load_file.hpp"
 #endif
 #ifdef _MSC_VER
 #include <SDL.h>
 #include <SDL_ttf.h>
 #include <SDL_image.h>
 #include <SDL_mixer.h>
-#include "class/load_file.hpp"
 #endif
+#include "class/load_file.hpp"
+#include "class/text.hpp"
 int main(int argc, char** argv) {
+	// ウィンドウ
 	SDL_Window* window;
 	// 終了イベント
 	SDL_Event exit;
-	// フォント
-	TTF_Font* font = NULL;
-	// 文字列描画構造体
-	SDL_Rect time_rect{
-		time_rect.x = 520,
-		time_rect.y = 260,
-		time_rect.w = 150,
-		time_rect.h = 90
-	};
-	// load_fileコンストラクタ
-	load_file loading("test");
 	// SDL2の初期化
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
 		SDL_Quit();
@@ -37,18 +27,18 @@ int main(int argc, char** argv) {
 		SDL_Quit();
 		return 1;
 	}
-
-	SDL_SetWindowTitle(window, "Tajpado");
+	// ウィンドウのタイトル
+	SDL_SetWindowTitle(window, "gui-base");
 	//レンダラー
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
 	//背景を黒にする
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 	//背景をクリア
 	SDL_RenderClear(renderer);
-	if ((font = TTF_OpenFont("HackGen-Regular.ttf", 50)) == NULL) {
-		SDL_Quit();
-		return 1;
-	}
+	// テキスト
+	text test;
+	// フォントの読み込み
+	test.load("HackGen-Regular.ttf", 100);
 	while (1)
 	{
 		//背景をクリア
@@ -58,11 +48,11 @@ int main(int argc, char** argv) {
 		if (exit.type == SDL_QUIT) {
 			break;
 		}
-		SDL_RenderCopy(renderer,
-		SDL_CreateTextureFromSurface(renderer,
-			TTF_RenderUTF8_Blended(font,reinterpret_cast<const char*>(u8"ねこ"), SDL_Color{ 0,120, 120, 120 })),NULL, &time_rect);
+		SDL_RenderCopy(renderer,test.draw(renderer,test.font,"にゃんこ",10,100),NULL,&test.rect);
+		SDL_RenderCopy(renderer,test.draw(renderer,test.font,"すーぱーにゃんにゃん",10,200),NULL,&test.rect);
 		// 画面に反映させる
 		SDL_RenderPresent(renderer);
+		// 無限ループが早すぎてフリーズするのを防ぐ
 		SDL_Delay(10);
 	}
 	SDL_DestroyWindow(window);
