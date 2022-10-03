@@ -4,8 +4,10 @@
 
 ## 現在の開発状況
 
+### Windows 11
 ![スクリーンショット 2022-10-02 160841](https://user-images.githubusercontent.com/55316963/193442478-8d9e14be-458a-4850-9447-d8f4c5862206.png)
-
+### Android 
+![Screenshot_20221003_231345](https://user-images.githubusercontent.com/55316963/193599566-4b7df201-2cc0-49b1-b567-8b2bb33e9e8b.png)
 
 ## メンバー
 - [312k](https://github.com/312k)
