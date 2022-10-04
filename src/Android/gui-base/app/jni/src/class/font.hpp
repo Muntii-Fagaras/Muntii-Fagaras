@@ -1,3 +1,4 @@
+#pragma once
 #ifdef __GNUC__
 #ifdef __linux__
 //#include <SDL2/SDL.h>
@@ -20,19 +21,16 @@
 #endif
 
 #include <iostream>
-#include "font.hpp"
+#include "load_file.hpp"
+class font_load :public load_file {
+public:
+	TTF_Font* font;
+	// fontの読み込み
+	font_load(std::string path, int font_size);
+	// fontの廃棄
+	~font_load();
+private:
+	SDL_Surface* text_surface;
+	SDL_Texture* texture;
 
-class text:public load_file{
-	public:
-		SDL_Rect rect{
-		rect.x = 520,
-		rect.y = 260,
-		rect.w = 0,
-		rect.h = 0
-	};
-		SDL_Texture* texture;
-		text(SDL_Renderer* renderer,TTF_Font* font,std::string text_show,int x,int y);
-		~text();
-	private:
-		SDL_Surface* text_surface;
 };
