@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "text.hpp"
 
 text::text(SDL_Renderer* renderer,TTF_Font* font,std::string text_show,int x,int y){
@@ -11,8 +11,8 @@ text::text(SDL_Renderer* renderer,TTF_Font* font,std::string text_show,int x,int
 
 text::~text()
 {
-	// ƒeƒNƒXƒ`ƒƒ‚Ì‰ğ•ú
+	// ãƒ†ã‚¯ã‚¹ãƒãƒ£ã®è§£æ”¾
 	SDL_DestroyTexture(texture);
 	SDL_FreeSurface(text_surface);
-	texture = NULL;	//‚Æ‚è‚ ‚¦‚¸NULL‚ğ“ü‚ê‚Æ‚­
+	texture = NULL;	//ã¨ã‚Šã‚ãˆãšNULLã‚’å…¥ã‚Œã¨ã
 }

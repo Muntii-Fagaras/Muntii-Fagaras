@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #ifdef __GNUC__
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
@@ -18,9 +18,9 @@
 class font_load :public load_file {
 public:
 	TTF_Font* font;
-	// font‚Ì“Ç‚İ‚İ
+	// fontã®èª­ã¿è¾¼ã¿
 	font_load(std::string path, int font_size);
-	// font‚Ì”pŠü
+	// fontã®å»ƒæ£„
 	~font_load();
 private:
 	SDL_Surface* text_surface;
