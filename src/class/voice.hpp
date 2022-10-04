@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifdef __GNUC__
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
@@ -18,9 +18,11 @@
 class voice :public load_file {
 public:
 	Mix_Chunk* voice_file;
+	// コンストラクタ
 	voice(std::string voice_file_path);
+	//　デストラクタ
 	~voice();
+	// 音声再生
 	void play();
 private:
-	SDL_Surface* text_surface;
 };

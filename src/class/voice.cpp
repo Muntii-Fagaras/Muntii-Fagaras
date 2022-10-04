@@ -1,20 +1,20 @@
-#pragma once
+ï»¿#pragma once
 #include "voice.hpp"
 
 voice::voice(std::string voice_file_path)
 {
-	//‰¹º‚ð“Ç‚Ýž‚Þ
+	//éŸ³å£°ã‚’èª­ã¿è¾¼ã‚€
 	voice_file = Mix_LoadWAV(voice_file_path.c_str());
 }
 
 voice::~voice()
 {
-	// ƒƒ‚ƒŠ‚Ì‰ð•ú
+	// ãƒ¡ãƒ¢ãƒªã®è§£æ”¾
 	Mix_FreeChunk(voice_file);
 }
 
 void voice::play()
 {
-	//@‰¹º‚ðƒ‹[ƒv‚È‚µ‚ÅÄ¶‚·‚é
+	//ã€€éŸ³å£°ã‚’ãƒ«ãƒ¼ãƒ—ãªã—ã§å†ç”Ÿã™ã‚‹
 	Mix_PlayChannel(-1, voice_file, 0);
 }
