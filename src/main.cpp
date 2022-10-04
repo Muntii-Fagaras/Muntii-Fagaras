@@ -12,6 +12,7 @@
 #endif
 #include "class/load_file.hpp"
 #include "class/text.hpp"
+#include "class/font.hpp"
 int main(int argc, char** argv) {
 	// ウィンドウ
 	SDL_Window* window;
@@ -23,22 +24,21 @@ int main(int argc, char** argv) {
 		return 1;
 	}
 	// Windowの作成、TTFの初期化に失敗したとき
-	if ((window = SDL_CreateWindow("Tajpado", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1280, 720, SDL_WINDOW_RESIZABLE)) == NULL || TTF_Init() == -1) {
+	if ((window = SDL_CreateWindow("gui-base", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1280, 720, SDL_WINDOW_RESIZABLE)) == NULL || TTF_Init() == -1) {
 		SDL_Quit();
 		return 1;
 	}
-	// ウィンドウのタイトル
-	SDL_SetWindowTitle(window, "gui-base");
 	//レンダラー
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
 	//背景を黒にする
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 	//背景をクリア
 	SDL_RenderClear(renderer);
-	// テキスト
-	text test;
 	// フォントの読み込み
-	test.load("HackGen-Regular.ttf", 100);
+	font_load f("HackGen-Regular.ttf", 100);
+	text cat(renderer, f.font, "にゃんこ", 0, 10);
+	text cats(renderer, f.font, "ニャンぱーてぃニャン", 0, 110);
+
 	while (1)
 	{
 		//背景をクリア
@@ -48,13 +48,18 @@ int main(int argc, char** argv) {
 		if (exit.type == SDL_QUIT) {
 			break;
 		}
-		SDL_RenderCopy(renderer,test.draw(renderer,test.font,"にゃんこ",10,100),NULL,&test.rect);
-		SDL_RenderCopy(renderer,test.draw(renderer,test.font,"すーぱーにゃんにゃん",10,200),NULL,&test.rect);
+		SDL_RenderCopy(renderer,cat.texture,NULL,&cat.rect);
+		SDL_RenderCopy(renderer, cats.texture, NULL, &cats.rect);
+
 		// 画面に反映させる
 		SDL_RenderPresent(renderer);
 		// 無限ループが早すぎてフリーズするのを防ぐ
 		SDL_Delay(10);
 	}
+	//デストラクタ
+	f.~font_load();
+	cat.~text();
+	cats.~text();
 	SDL_DestroyWindow(window);
 	SDL_Quit();
 
