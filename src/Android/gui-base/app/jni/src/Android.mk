@@ -9,11 +9,15 @@ SDL_PATH := ../SDL
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/$(SDL_PATH)/include
 
 # Add your application source files here...
-LOCAL_SRC_FILES := main.cpp class/text.cpp class/load_file.cpp class/font.cpp
+LOCAL_SRC_FILES := main.cpp class/text.cpp class/load_file.cpp \
+class/font.cpp class/image.cpp class/voice.cpp
 
 
 LOCAL_SHARED_LIBRARIES := SDL2 \
-SDL2_ttf
+                          SDL2_image \
+                          SDL2_mixer \
+                          SDL2_ttf \
+
 
 LOCAL_LDLIBS := -lGLESv1_CM -lGLESv2 -lOpenSLES -llog -landroid
 
