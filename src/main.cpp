@@ -13,6 +13,7 @@
 #include "class/load_file.hpp"
 #include "class/text.hpp"
 #include "class/font.hpp"
+#include "class/voice.hpp"
 int main(int argc, char** argv) {
 	// ウィンドウ
 	SDL_Window* window;
@@ -24,7 +25,7 @@ int main(int argc, char** argv) {
 		return 1;
 	}
 	// Windowの作成、TTFの初期化に失敗したとき
-	if ((window = SDL_CreateWindow("gui-base", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1280, 720, SDL_WINDOW_RESIZABLE)) == NULL || TTF_Init() == -1) {
+	if ((window = SDL_CreateWindow("Tajpado", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1280, 720, SDL_WINDOW_RESIZABLE)) == NULL || TTF_Init() == -1 || (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096)) == -1) {
 		SDL_Quit();
 		return 1;
 	}
@@ -38,7 +39,9 @@ int main(int argc, char** argv) {
 	font_load f("HackGen-Regular.ttf", 100);
 	text cat(renderer, f.font, "にゃんこ", 0, 10);
 	text cats(renderer, f.font, "ニャンぱーてぃニャン", 0, 110);
-
+	// 音声の読み込み
+	voice weather("assets/voice/good_weather.wav");
+	weather.play();
 	while (1)
 	{
 		//背景をクリア
@@ -60,6 +63,7 @@ int main(int argc, char** argv) {
 	f.~font_load();
 	cat.~text();
 	cats.~text();
+	weather.~voice();
 	SDL_DestroyWindow(window);
 	SDL_Quit();
 

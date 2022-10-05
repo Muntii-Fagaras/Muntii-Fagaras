@@ -33,7 +33,7 @@ google-services.json
 # Android Profiling
 *.hprof
 
-
+voice/
 SDL2/
 SDL2_image/
 SDL2_mixer/
