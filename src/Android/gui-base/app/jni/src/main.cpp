@@ -51,7 +51,7 @@ int SDL_main(int argc, char **argv) {
     voice weather("assets/voice/good_weather.wav");
     // 画像の読み込み
     image check_button("assets/image/buttons/not_check.png");
-    //weather.play();
+    weather.play();
     check_button.create_image(renderer,220,220);
     while (1)
     {
