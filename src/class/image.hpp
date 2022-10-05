@@ -15,15 +15,19 @@
 #include <iostream>
 #include "load_file.hpp"
 
-class font_load :public load_file {
+class image :public load_file {
 public:
-	TTF_Font* font;
-	// fontの読み込み
-	font_load(std::string path, int font_size);
-	// fontの廃棄
-	~font_load();
+	SDL_Texture* texture;
+	SDL_Rect rect{
+		rect.x = 520,
+		rect.y = 260,
+		rect.w = 0,
+		rect.h = 0
+	};
+	image(std::string image_path);
+	void create_image(SDL_Renderer* renderer, int x, int y);
+	~image();
 private:
-	SDL_Surface* text_surface=NULL;
-	SDL_Texture* texture=NULL;
+	SDL_Surface* image_surface=NULL;
 
 };

@@ -1,44 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="ソース ファイル">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="リソース ファイル">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="class\font.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
     <ClCompile Include="class\load_file.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソースファイル</Filter>
     </ClCompile>
     <ClCompile Include="class\text.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
-    <ClCompile Include="class\font.cpp">
     <ClCompile Include="class\voice.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\image.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="class\font.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
     <ClInclude Include="class\load_file.hpp">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
     <ClInclude Include="class\text.hpp">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
-    <ClInclude Include="class\font.hpp">
     <ClInclude Include="class\voice.hpp">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
+    <ClInclude Include="class\image.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ソースファイル">
+      <UniqueIdentifier>{f817a44d-f969-4357-bfa9-43aed522ae0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\クラスファイル">
+      <UniqueIdentifier>{fa6c23f5-6324-4f8c-be68-f46e32475449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダファイル">
+      <UniqueIdentifier>{14763cf6-a24b-4211-9057-63adaa851e35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダファイル\クラスファイル">
+      <UniqueIdentifier>{46e34625-5632-4232-8cb3-92af275d95ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

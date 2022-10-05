@@ -108,6 +108,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <EnableModules>true</EnableModules>
       <AdditionalOptions>/execution-charset:utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -137,6 +138,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="class\font.cpp" />
+    <ClCompile Include="class\image.cpp" />
     <ClCompile Include="class\load_file.cpp" />
     <ClCompile Include="class\text.cpp" />
     <ClCompile Include="class\voice.cpp" />
@@ -144,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\font.hpp" />
+    <ClInclude Include="class\image.hpp" />
     <ClInclude Include="class\load_file.hpp" />
     <ClInclude Include="class\text.hpp" />
     <ClInclude Include="class\voice.hpp" />

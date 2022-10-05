@@ -2,7 +2,7 @@
 #include "text.hpp"
 
 text::text(SDL_Renderer* renderer,TTF_Font* font,std::string text_show,int x,int y){
-	text_surface=TTF_RenderUTF8_Blended(font, text_show.c_str(), SDL_Color{ 0,120, 120, 120 });
+	text_surface=TTF_RenderUTF8_Blended(font, text_show.c_str(), SDL_Color{ 0,216, 222, 233 });
 	rect.x=x;
 	rect.y=y;
 	texture=SDL_CreateTextureFromSurface(renderer,text_surface);

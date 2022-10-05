@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1664848201 source:h:\gui-base-main\src\main.cpp
+1664941641 source:h:\gui-base-main\src\main.cpp
 	<SDL2/SDL.h>
 	<SDL2/SDL_ttf.h>
 	<SDL2/SDL_image.h>
@@ -10,6 +10,8 @@
 	<SDL_mixer.h>
 	"class/load_file.hpp"
 	"class/text.hpp"
+	"class/font.hpp"
+	"class/voice.hpp"
 
 1664846682 h:\gui-base-main\src\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -405,24 +407,26 @@
 	"begin_code.h"
 	"close_code.h"
 
-1664846012 h:\gui-base-main\src\class\load_file.hpp
+1664940586 h:\gui-base-main\src\class\load_file.hpp
 	<iostream>
 
-1664847001 h:\gui-base-main\src\class\text.hpp
+1664940587 h:\gui-base-main\src\class\text.hpp
 	<SDL2/SDL.h>
 	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
 	<SDL.h>
 	<SDL_ttf.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
 	<iostream>
-	"load_file.hpp"
+	"font.hpp"
 
-1664846012 source:h:\gui-base-main\src\class\load_file.cpp
+1664940586 source:h:\gui-base-main\src\class\load_file.cpp
 	"load_file.hpp"
 	<iostream>
 
-1664848289 source:h:\gui-base-main\src\class\text.cpp
+1664940587 source:h:\gui-base-main\src\class\text.cpp
 	"text.hpp"
 
 1664847690 h:\gui-base-main\src\sdl2\include\sdl2\sdl_image.h
@@ -439,4 +443,34 @@
 	"SDL_version.h"
 	"begin_code.h"
 	"close_code.h"
+
+1664940586 source:h:\gui-base-main\src\class\font.cpp
+	"font.hpp"
+
+1664940586 h:\gui-base-main\src\class\font.hpp
+	<SDL2/SDL.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<iostream>
+	"load_file.hpp"
+
+1664940587 source:h:\gui-base-main\src\class\voice.cpp
+	"voice.hpp"
+
+1664940587 h:\gui-base-main\src\class\voice.hpp
+	<SDL2/SDL.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_mixer.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<iostream>
+	"load_file.hpp"
 
