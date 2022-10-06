@@ -36,6 +36,7 @@
     <ClInclude Include="class\image.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ソースファイル">
@@ -50,5 +51,11 @@
     <Filter Include="ヘッダファイル\クラスファイル">
       <UniqueIdentifier>{46e34625-5632-4232-8cb3-92af275d95ca}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
   </ItemGroup>
 </Project>

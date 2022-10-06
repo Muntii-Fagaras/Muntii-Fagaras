@@ -19,7 +19,7 @@
 #include "class/font.hpp"
 #include "class/voice.hpp"
 #include "class/image.hpp"
-
+#include <vector>
 int main(int argc, char** argv) {
 	// ウィンドウ
 	SDL_Window* window;
@@ -49,9 +49,10 @@ int main(int argc, char** argv) {
 	// 音声の読み込み
 	voice weather("assets/voice/good_weather.wav");
 	// 画像の読み込み
-	image check_button("assets/image/buttons/not_check.png");
+	std::vector<std::string>image_path={ "assets/image/buttons/not_check.png","assets/image/buttons/checked.png" };
 	//weather.play();
-	check_button.create_image(renderer,220,220);
+	image check_button(image_path, renderer, 220, 220);
+
 	while (1)
 	{
 		//背景をクリア
@@ -68,7 +69,10 @@ int main(int argc, char** argv) {
 		// マウスのボタンが押し下げられたとき
 		if(exit.type==SDL_MOUSEBUTTONUP){
             SDL_RenderCopy(renderer, catt.texture, nullptr, &catt.rect);
+			check_button.image_next(image_path, renderer, 220, 220);
+			
 		}
+
 		// 画面に反映させる
 		SDL_RenderPresent(renderer);
 		// 無限ループが早すぎてフリーズするのを防ぐ

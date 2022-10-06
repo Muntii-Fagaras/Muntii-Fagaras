@@ -150,6 +150,13 @@
     <ClInclude Include="class\load_file.hpp" />
     <ClInclude Include="class\text.hpp" />
     <ClInclude Include="class\voice.hpp" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
