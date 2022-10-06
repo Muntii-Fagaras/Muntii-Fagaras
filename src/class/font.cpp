@@ -3,7 +3,7 @@
 
 font_load::font_load(std::string path, int font_size)
 {
-	if ((font_load::font = TTF_OpenFont(path.c_str(), font_size)) == NULL) {
+	if ((font_load::font = TTF_OpenFont(path.c_str(), font_size)) == nullptr) {
 		SDL_Quit();
 	}
 }

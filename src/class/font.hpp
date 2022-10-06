@@ -23,7 +23,7 @@ public:
 	// fontの廃棄
 	~font_load();
 private:
-	SDL_Surface* text_surface;
-	SDL_Texture* texture;
+	SDL_Surface* text_surface= nullptr;
+	SDL_Texture* texture= nullptr;
 
 };

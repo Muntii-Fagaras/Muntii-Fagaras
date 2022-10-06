@@ -5,11 +5,15 @@
 ## 現在の開発状況
 
 ### Windows 11
+
 ![スクリーンショット 2022-10-02 160841](https://user-images.githubusercontent.com/55316963/193442478-8d9e14be-458a-4850-9447-d8f4c5862206.png)
-### Android 
+
+### Android
+
 ![Screenshot_20221003_231345](https://user-images.githubusercontent.com/55316963/193599566-4b7df201-2cc0-49b1-b567-8b2bb33e9e8b.png)
 
 ## メンバー
+
 - [312k](https://github.com/312k)
 - [demiida](https://github.com/demiida)
 
@@ -20,21 +24,24 @@ CONTRIBUTING.mdをご覧ください。
 ## ライセンス
 
 ### HackGen
+
 使用しているフォントは[HackGen](https://github.com/yuru7/HackGen)を使用しています。
 SIL OPEN FONT LICENSE Version 1.1でライセンスされています。
 HackGenのライセンスについては[LICENSE](https://github.com/yuru7/HackGen/blob/master/LICENSE)をご確認ください。
 
-#### HackGen LICENSE
+<details>
+<summary>HackGen LICENSE</summary>
+
 ## "白源/HackGen" licensing
 
 Copyright (c) 2019, Yuko OTAWARA. with Reserved Font Name "白源", "HackGen"
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-https://scripts.sil.org/OFL
-
+<https://scripts.sil.org/OFL>
 
 -----------------------------------------------------------
+
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
 -----------------------------------------------------------
 
@@ -47,7 +54,7 @@ with others.
 
 The OFL allows the licensed fonts to be used, studied, modified and
 redistributed freely as long as they are not sold by themselves. The
-fonts, including any derivative works, can be bundled, embedded, 
+fonts, including any derivative works, can be bundled, embedded,
 redistributed and/or sold with any software provided that any reserved
 names are not used by derivative works. The fonts and derivatives,
 however, cannot be released under any other type of license. The
@@ -120,3 +127,5 @@ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
+
+</details>

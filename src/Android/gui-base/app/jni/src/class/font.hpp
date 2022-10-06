@@ -1,17 +1,10 @@
-#pragma once
+﻿#pragma once
+// GCCの時のコンパイルオプション
 #ifdef __GNUC__
-#ifdef __linux__
-//#include <SDL2/SDL.h>
-//#include <SDL2/SDL_ttf.h>
-//#include <SDL2/SDL_image.h>
-//#include <SDL2/SDL_mixer.h>
-#endif
-#ifdef __ANDROID__
 #include <SDL.h>
 #include <SDL_ttf.h>
-//#include <SDL_image.h>
-//#include <SDL_mixer.h>
-#endif
+#include <SDL_image.h>
+#include "../SDL2_mixer/SDL_mixer.h"
 #endif
 #ifdef _MSC_VER
 #include <SDL.h>
@@ -22,6 +15,7 @@
 
 #include <iostream>
 #include "load_file.hpp"
+
 class font_load :public load_file {
 public:
 	TTF_Font* font;
@@ -30,7 +24,7 @@ public:
 	// fontの廃棄
 	~font_load();
 private:
-	SDL_Surface* text_surface;
-	SDL_Texture* texture;
+	SDL_Surface* text_surface=nullptr;
+	SDL_Texture* texture=nullptr;
 
 };
