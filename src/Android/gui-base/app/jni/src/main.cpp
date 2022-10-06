@@ -43,7 +43,7 @@ int SDL_main(int argc, char **argv) {
     //背景をクリア
     SDL_RenderClear(renderer);
     // フォントの読み込み
-    font_load f("assets/fonts/HackGen-Regular.ttf", 18);
+    font_load f("assets/fonts/HackGen-Regular.ttf", 50);
     text cat(renderer, f.font, "にゃんこ", 0, 10);
     text cats(renderer, f.font, "ニャンぱーてぃニャン", 0, 50);
     text catt(renderer, f.font, "消えるニャン", 0, 100);
@@ -62,13 +62,13 @@ int SDL_main(int argc, char **argv) {
         if (exit.type == SDL_QUIT) {
             break;
         }
-        SDL_RenderCopy(renderer,cat.texture,NULL,&cat.rect);
-        SDL_RenderCopy(renderer, cats.texture, NULL, &cats.rect);
-        SDL_RenderCopy(renderer, check_button.texture, NULL, &check_button.rect);
+        SDL_RenderCopy(renderer,cat.texture,nullptr,&cat.rect);
+        SDL_RenderCopy(renderer, cats.texture, nullptr, &cats.rect);
+        SDL_RenderCopy(renderer, check_button.texture, nullptr, &check_button.rect);
 
         // マウスのボタンが押し下げられたとき
         if(exit.type==SDL_MOUSEBUTTONUP){
-            SDL_RenderCopy(renderer, catt.texture, NULL, &catt.rect);
+            SDL_RenderCopy(renderer, catt.texture, nullptr, &catt.rect);
         }
         // 画面に反映させる
         SDL_RenderPresent(renderer);

@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
 		return 1;
 	}
 	// Windowの作成、TTF,mixerの初期化
-	if ((window = SDL_CreateWindow("gui_base", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1280, 720, SDL_WINDOW_RESIZABLE)) == NULL || TTF_Init() == -1 || (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096)) == -1) {
+	if ((window = SDL_CreateWindow("gui_base", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1280, 720, SDL_WINDOW_RESIZABLE)) == nullptr || TTF_Init() == -1 || (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096)) == -1) {
 		SDL_Quit();
 		return 1;
 	}
@@ -61,13 +61,13 @@ int main(int argc, char** argv) {
 		if (exit.type == SDL_QUIT) {
 			break;
 		}
-        SDL_RenderCopy(renderer,cat.texture,NULL,&cat.rect);
-        SDL_RenderCopy(renderer, cats.texture, NULL, &cats.rect);
-		SDL_RenderCopy(renderer, check_button.texture, NULL, &check_button.rect);
+        SDL_RenderCopy(renderer,cat.texture,nullptr,&cat.rect);
+        SDL_RenderCopy(renderer, cats.texture, nullptr, &cats.rect);
+		SDL_RenderCopy(renderer, check_button.texture, nullptr, &check_button.rect);
 
 		// マウスのボタンが押し下げられたとき
 		if(exit.type==SDL_MOUSEBUTTONUP){
-            SDL_RenderCopy(renderer, catt.texture, NULL, &catt.rect);
+            SDL_RenderCopy(renderer, catt.texture, nullptr, &catt.rect);
 		}
 		// 画面に反映させる
 		SDL_RenderPresent(renderer);

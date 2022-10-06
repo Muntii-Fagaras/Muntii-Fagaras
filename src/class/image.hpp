@@ -28,6 +28,6 @@ public:
 	void create_image(SDL_Renderer* renderer, int x, int y);
 	~image();
 private:
-	SDL_Surface* image_surface=NULL;
+	SDL_Surface* image_surface= nullptr;
 
 };

@@ -17,7 +17,7 @@
 
 class voice :public load_file {
 public:
-	Mix_Chunk* voice_file=NULL;
+	Mix_Chunk* voice_file=nullptr;
 	// コンストラクタ
 	voice(const std::string& voice_file_path);
 	//　デストラクタ
