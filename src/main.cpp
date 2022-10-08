@@ -71,8 +71,8 @@ int main(int argc, char** argv) {
         SDL_RenderCopy(renderer, cats.texture, nullptr, &cats.rect);
 		SDL_RenderCopy(renderer, a.texture, nullptr, &a.rect);
 		
-		// マウスのボタンが押し下げられたとき
-		if(exit.type==SDL_MOUSEBUTTONUP){
+		// チェックボックスがオフになったとき
+		if(a.checkbox_state==false){
             SDL_RenderCopy(renderer, catt.texture, nullptr, &catt.rect);
 		}
 
