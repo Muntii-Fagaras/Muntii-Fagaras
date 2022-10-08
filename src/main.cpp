@@ -66,7 +66,15 @@ int main(int argc, char** argv) {
 			break;
 		}
 		checkbox a(image_path, renderer, 220, 220, mouse.is_cursor_in_box_with_click(220, 220, 420, 420));
+		if (exit.type == SDL_MOUSEBUTTONDOWN) {
+			while (1) {
+				SDL_PollEvent(&exit);
 
+				if (exit.type == SDL_MOUSEBUTTONUP) {
+					break;
+				}
+			}
+		}
         SDL_RenderCopy(renderer,cat.texture,nullptr,&cat.rect);
         SDL_RenderCopy(renderer, cats.texture, nullptr, &cats.rect);
 		SDL_RenderCopy(renderer, a.texture, nullptr, &a.rect);
