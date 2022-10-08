@@ -14,20 +14,15 @@
 
 #include <iostream>
 #include <vector>
-#include "load_file.hpp"
+#include "image.hpp"
 
-class image :public load_file {
+class checkbox :public image {
 public:
-	SDL_Texture* texture=nullptr;
-	SDL_Rect rect{
-		rect.x = 520,
-		rect.y = 260,
-		rect.w = 0,
-		rect.h = 0
-	};
-	void load(std::string image_path,SDL_Renderer* renderer, int x, int y);
+	// チェックボックスの状態
+	bool checkbox_state = true;
 
-	~image(); 
+	checkbox(std::vector<std::string>image_path, SDL_Renderer* renderer, int x, int y,bool mouse_state);
+	~checkbox();
 private:
 	SDL_Surface* image_surface= nullptr;
 	int img_num = 0;

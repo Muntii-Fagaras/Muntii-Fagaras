@@ -19,6 +19,9 @@
 #include "class/font.hpp"
 #include "class/voice.hpp"
 #include "class/image.hpp"
+#include "class/checkbox.hpp"
+#include "class/mouse.hpp"
+
 #include <vector>
 int main(int argc, char** argv) {
 	// ウィンドウ
@@ -41,6 +44,8 @@ int main(int argc, char** argv) {
 	SDL_SetRenderDrawColor(renderer, 46, 52, 64, 255);
 	//背景をクリア
 	SDL_RenderClear(renderer);
+
+	mouse mouse{};
 	// フォントの読み込み
 	font_load f("assets/fonts/HackGen-Regular.ttf", 18);
 	text cat(renderer, f.font, "にゃんこ", 0, 10);
@@ -51,8 +56,6 @@ int main(int argc, char** argv) {
 	// 画像の読み込み
 	std::vector<std::string>image_path={ "assets/image/buttons/not_check.png","assets/image/buttons/checked.png" };
 	//weather.play();
-	image check_button(image_path, renderer, 220, 220);
-
 	while (1)
 	{
 		//背景をクリア
@@ -62,15 +65,15 @@ int main(int argc, char** argv) {
 		if (exit.type == SDL_QUIT) {
 			break;
 		}
+		checkbox a(image_path, renderer, 220, 220, mouse.is_cursor_in_box_with_click(220, 220, 420, 420));
+
         SDL_RenderCopy(renderer,cat.texture,nullptr,&cat.rect);
         SDL_RenderCopy(renderer, cats.texture, nullptr, &cats.rect);
-		SDL_RenderCopy(renderer, check_button.texture, nullptr, &check_button.rect);
-
+		SDL_RenderCopy(renderer, a.texture, nullptr, &a.rect);
+		
 		// マウスのボタンが押し下げられたとき
 		if(exit.type==SDL_MOUSEBUTTONUP){
             SDL_RenderCopy(renderer, catt.texture, nullptr, &catt.rect);
-			check_button.image_next(image_path, renderer, 220, 220);
-			
 		}
 
 		// 画面に反映させる
@@ -83,7 +86,7 @@ int main(int argc, char** argv) {
 	cat.~text();
 	cats.~text();
 	weather.~voice();
-	check_button.~image();
+	//check_button.~image();
 	// ウィンドウを解放する
 	SDL_DestroyWindow(window);
 	IMG_Quit();
