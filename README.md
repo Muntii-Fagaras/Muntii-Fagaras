@@ -6,7 +6,10 @@
 
 ### Windows 11
 
-![スクリーンショット 2022-10-02 160841](https://user-images.githubusercontent.com/55316963/193442478-8d9e14be-458a-4850-9447-d8f4c5862206.png)
+
+https://user-images.githubusercontent.com/55316963/194715362-3124f96a-49d4-4bef-a81c-459c133169b2.mp4
+
+
 
 ### Android
 
