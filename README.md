@@ -6,14 +6,12 @@
 
 ### Windows 11
 
-
 https://user-images.githubusercontent.com/55316963/194715362-3124f96a-49d4-4bef-a81c-459c133169b2.mp4
-
-
 
 ### Android
 
-![Screenshot_20221003_231345](https://user-images.githubusercontent.com/55316963/193599566-4b7df201-2cc0-49b1-b567-8b2bb33e9e8b.png)
+![スクリーンショット 2022-10-09 010140](https://user-images.githubusercontent.com/55316963/194716731-008c94cb-3b05-44e4-b69d-b0d7f6fc03a0.png)
+
 
 ## メンバー
 
