@@ -23,6 +23,7 @@
 #include "class/mouse.hpp"
 
 #include <vector>
+
 int main(int argc, char** argv) {
 	// ウィンドウ
 	SDL_Window* window;
@@ -58,6 +59,8 @@ int main(int argc, char** argv) {
 	//weather.play();
 	const static int checkbox_place = 100;
 	image back_ground;
+	back_ground.load("assets/image/back_ground/back.png", renderer, 0, 0);
+
 	while (1)
 	{
 		//背景をクリア
@@ -78,7 +81,6 @@ int main(int argc, char** argv) {
 		}
 		// チェックボックスがオンになったとき
 		if (a.checkbox_state == true) {
-			back_ground.load("assets/image/back_ground/back.png", renderer, 0, 0);
 			SDL_RenderCopy(renderer, back_ground.texture, nullptr, &back_ground.rect);
 		}
 		SDL_RenderCopy(renderer, catt.texture, nullptr, &catt.rect);
