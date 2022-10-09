@@ -109,6 +109,9 @@
       <EnableModules>true</EnableModules>
       <AdditionalOptions>/execution-charset:utf-8 %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <TranslateIncludes>true</TranslateIncludes>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -119,6 +122,9 @@
     <PostBuildEvent>
       <Command>COPY "$(ProjectDir)SDL2\lib\x64\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
+    <ResourceCompile>
+      <Culture>0x0411</Culture>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -137,17 +143,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="class\checkbox.cpp" />
     <ClCompile Include="class\font.cpp" />
     <ClCompile Include="class\image.cpp" />
     <ClCompile Include="class\load_file.cpp" />
+    <ClCompile Include="class\mouse.cpp" />
     <ClCompile Include="class\text.cpp" />
     <ClCompile Include="class\voice.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="class\checkbox.hpp" />
     <ClInclude Include="class\font.hpp" />
     <ClInclude Include="class\image.hpp" />
     <ClInclude Include="class\load_file.hpp" />
+    <ClInclude Include="class\mouse.hpp" />
     <ClInclude Include="class\text.hpp" />
     <ClInclude Include="class\voice.hpp" />
     <ClInclude Include="resource.h" />

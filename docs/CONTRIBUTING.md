@@ -62,6 +62,7 @@ meson compile -C builddir
 
 ### Windows 11編
 
+#### Meson編
 1. Mesonとninjaを
 
 ```shell
@@ -79,3 +80,7 @@ meson setup --backend vs builddir
 
 を生成します
 4. 生成したファイルから、slnを起動します。
+
+#### Visual Studio編
+
+1. プロジェクト内のslnを起動します。

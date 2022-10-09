@@ -25,8 +25,8 @@ public:
 		rect.w = 0,
 		rect.h = 0
 	};
-	image(std::vector<std::string>image_path,SDL_Renderer* renderer, int x, int y);
-	void image_next(std::vector<std::string>image_path, SDL_Renderer* renderer, int x, int y);
+	void load(std::string image_path,SDL_Renderer* renderer, int x, int y);
+
 	~image(); 
 private:
 	SDL_Surface* image_surface= nullptr;
