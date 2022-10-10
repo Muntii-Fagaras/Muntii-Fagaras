@@ -1,8 +1,8 @@
-# このプロジェクトについて
+# gui-baseについて
 
-[SDL2](https://github.com/libsdl-org/SDL)でGUIのベースを作るプロジェクトです。
+[SDL2](https://github.com/libsdl-org/SDL)でGUIのベースを作るプロジェクトです。本プロジェクトはSDL2のUIを提供します。  
 
-## 現在の開発状況
+## 動作デモ
 
 ### Windows 11
 
@@ -12,6 +12,12 @@ https://user-images.githubusercontent.com/55316963/194715362-3124f96a-49d4-4bef-
 
 ![スクリーンショット 2022-10-09 010140](https://user-images.githubusercontent.com/55316963/194716731-008c94cb-3b05-44e4-b69d-b0d7f6fc03a0.png)
 
+## 特徴
+
+- 高速な動作
+- 省メモリ
+- 軽量なバイナリ
+- 最新のC++20の採用
 
 ## メンバー
 

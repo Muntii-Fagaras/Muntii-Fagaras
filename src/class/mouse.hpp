@@ -1,23 +1,19 @@
-﻿#pragma once
-#ifdef __GNUC__
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_ttf.h>
-#include <SDL2/SDL_image.h>
-#include <SDL2/SDL_mixer.h>
-#endif
-#ifdef _MSC_VER
-#include <SDL.h>
-#include <SDL_ttf.h>
-#include <SDL_image.h>
-#include <SDL_mixer.h>
-#endif
-
+﻿
 class mouse {
 private:
+	// クリックボタン
 	Uint32 buttons;
-	SDL_Cursor* cursor;
-	int x_state, y_state;
+	// カーソル
+	SDL_Cursor* cursor = nullptr;
+	int x_state = 0;
+	int y_state = 0;
+	// マウスがクリックされているかの状態
 	bool mouse_state=false;
+	void update_cursor(std::string cursor_state);
+	bool clicked_left_down(SDL_Event left_clicked_event);
+	bool clicked_left_up(SDL_Event left_clicked_event);
+	// 終了イベント
+	SDL_Event left_clicked_event;
 public:
 	//仮想的な四角形の中にマウスカーソルがあるかどうかを判断するメンバ関数
 	//使い方(左、上、右、下)
