@@ -6,8 +6,9 @@
 #include "class/image.hpp"
 #include "class/checkbox.hpp"
 #include "class/mouse.hpp"
-
 int main(int argc, char** argv) {
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+
 	// ウィンドウ
 	SDL_Window* window;
 	// 終了イベント
@@ -69,7 +70,6 @@ int main(int argc, char** argv) {
 		SDL_RenderCopy(renderer, set_background_text.texture, nullptr, &set_background_text.rect);
         SDL_RenderCopy(renderer, gui_base_text.texture,nullptr,&gui_base_text.rect);
 		SDL_RenderCopy(renderer, back_ground_check.texture, nullptr, &back_ground_check.rect);
-
 		// 画面に反映させる
 		SDL_RenderPresent(renderer);
 	}

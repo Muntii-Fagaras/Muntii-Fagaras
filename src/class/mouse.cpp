@@ -2,13 +2,12 @@
 #include "mouse.hpp"
 
 bool mouse::is_cursor_in_box_with_click(int xl, int yu, int xr, int yd) {
-	while(1){
-		// マウスの現在位置を取得する
-		buttons = SDL_GetMouseState(&x_state, &y_state);
+	// マウスの現在位置を取得する
+	buttons = SDL_GetMouseState(&x_state, &y_state);
 		// カーソルがチェックボックスの中にあるとき
 		if ((x_state > xl) && (y_state > yu) && ((x_state < xr) && (y_state < yd))) {
-			SDL_PollEvent(&left_clicked_event);
 			update_cursor("HAND");
+			SDL_WaitEvent(&left_clicked_event);
 			//左クリックされたとき
 			if (clicked_left_down(left_clicked_event)) {
 				// 押しっぱなしの時にルーレット状態になるのを防ぐ
@@ -27,8 +26,7 @@ bool mouse::is_cursor_in_box_with_click(int xl, int yu, int xr, int yd) {
 				// マウスの状態を返す
 				return false;
 			}
-	}
-		return false;
+	return false;
 }
 void mouse::update_cursor(std::string mouse_cursor)
 {
