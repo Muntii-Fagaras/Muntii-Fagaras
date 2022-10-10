@@ -1,15 +1,15 @@
-#pragma once
+ï»¿#pragma once
 #include "font.hpp"
 
 font_load::font_load(std::string font_path, int font_size)
 {
-	// ƒtƒHƒ“ƒgƒtƒ@ƒCƒ‹‚Ì‘¶İŠm”F
+	// ãƒ•ã‚©ãƒ³ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã®å­˜åœ¨ç¢ºèª
 	if (chk(font_path) == false) {
 		std::cout << SDL_GetError();
 		SDL_Quit();
 		exit(1);
 	}
-	// ƒtƒHƒ“ƒg‚ğƒƒ‚ƒŠ‚É“Ç‚İ‚Ş
+	// ãƒ•ã‚©ãƒ³ãƒˆã‚’ãƒ¡ãƒ¢ãƒªã«èª­ã¿è¾¼ã‚€
 	if ((font_load::font = TTF_OpenFont(font_path.c_str(), font_size)) == nullptr) {
 		std::cout << SDL_GetError();
 		SDL_Quit();
@@ -19,6 +19,6 @@ font_load::font_load(std::string font_path, int font_size)
 
 font_load::~font_load()
 {
-	// ƒtƒHƒ“ƒg‚ğƒƒ‚ƒŠ‚©‚ç‰ğ•ú‚·‚é
+	// ãƒ•ã‚©ãƒ³ãƒˆã‚’ãƒ¡ãƒ¢ãƒªã‹ã‚‰è§£æ”¾ã™ã‚‹
 	TTF_CloseFont(font);
 }

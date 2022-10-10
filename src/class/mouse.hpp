@@ -1,4 +1,8 @@
-﻿
+﻿#pragma once
+
+#ifdef __ANDROID__
+#include "stdafx.h"
+#endif
 class mouse {
 private:
 	// クリックボタン

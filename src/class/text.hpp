@@ -1,21 +1,23 @@
-#pragma once
-
+ï»¿#pragma once
+#ifdef __ANDROID__
+#include "stdafx.h"
+#endif
 #include "font.hpp"
 
 class text:public load_file{
 	public:
-		// ƒeƒLƒXƒg‚Ì•`‰æˆÊ’u
+		// ãƒ†ã‚­ã‚¹ãƒˆã®æç”»ä½ç½®
 		SDL_Rect rect{
 		rect.x = 520,
 		rect.y = 260,
 		rect.w = 0,
 		rect.h = 0
 	};
-		// ƒeƒLƒXƒgƒeƒNƒXƒ`ƒƒ
+		// ãƒ†ã‚­ã‚¹ãƒˆãƒ†ã‚¯ã‚¹ãƒãƒ£
 		SDL_Texture* texture=nullptr;
 		text(SDL_Renderer* renderer,TTF_Font* font,std::string text_show,int x,int y);
 		~text();
 	private:
-		// ƒeƒLƒXƒgƒT[ƒtƒFƒX
+		// ãƒ†ã‚­ã‚¹ãƒˆã‚µãƒ¼ãƒ•ã‚§ã‚¹
 		SDL_Surface* text_surface=nullptr;
 };

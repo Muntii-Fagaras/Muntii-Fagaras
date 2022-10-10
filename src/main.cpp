@@ -6,7 +6,12 @@
 #include "class/image.hpp"
 #include "class/checkbox.hpp"
 #include "class/mouse.hpp"
+#ifdef __ANDROID__
+#include "stdafx.h"
+int SDL_main(int argc, char** argv) {
+#else
 int main(int argc, char** argv) {
+#endif
 	// ウィンドウ
 	SDL_Window* window;
 	// 終了イベント
