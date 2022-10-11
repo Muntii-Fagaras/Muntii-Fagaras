@@ -25,6 +25,9 @@
     <ClCompile Include="class\mouse.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>ソースファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\font.hpp">
@@ -48,6 +51,9 @@
     </ClInclude>
     <ClInclude Include="class\mouse.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>ヘッダファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

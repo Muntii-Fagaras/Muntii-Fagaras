@@ -83,4 +83,19 @@ meson setup --backend vs builddir
 
 #### Visual Studio編
 
-1. プロジェクト内のslnを起動します。
+本プロジェクトは、Visual Studio 2022を採用しています。
+1. まずは、本プロジェクトをGithubからクローンします。
+
+```shell
+git clone https://github.com/312k/gui-base.git
+```
+
+2. クローンしたら、srcディレクトリに移動します。
+3. srcディレクトリ内の**src.sln**をダブルクリックします。
+4. 起動したら、CTRL+F5でデバッグなしで実行できます。
+
+## このプロジェクトのソースコードの解説
+
+### クラスについて
+
+クラスの使用方法については、class_desc内のファイルをご覧ください。

@@ -1,8 +1,8 @@
-# このプロジェクトについて
+# gui-baseについて
 
-[SDL2](https://github.com/libsdl-org/SDL)でGUIのベースを作るプロジェクトです。
+[SDL2](https://github.com/libsdl-org/SDL)でGUIのベースを作るプロジェクトです。本プロジェクトはSDL2のUIを提供します。  
 
-## 現在の開発状況
+## 動作デモ
 
 ### Windows 11
 
@@ -12,6 +12,12 @@ https://user-images.githubusercontent.com/55316963/194715362-3124f96a-49d4-4bef-
 
 ![スクリーンショット 2022-10-09 010140](https://user-images.githubusercontent.com/55316963/194716731-008c94cb-3b05-44e4-b69d-b0d7f6fc03a0.png)
 
+## 特徴
+
+- 高速な動作
+- 省メモリ
+- 軽量なバイナリ
+- 最新のC++20の採用
 
 ## メンバー
 
@@ -130,3 +136,11 @@ FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
 </details>
+
+### 使用している画像
+
+本ソフトウェアは、[Unsplash](https://unsplash.com/ja)で提供されている画像を使用しています。
+毛布にくるまっている猫の画像は[Mikhail Vasilyev](https://unsplash.com/ja/%E5%86%99%E7%9C%9F/NodtnCsLdTE)さんの画像を使用しています。
+アイコンに使用している山の画像は[Lucian Dachman](https://unsplash.com/ja/%E5%86%99%E7%9C%9F/v_mTgSs6UiY)さんの画像を使用しています。
+
+[Unsplash](https://unsplash.com/ja/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9)ライセンスのもとで画像を使用しています。
