@@ -63,6 +63,7 @@ int main(int argc, char** argv) {
 	checkbox back_ground_check_with_cat(image_path, renderer, checkbox_place, checkbox_place+100, mouse.is_cursor_in_box_with_click(checkbox_place, checkbox_place+100, checkbox_place + 20, checkbox_place + 120));
 	// 入力した文字の格納先
 	std::string inputed_word=" ";
+	std::string inputing = " ";
     // テキスト入力を開始する
     SDL_StartTextInput();
 	// メインループ
@@ -76,11 +77,19 @@ int main(int argc, char** argv) {
 			break;
 		}
 		if (exit.type==SDL_TEXTINPUT){
+			inputing = " ";
+
             inputed_word+=exit.text.text;
             text inputed(renderer, font.font, inputed_word, 0, 300);
-            SDL_SetTextInputRect(&inputed.rect);
+		}
+		if (exit.type == SDL_TEXTEDITING) {
+			inputing = " ";
+
+			inputing += exit.edit.text;
 		}
         text inputed(renderer, font.font, inputed_word, 0, 300);
+		text inputeing(renderer, font.font, inputing, 0, 400);
+
 		back_ground_check.next(mouse.is_cursor_in_box_with_click(checkbox_place, checkbox_place, checkbox_place + 20, checkbox_place + 20));
 		back_ground_check_with_cat.next(mouse.is_cursor_in_box_with_click(checkbox_place, checkbox_place+100, checkbox_place + 20, checkbox_place + 120));
 
@@ -92,6 +101,7 @@ int main(int argc, char** argv) {
 		}
 		// 入力した文字列の描画
         SDL_RenderCopy(renderer, inputed.texture, nullptr, &inputed.rect);
+		SDL_RenderCopy(renderer, inputeing.texture, nullptr, &inputeing.rect);
 		// テキストの描画
 		SDL_RenderCopy(renderer, set_background_text_with_cat.texture, nullptr, &set_background_text_with_cat.rect);
 		SDL_RenderCopy(renderer, set_background_text.texture, nullptr, &set_background_text.rect);
@@ -101,6 +111,7 @@ int main(int argc, char** argv) {
 		SDL_RenderCopy(renderer, back_ground_check_with_cat.texture, nullptr, &back_ground_check_with_cat.rect);
 		// 画面に反映させる
 		SDL_RenderPresent(renderer);
+		
 	}
 	// テキスト入力を終了する
     SDL_StopTextInput();
