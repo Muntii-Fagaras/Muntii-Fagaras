@@ -3,6 +3,9 @@
 #ifdef __ANDROID__
 #include "stdafx.h"
 #endif
+#ifdef __GNUC__
+#include "../stdafx.h"
+#endif
 class mouse {
 private:
 	// クリックボタン

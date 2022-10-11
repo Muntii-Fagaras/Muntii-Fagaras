@@ -3,7 +3,6 @@
 #include "stdafx.h"
 #endif
 #include "image.hpp"
-
 class checkbox :public image {
 public:
 	image uncheck;

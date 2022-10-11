@@ -16,7 +16,7 @@ public:
 	};
 	void load(std::string image_path,SDL_Renderer* renderer, int x, int y);
 
-	~image(); 
+	~image();
 private:
 	// 画像のサーフェス
 	SDL_Surface* image_surface= nullptr;

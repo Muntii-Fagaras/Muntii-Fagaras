@@ -46,15 +46,23 @@
 		<ExtraCommands>
 			<Add after="XCOPY $(#sdl2)\bin\*.dll $(TARGET_OUTPUT_DIR) /D /Y" />
 		</ExtraCommands>
+		<Unit filename="class/checkbox.cpp" />
+		<Unit filename="class/checkbox.hpp" />
 		<Unit filename="class/font.cpp" />
 		<Unit filename="class/font.hpp" />
+		<Unit filename="class/image.cpp" />
+		<Unit filename="class/image.hpp" />
 		<Unit filename="class/load_file.cpp" />
 		<Unit filename="class/load_file.hpp" />
+		<Unit filename="class/mouse.cpp" />
+		<Unit filename="class/mouse.hpp" />
 		<Unit filename="class/text.cpp" />
 		<Unit filename="class/text.hpp" />
 		<Unit filename="class/voice.cpp" />
 		<Unit filename="class/voice.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="stdafx.cpp" />
+		<Unit filename="stdafx.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

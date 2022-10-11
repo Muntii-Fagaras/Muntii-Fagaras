@@ -7,7 +7,7 @@
 #include "class/checkbox.hpp"
 #include "class/mouse.hpp"
 #ifdef __ANDROID__
-#include "stdafx.h"
+
 int SDL_main(int argc, char** argv) {
 #else
 int main(int argc, char** argv) {
@@ -29,10 +29,10 @@ int main(int argc, char** argv) {
 		return 1;
 	}
 	// Windowの作成、TTF,mixerの初期化
-	if ((window = SDL_CreateWindow("gui_base", 
-		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 
-		1280, 720, SDL_WINDOW_RESIZABLE)) == nullptr || 
-		TTF_Init() == -1 || 
+	if ((window = SDL_CreateWindow("gui_base",
+		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+		1280, 720, SDL_WINDOW_RESIZABLE)) == nullptr ||
+		TTF_Init() == -1 ||
 		(Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096)) == -1) {
 			std::cout << SDL_GetError();
 			SDL_Quit();
@@ -52,7 +52,7 @@ int main(int argc, char** argv) {
 	text set_background_text_with_cat(renderer, font.font, "猫ちゃん", 0, 200);
 
 	// 音声の読み込み
-	voice weather_voice("assets/voice/good_weather.wav");
+	//voice weather_voice("assets/voice/good_weather.wav");
 	// 画像の読み込み
 	std::vector<std::string>image_path={ "assets/image/buttons/not_check.png","assets/image/buttons/checked.png" };
 	//weather.play();
@@ -94,7 +94,7 @@ int main(int argc, char** argv) {
 	font.~font_load();
 	gui_base_text.~text();
 	set_background_text.~text();
-	weather_voice.~voice();
+	//weather_voice.~voice();
 	// ウィンドウを解放する
 	SDL_DestroyWindow(window);
 	IMG_Quit();
