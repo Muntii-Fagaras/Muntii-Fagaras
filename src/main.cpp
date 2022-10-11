@@ -111,7 +111,7 @@ int main(int argc, char** argv) {
 		SDL_RenderCopy(renderer, back_ground_check_with_cat.texture, nullptr, &back_ground_check_with_cat.rect);
 		// 画面に反映させる
 		SDL_RenderPresent(renderer);
-		
+		SDL_Delay(10);	
 	}
 	// テキスト入力を終了する
     SDL_StopTextInput();
