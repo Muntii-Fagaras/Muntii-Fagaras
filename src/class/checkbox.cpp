@@ -35,5 +35,4 @@ void checkbox::next(bool mouse_state)
 		this->rect = uncheck.rect;
 		this->texture = uncheck.texture;
 	}
-
 }

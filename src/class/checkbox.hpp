@@ -5,8 +5,11 @@
 #include "image.hpp"
 class checkbox :public image {
 public:
+	// 未チェック
 	image uncheck;
+	// チェック済み
 	image checked;
+	// テクスチャ
 	SDL_Texture* texture = nullptr;
 
 	// チェックボックスの状態

@@ -9,9 +9,12 @@ text::text(SDL_Renderer* renderer,TTF_Font* font,std::string text_show,int x,int
 		SDL_Quit();
 		exit(1);
 	}
+	// フォントのx座標とy座標
 	rect.x=x;
 	rect.y=y;
+	// テクスチャを生成する
 	texture=SDL_CreateTextureFromSurface(renderer,text_surface);
+	// フォントのサイズを取得する
 	SDL_QueryTexture(texture, nullptr, nullptr,&rect.w,&rect.h);
 }
 
