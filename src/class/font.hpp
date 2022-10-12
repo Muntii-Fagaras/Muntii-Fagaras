@@ -13,5 +13,4 @@ public:
 	// fontの廃棄
 	~font_load();
 private:
-
 };

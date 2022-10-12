@@ -4,13 +4,14 @@
 void image::load(std::string image_path, SDL_Renderer* renderer, int x, int y)
 {
 	// 画像ファイルの存在確認
-	if (chk(image_path)==false) {
+	if (chk(image_path) == false) {
 		std::cout << SDL_GetError();
 		SDL_Quit();
 		exit(1);
 	}
 	// 画像をサーフェスに読み込む
 	image_surface = IMG_Load(image_path.c_str());
+	// 画像のx座標とy座標の更新
 	rect.x = x;
 	rect.y = y;
 	// テクスチャをサーフェスから作る

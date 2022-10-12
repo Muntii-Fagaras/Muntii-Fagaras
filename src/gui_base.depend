@@ -474,14 +474,14 @@
 	<iostream>
 	"load_file.hpp"
 
-1665445731 source:h:\gui-base\src\class\load_file.cpp
+1665452487 source:h:\gui-base\src\class\load_file.cpp
 	"load_file.hpp"
 
-1665448591 h:\gui-base\src\class\load_file.hpp
+1665452487 h:\gui-base\src\class\load_file.hpp
 	"stdafx.h"
 	"../stdafx.h"
 
-1665448320 h:\gui-base\src\stdafx.h
+1665452487 h:\gui-base\src\stdafx.h
 	<SDL.h>
 	<SDL_ttf.h>
 	<SDL_image.h>
@@ -911,53 +911,53 @@
 	"begin_code.h"
 	"close_code.h"
 
-1665445731 source:h:\gui-base\src\class\checkbox.cpp
+1665452487 source:h:\gui-base\src\class\checkbox.cpp
 	"checkbox.hpp"
 	"mouse.hpp"
 
-1665448355 h:\gui-base\src\class\checkbox.hpp
+1665452487 h:\gui-base\src\class\checkbox.hpp
 	"stdafx.h"
 	"image.hpp"
 
-1665448355 h:\gui-base\src\class\image.hpp
+1665452487 h:\gui-base\src\class\image.hpp
 	"stdafx.h"
 	"load_file.hpp"
 
-1665448591 h:\gui-base\src\class\mouse.hpp
+1665452487 h:\gui-base\src\class\mouse.hpp
 	"stdafx.h"
 	"../stdafx.h"
 
-1665445731 source:h:\gui-base\src\class\font.cpp
+1665452487 source:h:\gui-base\src\class\font.cpp
 	"font.hpp"
 
-1665445731 h:\gui-base\src\class\font.hpp
+1665452487 h:\gui-base\src\class\font.hpp
 	"stdafx.h"
 	"load_file.hpp"
 
-1665445731 source:h:\gui-base\src\class\image.cpp
+1665452487 source:h:\gui-base\src\class\image.cpp
 	"image.hpp"
 
-1665445731 source:h:\gui-base\src\class\mouse.cpp
+1665452487 source:h:\gui-base\src\class\mouse.cpp
 	"mouse.hpp"
 
-1665445731 source:h:\gui-base\src\class\text.cpp
+1665452487 source:h:\gui-base\src\class\text.cpp
 	"text.hpp"
 
-1665445731 h:\gui-base\src\class\text.hpp
+1665452487 h:\gui-base\src\class\text.hpp
 	"stdafx.h"
 	"font.hpp"
 
-1665445731 source:h:\gui-base\src\class\voice.cpp
+1665452487 source:h:\gui-base\src\class\voice.cpp
 	"voice.hpp"
 
-1665445731 h:\gui-base\src\class\voice.hpp
+1665452487 h:\gui-base\src\class\voice.hpp
 	"stdafx.h"
 	"load_file.hpp"
 
-1665445731 source:h:\gui-base\src\stdafx.cpp
+1665452487 source:h:\gui-base\src\stdafx.cpp
 	"stdafx.h"
 
-1665448389 source:h:\gui-base\src\main.cpp
+1665454548 source:h:\gui-base\src\main.cpp
 	"class/load_file.hpp"
 	"class/text.hpp"
 	"class/font.hpp"

@@ -19,7 +19,7 @@ else
   extra_args = ['/U USING_GENERATED_CONFIG_H']
 endif
 
-file=['main.cpp','class/load_file.cpp','class/text.cpp']
+file=['main.cpp','stdafx.cpp','class/load_file.cpp','class/text.cpp','class/checkbox.cpp','class/font.cpp','class/mouse.cpp','class/image.cpp','class/voice.cpp']
 
 # 実行ファイル
 executable('main', file,

@@ -6,7 +6,7 @@
 
 ### Windows 11
 
-https://user-images.githubusercontent.com/55316963/194715362-3124f96a-49d4-4bef-a81c-459c133169b2.mp4
+https://user-images.githubusercontent.com/55316963/195095585-4b8619f5-6dd3-4a6a-ada5-68d91cdfc3b6.mp4
 
 ### Android
 

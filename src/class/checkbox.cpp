@@ -1,9 +1,9 @@
 ﻿#pragma once
 #include "checkbox.hpp"
 #include "mouse.hpp"
-checkbox::checkbox(std::vector<std::string> image_path, SDL_Renderer* renderer, int x, int y,bool mouse_state)
- {
-	if (mouse_state==true) {
+checkbox::checkbox(std::vector<std::string> image_path, SDL_Renderer* renderer, int x, int y, bool mouse_state)
+{
+	if (mouse_state == true) {
 		// チェックボックスの状態を取得できるように代入する
 		checkbox_state = !checkbox_state;
 	}
@@ -35,5 +35,4 @@ void checkbox::next(bool mouse_state)
 		this->rect = uncheck.rect;
 		this->texture = uncheck.texture;
 	}
-
 }
