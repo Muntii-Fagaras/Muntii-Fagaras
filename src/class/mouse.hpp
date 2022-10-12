@@ -15,7 +15,7 @@ private:
 	int x_state = 0;
 	int y_state = 0;
 	// マウスがクリックされているかの状態
-	bool mouse_state=false;
+	bool mouse_state = false;
 	void update_cursor(std::string cursor_state);
 	bool clicked_left_down(SDL_Event left_clicked_event);
 	bool clicked_left_up(SDL_Event left_clicked_event);

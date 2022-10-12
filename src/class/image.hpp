@@ -6,7 +6,7 @@
 class image :public load_file {
 public:
 	// イメージのテクスチャ
-	SDL_Texture* texture=nullptr;
+	SDL_Texture* texture = nullptr;
 	// 画像の位置
 	SDL_Rect rect{
 		rect.x = 520,
@@ -14,10 +14,10 @@ public:
 		rect.w = 0,
 		rect.h = 0
 	};
-	void load(std::string image_path,SDL_Renderer* renderer, int x, int y);
+	void load(std::string image_path, SDL_Renderer* renderer, int x, int y);
 
 	~image();
 private:
 	// 画像のサーフェス
-	SDL_Surface* image_surface= nullptr;
+	SDL_Surface* image_surface = nullptr;
 };
