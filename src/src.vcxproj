@@ -156,6 +156,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="class\button.cpp" />
     <ClCompile Include="class\checkbox.cpp" />
     <ClCompile Include="class\font.cpp" />
     <ClCompile Include="class\image.cpp" />
@@ -172,6 +173,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="class\button.hpp" />
     <ClInclude Include="class\checkbox.hpp" />
     <ClInclude Include="class\font.hpp" />
     <ClInclude Include="class\image.hpp" />
@@ -187,6 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
