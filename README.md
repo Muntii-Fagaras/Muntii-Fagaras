@@ -1,4 +1,4 @@
-# gui-baseについて
+﻿# gui-baseについて
 
 [SDL2](https://github.com/libsdl-org/SDL)でGUIのベースを作るプロジェクトです。本プロジェクトはSDL2のUIを提供します。  
 
@@ -12,11 +12,20 @@ https://user-images.githubusercontent.com/55316963/195095585-4b8619f5-6dd3-4a6a-
 
 ![スクリーンショット 2022-10-09 010140](https://user-images.githubusercontent.com/55316963/194716731-008c94cb-3b05-44e4-b69d-b0d7f6fc03a0.png)
 
+## 動作環境
+
+- Windows 10/11
+- Linux 2.6　以降
+- Android 10 以降
+
+## 使い方
+
+1. gui-baseを起動します。
+2. UI上のアイコンを触ってみたりしてください!!
+
 ## 特徴
 
-- 高速な動作
-- 省メモリ
-- 軽量なバイナリ
+- クロスプラットフォーム
 - 最新のC++20の採用
 
 ## メンバー
@@ -30,6 +39,28 @@ CONTRIBUTING.mdをご覧ください。
 
 ## ライセンス
 
+### SDL2
+
+本ソフトウェアは、[zlib](https://www.zlib.net/zlib_license.html)ライセンスで提供されている、SDL2を使用しています。[SDL2](http://www.libsdl.org/license.php)のライセンスをご確認ください。
+
+<details>
+<summary> SDL2 LICENSE</summary>
+This software is provided 'as-is', without any express or implied
+warranty.  In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+</details>
 ### HackGen
 
 使用しているフォントは[HackGen](https://github.com/yuru7/HackGen)を使用しています。
