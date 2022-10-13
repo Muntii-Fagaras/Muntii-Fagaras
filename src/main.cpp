@@ -6,6 +6,7 @@
 #include "class/image.hpp"
 #include "class/checkbox.hpp"
 #include "class/mouse.hpp"
+#include "class/button.hpp"
 #define SDL_HINT_IME_SHOW_UI 1
 #ifdef __ANDROID__
 int SDL_main(int argc, char** argv) {
@@ -18,6 +19,11 @@ int main(int argc, char** argv) {
 	SDL_Event exit;
 	// チェックボックスの位置
 	const static int checkbox_place = 100;
+	// ボタンの位置
+	struct button_place {
+		int x = 400;
+		int y = 500;
+	} button_place;
 	// 背景画像
 	image back_ground;
 	image back_ground_with_cat;
@@ -55,6 +61,8 @@ int main(int argc, char** argv) {
 	//voice weather_voice("assets/voice/good_weather.wav");
 	// 画像の読み込み
 	std::vector<std::string>image_path = { "assets/image/buttons/not_check.png","assets/image/buttons/checked.png" };
+	std::vector<std::string>button_image_path = { "assets/image/buttons/button_normal.png","assets/image/buttons/button_with.png" };
+
 	//weather.play();
 	back_ground.load("assets/image/back_ground/back.png", renderer, 0, 0);
 	back_ground_with_cat.load("assets/image/back_ground/cat_with_bracket.jpg", renderer, 0, 0);
@@ -66,6 +74,9 @@ int main(int argc, char** argv) {
 	std::string inputing = " ";
 	// テキスト入力を開始する
 	SDL_StartTextInput();
+	// ボタンを生成する
+	button button(button_image_path, renderer, button_place.x, button_place.y, mouse.is_cursor_in_box_with_click(button_place.x, button_place.y, button_place.x + 200, button_place.y + 100));
+	text button_text(renderer, font.font, "Githubで開く", button_place.x + 50, button_place.y + 50);
 	// メインループ
 	while (1)
 	{
@@ -92,13 +103,17 @@ int main(int argc, char** argv) {
 
 		back_ground_check.next(mouse.is_cursor_in_box_with_click(checkbox_place, checkbox_place, checkbox_place + 20, checkbox_place + 20));
 		back_ground_check_with_cat.next(mouse.is_cursor_in_box_with_click(checkbox_place, checkbox_place + 100, checkbox_place + 20, checkbox_place + 120));
-
+		button.next(mouse.is_cursor_in_box_with_click(button_place.x, button_place.y, button_place.x + 200, button_place.y + 100));
 		// チェックボックスがオンになったとき
 		if (back_ground_check.checkbox_state == true) {
 			SDL_RenderCopy(renderer, back_ground.texture, nullptr, &back_ground.rect);
 		}
-		else if (back_ground_check_with_cat.checkbox_state == true) {
+		if (back_ground_check_with_cat.checkbox_state == true) {
 			SDL_RenderCopy(renderer, back_ground_with_cat.texture, nullptr, &back_ground_with_cat.rect);
+		}
+		if (button.checkbox_state == true) {
+			SDL_OpenURL("https://github.com/312k/gui-base");
+			button.checkbox_state = false;
 		}
 		// 入力した文字列の描画
 		SDL_RenderCopy(renderer, inputed.texture, nullptr, &inputed.rect);
@@ -110,6 +125,10 @@ int main(int argc, char** argv) {
 		// チェックボックスの描画
 		SDL_RenderCopy(renderer, back_ground_check.texture, nullptr, &back_ground_check.rect);
 		SDL_RenderCopy(renderer, back_ground_check_with_cat.texture, nullptr, &back_ground_check_with_cat.rect);
+		// ボタンの描画
+		SDL_RenderCopy(renderer, button.texture, nullptr, &button.rect);
+		SDL_RenderCopy(renderer, button_text.texture, nullptr, &button_text.rect);
+
 		// 画面に反映させる
 		SDL_RenderPresent(renderer);
 		SDL_Delay(10);

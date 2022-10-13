@@ -28,6 +28,9 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>ソースファイル</Filter>
     </ClCompile>
+    <ClCompile Include="class\button.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\font.hpp">
@@ -55,6 +58,9 @@
     <ClInclude Include="stdafx.h">
       <Filter>ヘッダファイル</Filter>
     </ClInclude>
+    <ClInclude Include="class\button.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ソースファイル">
@@ -75,5 +81,8 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
