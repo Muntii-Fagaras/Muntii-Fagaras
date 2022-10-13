@@ -15,6 +15,8 @@ public:
 
 	// チェックボックスの状態
 	bool checkbox_state = false;
+	button();
+
 	button(std::vector<std::string>image_path, SDL_Renderer* renderer, int x, int y, bool mouse_state);
 	~button();
 	void next(bool mouse_state);

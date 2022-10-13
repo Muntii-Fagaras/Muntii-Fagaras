@@ -2,8 +2,8 @@
 #ifdef __ANDROID__
 #include "stdafx.h"
 #endif
-#include "image.hpp"
-class checkbox :public image {
+#include "button.hpp"
+class checkbox :public button {
 public:
 	// 未チェック
 	image uncheck;
