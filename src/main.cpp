@@ -83,6 +83,7 @@ int main(int argc, char** argv) {
 
 	// ボタンを生成する
 	button button(button_image_path, renderer, button_place.x, button_place.y, mouse.is_cursor_in_box_with_click(button_place.x, button_place.y, button_place.x + 200, button_place.y + 100));
+	int line = 300;
 	// メインループ
 	while (1)
 	{
@@ -95,9 +96,11 @@ int main(int argc, char** argv) {
 		}
 		if (exit.type == SDL_TEXTINPUT) {
 			inputed_word += exit.text.text;
-			text inputed(renderer, font.font, inputed_word, 0, 300);
 		}
-		text inputed(renderer, font.font, inputed_word, 0, 300);
+		if ((exit.type == SDL_KEYDOWN && exit.key.keysym.sym == SDLK_RETURN)) {
+			line += 100;
+		}
+		text inputed(renderer, font.font, inputed_word, 0, line);
 
 		back_ground_check.next(mouse.is_cursor_in_box_with_click(checkbox_place, checkbox_place, checkbox_place + 20, checkbox_place + 20));
 		back_ground_check_with_cat.next(mouse.is_cursor_in_box_with_click(checkbox_place, checkbox_place + 100, checkbox_place + 20, checkbox_place + 120));
