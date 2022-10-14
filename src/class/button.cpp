@@ -1,5 +1,8 @@
 ﻿#pragma once
 #include "button.hpp"
+button::button()
+{
+}
 button::button(std::vector<std::string> image_path, SDL_Renderer* renderer, int x, int y, bool mouse_state)
 {
 	if (mouse_state == true) {
