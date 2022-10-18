@@ -1,6 +1,13 @@
-﻿# gui-baseについて
+
+<div align="center">
+<samp>
+
+# gui-base
 
 [SDL2](https://github.com/libsdl-org/SDL)でGUIのベースを作るプロジェクトです。本プロジェクトはSDL2のUIを提供します。  
+
+</samp>
+</div>
 
 ## 動作デモ
 
