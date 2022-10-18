@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
 		return 1;
 	}
 	// Windowの作成、TTF,mixerの初期化
-	if ((window = SDL_CreateWindow("gui_base",
+	if ((window = SDL_CreateWindow("gui_base メイン画面",
 		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
 		1280, 720, SDL_WINDOW_RESIZABLE)) == nullptr ||
 		TTF_Init() == -1 ||
@@ -84,6 +84,10 @@ int main(int argc, char** argv) {
 	// ボタンを生成する
 	button button(button_image_path, renderer, button_place.x, button_place.y, mouse.is_cursor_in_box_with_click(button_place.x, button_place.y, button_place.x + 200, button_place.y + 100));
 	int line = 300;
+	int tab_count=0;
+	std::string window_title_at_setting="gui-baseの設定画面 表示数:";
+	// ウィンドウのタイトル名変更
+	SDL_SetWindowTitle(window,(window_title_at_setting+std::to_string(tab_count)).c_str());
 	// メインループ
 	while (1)
 	{

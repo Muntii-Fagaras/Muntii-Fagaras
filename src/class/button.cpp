@@ -1,5 +1,4 @@
-﻿#pragma once
-#include "button.hpp"
+﻿#include "button.hpp"
 button::button()
 {
 }

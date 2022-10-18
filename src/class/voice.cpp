@@ -1,5 +1,4 @@
-﻿#pragma once
-#include "voice.hpp"
+﻿#include "voice.hpp"
 
 voice::voice(std::string voice_file_path)
 {

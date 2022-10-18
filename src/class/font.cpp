@@ -1,5 +1,4 @@
-﻿#pragma once
-#include "font.hpp"
+﻿#include "font.hpp"
 
 font_load::font_load(std::string font_path, int font_size)
 {
