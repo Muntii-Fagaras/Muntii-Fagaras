@@ -1,5 +1,4 @@
-#pragma once
-#include "TextFile.h"
+#include "TextFile.hpp"
 
 // ファイルからテキストを取り出す
 std::list<std::string> TextFile::takeOutText() {

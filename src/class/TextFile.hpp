@@ -1,6 +1,6 @@
 #pragma once
 #include <list>
-#include "MyFile.h"
+#include "MyFile.hpp"
 
 class TextFile : public MyFile
 {

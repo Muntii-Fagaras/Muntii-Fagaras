@@ -1,5 +1,4 @@
-#pragma once
-#include "FilePass.h"
+#include "FilePass.hpp"
 
 // FileNameのコンストラクタ(パスはデフォルト設定)
 FilePass::FilePass() {

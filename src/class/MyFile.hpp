@@ -1,6 +1,6 @@
 #pragma once
 #include <fstream>
-#include "FilePass.h"
+#include "FilePass.hpp"
 
 class MyFile {
 protected:

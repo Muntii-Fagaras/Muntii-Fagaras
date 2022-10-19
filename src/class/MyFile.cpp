@@ -1,5 +1,4 @@
-#pragma once
-#include "MyFile.h"
+#include "MyFile.hpp"
 
 // MyFileのコンストラクタ
 MyFile::MyFile() {
