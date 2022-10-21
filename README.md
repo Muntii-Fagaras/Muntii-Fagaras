@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/55316963/195095585-4b8619f5-6dd3-4a6a-
 ## 動作環境
 
 - Windows 10/11
-- Linux 2.6　以降
+- Linux 5.0　以降
 
 ## 使い方
 
