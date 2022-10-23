@@ -2,7 +2,8 @@ MAKEFLAGS=-j8
 MAKEFLAGS+= --no-builtin-rules
 
 .SUFFIXES:	#サフィックス無効
-CC:=g++ #g++でビルドする
+CC_gcc:=g++ #g++でビルドする
+CC_clang:=clang++ #clang++でビルドする
 
 CFLAGS:= -ggdb3 #デバッグ情報最大化(GDB用)
 CFLAGS:= -Wall #エラーを全部出す
@@ -43,15 +44,18 @@ DEFINE=SDL_MAIN_HANDLED
 
 LDFLAGS:= -Wl,-Bstatic -lSDL2main -lSDL2 -lSDL2_ttf  -lSDL2_mixer  \
 -lSDL2_image -Wl,-Bdynamic -luser32 -lgdi32 -lwinmm -ldxguid 
-LDFLAGS+=   -mwindows -uuid  -lm -lpthread  -oleaut64 -ole64  \
--user64  -lgdi32 -lsetupapi -lhid -lole32  -limm32 -lversion -lwinmm -lOpenGL32 \
+LDFLAGS+=   -mwindows -lm -lpthread  -ole64  \
+-lgdi32 -lsetupapi -lhid -lole32  -limm32 -lversion -lwinmm  \
 -lshell32 -limagehlp -ldinput8 -ldxguid -ldxerr8 -luser32 -l oleaut32 -luuid \
 -lrpcrt4 -static -static-libgcc -static-libstdc++ -lstdc++ \
--lwinpthread 
+-lwinpthread -lpthread
 
 $(TARGET):
 	$(CC) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIR) $(LDFLAGS) -D$(DEFINE)
 	mv le64.exe gui-base.exe
 C_drive:
-	$(CC) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG
+	$(CC_gcc) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG
+	move le64.exe gui-base.exe
+C_drive_clang:
+	$(CC_clang) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG
 	move le64.exe gui-base.exe
