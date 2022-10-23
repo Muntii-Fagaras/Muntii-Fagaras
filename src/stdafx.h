@@ -2,29 +2,29 @@
 #pragma once
 // GCCの時のコンパイルオプション
 #ifdef __ANDROID__
-#include <SDL.h>
-#include <SDL_ttf.h>
-#include <SDL_image.h>
-#include <SDL_mixer.h>
+	#include <SDL.h>
+	#include <SDL_image.h>
+	#include <SDL_mixer.h>
+	#include <SDL_ttf.h>
 #elif __linux__
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_ttf.h>
-#include <SDL2/SDL_image.h>
-#include <SDL2/SDL_mixer.h>
+	#include <SDL2/SDL.h>
+	#include <SDL2/SDL_image.h>
+	#include <SDL2/SDL_mixer.h>
+	#include <SDL2/SDL_ttf.h>
 #elif __GNUC__
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_ttf.h>
-#include <SDL2/SDL_image.h>
-#include <SDL2/SDL_mixer.h>
+	#include <SDL2/SDL.h>
+	#include <SDL2/SDL_image.h>
+	#include <SDL2/SDL_mixer.h>
+	#include <SDL2/SDL_ttf.h>
 #endif
 // MSVCの時のコンパイルオプション
 #ifdef _MSC_VER
-#include <SDL.h>
-#include <SDL_ttf.h>
-#include <SDL_image.h>
-#include <SDL_mixer.h>
+	#include <SDL.h>
+	#include <SDL_image.h>
+	#include <SDL_mixer.h>
+	#include <SDL_ttf.h>
 #endif
-#include <vector>
-#include <iostream>
 #include <filesystem>
+#include <iostream>
 #include <string>
+#include <vector>

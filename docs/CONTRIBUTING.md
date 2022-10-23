@@ -93,7 +93,11 @@ git clone https://github.com/312k/gui-base.git
 2. クローンしたら、srcディレクトリに移動します。
 3. srcディレクトリ内の**src.sln**をダブルクリックします。
 4. 起動したら、CTRL+F5でデバッグなしで実行できます。
+## clang-formatの方法
 
+```shell
+$ clang-format *.cpp *.hpp *.h class/*.cpp class/*.hpp
+```
 ## このプロジェクトのソースコードの解説
 
 ### クラスについて
