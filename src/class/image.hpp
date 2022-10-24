@@ -1,7 +1,5 @@
 ﻿#pragma once
-#ifdef __ANDROID__
-	#include "stdafx.h"
-#endif
+
 #include "load_file.hpp"
 class image : public load_file {
    public:

@@ -1,7 +1,5 @@
 ﻿#pragma once
-#ifdef __ANDROID__
-	#include "stdafx.h"
-#endif
+
 #include "button.hpp"
 class checkbox : public button {
    public:

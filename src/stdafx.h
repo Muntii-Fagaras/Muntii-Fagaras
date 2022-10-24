@@ -1,17 +1,7 @@
 ﻿// このファイルは変更される可能性がほぼないヘッダファイルを追記する場所
 #pragma once
 // GCCの時のコンパイルオプション
-#ifdef __ANDROID__
-	#include <SDL.h>
-	#include <SDL_image.h>
-	#include <SDL_mixer.h>
-	#include <SDL_ttf.h>
-#elif __linux__
-	#include <SDL2/SDL.h>
-	#include <SDL2/SDL_image.h>
-	#include <SDL2/SDL_mixer.h>
-	#include <SDL2/SDL_ttf.h>
-#elif __GNUC__
+#ifdef __GNUC__
 	#include <SDL2/SDL.h>
 	#include <SDL2/SDL_image.h>
 	#include <SDL2/SDL_mixer.h>

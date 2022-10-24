@@ -1,7 +1,5 @@
 ﻿#pragma once
-#ifdef __ANDROID__
-	#include "stdafx.h"
-#endif
+
 #include "font.hpp"
 
 class text : public load_file {
