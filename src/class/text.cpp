@@ -7,9 +7,7 @@ text::text(SDL_Renderer* renderer, TTF_Font* font, std::string text_show, int x,
 										  SDL_Color{0, 216, 222, 233});
 		// テキストファイルの生成失敗
 		if (text_surface == NULL) {
-			std::cout << SDL_GetError();
-			SDL_Quit();
-			exit(1);
+			throw std::invalid_argument(SDL_GetError());
 		}
 	// フォントのx座標とy座標
 	rect.x = x;
