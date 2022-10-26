@@ -12,8 +12,8 @@ MyFile::MyFile(FilePass fileName) {
 
 // MyFileのコンストラクタ(stringでそれぞれ指定)
 MyFile::MyFile(std::string directory,
-    std::string name,
-    std::string extension) {
+               std::string name,
+               std::string extension) {
     filePass = FilePass(directory, name, extension);
 }
 

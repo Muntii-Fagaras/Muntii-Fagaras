@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 #include <list>
 #include "MyFile.hpp"
 
 class TextFile : public MyFile
 {
-    using MyFile::MyFile;   // MyFile‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^
+    using MyFile::MyFile;   // MyFileã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 public:
     std::list<std::string> takeOutText();
     bool overwriteText(std::list<std::string> text);
