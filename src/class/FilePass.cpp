@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include "FilePass.hpp"
 // FileNameのコンストラクタ(パスはデフォルト設定)
 FilePass::FilePass() {
@@ -6,15 +5,16 @@ FilePass::FilePass() {
     // SDL_GetPrefPath(const char* org, const char* app) が使えそう
 
     time_t t = time(nullptr);
-    struct tm *lt = localtime(&t);
+    struct tm lt;
+    localtime_s(&lt, &t);
     std::stringstream s;
     
-    s << lt->tm_year + 1900;
-    s << std::setw(2) << std::setfill('0') << lt->tm_mon + 1;
-    s << std::setw(2) << std::setfill('0') << lt->tm_mday;
-    s << std::setw(2) << std::setfill('0') << lt->tm_hour;
-    s << std::setw(2) << std::setfill('0') << lt->tm_min;
-    s << std::setw(2) << std::setfill('0') << lt->tm_sec;
+    s << lt.tm_year + 1900;
+    s << std::setw(2) << std::setfill('0') << lt.tm_mon + 1;
+    s << std::setw(2) << std::setfill('0') << lt.tm_mday;
+    s << std::setw(2) << std::setfill('0') << lt.tm_hour;
+    s << std::setw(2) << std::setfill('0') << lt.tm_min;
+    s << std::setw(2) << std::setfill('0') << lt.tm_sec;
 
     name = s.str(); // 時刻をファイル名とする
     
