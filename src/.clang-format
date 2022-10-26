@@ -1,0 +1,34 @@
+BasedOnStyle: Google
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
+AlignEscapedNewlines: Left
+BreakBeforeBraces: Linux
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 4
+EmptyLineBeforeAccessModifier: LogicalBlock
+IndentCaseBlocks: false
+IndentCaseLabels: true
+IndentPPDirectives: BeforeHash
+IndentWidth: 4
+NamespaceIndentation: All
+PointerAlignment: Right
+ReflowComments: true
+SortIncludes: CaseSensitive
+SortUsingDeclarations: true
+Standard: c++20
+TabWidth: 4
+UseTab: Always
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeWhile: true
+  IndentBraces: true

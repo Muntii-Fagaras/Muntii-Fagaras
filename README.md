@@ -1,6 +1,13 @@
-﻿# gui-baseについて
+
+<div align="center">
+<samp>
+
+# gui-base:sparkles:
 
 [SDL2](https://github.com/libsdl-org/SDL)でGUIのベースを作るプロジェクトです。本プロジェクトはSDL2のUIを提供します。  
+
+</samp>
+</div>
 
 ## 動作デモ
 
@@ -8,15 +15,10 @@
 
 https://user-images.githubusercontent.com/55316963/195095585-4b8619f5-6dd3-4a6a-ada5-68d91cdfc3b6.mp4
 
-### Android
-
-![スクリーンショット 2022-10-09 010140](https://user-images.githubusercontent.com/55316963/194716731-008c94cb-3b05-44e4-b69d-b0d7f6fc03a0.png)
-
 ## 動作環境
 
 - Windows 10/11
-- Linux 2.6　以降
-- Android 10 以降
+- Linux 5.0　以降
 
 ## 使い方
 
@@ -61,6 +63,7 @@ freely, subject to the following restrictions:
    misrepresented as being the original software.
 3. This notice may not be removed or altered from any source distribution.
 </details>
+
 ### HackGen
 
 使用しているフォントは[HackGen](https://github.com/yuru7/HackGen)を使用しています。
