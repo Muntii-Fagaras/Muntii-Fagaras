@@ -7,6 +7,7 @@
 #include "class/checkbox.hpp"
 #include "class/mouse.hpp"
 #include "class/button.hpp"
+#include "class/TextFile.hpp"
 #ifdef __ANDROID__
 int SDL_main(int argc, char** argv) {
 #else
