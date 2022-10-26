@@ -7,6 +7,8 @@
 #include "class/mouse.hpp"
 #include "class/text.hpp"
 #include "class/voice.hpp"
+#include "class/button.hpp"
+#include "class/TextFile.hpp"
 
 int main(int argc, char** argv)
 {
