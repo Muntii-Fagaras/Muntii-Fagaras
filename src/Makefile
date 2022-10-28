@@ -51,7 +51,8 @@ LDFLAGS+=   -mwindows -lm -lpthread  -ole64  \
 -lwinpthread -lpthread
 
 $(TARGET):
-	$(CC) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIR) $(LDFLAGS) -D$(DEFINE)
+	windres icon.rc -O coff -o icon.res	
+	$(CC) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIR) $(LDFLAGS) -D$(DEFINE) icon.res
 	mv le64.exe gui-base.exe
 C_drive:
 	windres icon.rc -O coff -o icon.res	

@@ -19,6 +19,26 @@
 				"isDefault": true
 			},
 			"detail": "コンパイラ: H:/msys2/mingw64/bin/g++.exe"
+		},
+		{
+			"type": "shell",
+			"label": "make_C",
+			"command": "make",
+			"args": [
+				"-B",
+				"C_drive"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "Cドライブでのmake"
 		}
 	]
 }
