@@ -9,6 +9,22 @@
 </samp>
 </div>
 
+## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Recent activity [![Time period](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_badge.svg)](https://repography.com)
+[![Timeline graph](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_timeline.svg)](https://github.com/312k/gui-base/commits)
+[![Issue status graph](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_issues.svg)](https://github.com/312k/gui-base/issues)
+[![Pull request status graph](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_prs.svg)](https://github.com/312k/gui-base/pulls)
+[![Trending topics](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_words.svg)](https://github.com/312k/gui-base/commits)
+[![Top contributors](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_users.svg)](https://github.com/312k/gui-base/graphs/contributors)
+
+## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Structure
+[![Structure](https://images.repography.com/30687787/312k/gui-base/structure/f96650c885281a688a793077761973f2_table.svg)](https://github.com/312k/gui-base)
+
+
+## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Top contributors
+[![Top contributors](https://images.repography.com/30687787/312k/gui-base/top-contributors/b67230c39379bd61f4d6ae004700cf0c_table.svg)](https://github.com/312k/gui-base/graphs/contributors)
+
+
+
 ## 動作デモ
 
 ### Windows 11
