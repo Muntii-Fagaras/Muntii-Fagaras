@@ -1,16 +1,16 @@
-#include "MyFile.hpp"
+ï»¿#include "MyFile.hpp"
 
-// MyFile‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^
+// MyFileã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 MyFile::MyFile() {
     filePass = FilePass();
 }
 
-// MyFile‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^(Filename‚ÅƒpƒX‚ğw’è)
+// MyFileã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(Filenameã§ãƒ‘ã‚¹ã‚’æŒ‡å®š)
 MyFile::MyFile(FilePass fileName) {
     this->filePass = fileName;
 }
 
-// MyFile‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^(string‚Å‚»‚ê‚¼‚êw’è)
+// MyFileã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(stringã§ãã‚Œãã‚ŒæŒ‡å®š)
 MyFile::MyFile(std::string directory,
                std::string name,
                std::string extension) {
@@ -18,13 +18,13 @@ MyFile::MyFile(std::string directory,
 }
 
 void MyFile::errorOpeningFile() {
-    // TODO:ƒGƒ‰[ˆ—
-    // "ƒtƒ@ƒCƒ‹‚ÌƒI[ƒvƒ“‚É¸”s‚µ‚Ü‚µ‚½B"
-    std::cerr << "ƒtƒ@ƒCƒ‹‚ÌƒI[ƒvƒ“‚É¸”s‚µ‚Ü‚µ‚½B" << std::endl;
+    // TODO:ã‚¨ãƒ©ãƒ¼å‡¦ç†
+    // "ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚ªãƒ¼ãƒ—ãƒ³ã«å¤±æ•—ã—ã¾ã—ãŸã€‚"
+    std::cerr << "ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚ªãƒ¼ãƒ—ãƒ³ã«å¤±æ•—ã—ã¾ã—ãŸã€‚" << std::endl;
 }
 
 void MyFile::errorReadingFile() {
-    // TODO:ƒGƒ‰[ˆ—
-    // "ƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B"
-    std::cerr << "ƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B" << std::endl;
+    // TODO:ã‚¨ãƒ©ãƒ¼å‡¦ç†
+    // "ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚"
+    std::cerr << "ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚" << std::endl;
 }

@@ -1,8 +1,8 @@
-#include "FilePass.hpp"
-// FileName‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^(ƒpƒX‚ÍƒfƒtƒHƒ‹ƒgİ’è)
+ï»¿#include "FilePass.hpp"
+// FileNameã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(ãƒ‘ã‚¹ã¯ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆè¨­å®š)
 FilePass::FilePass() {
-    directory = "..\\"; // ƒfƒtƒHƒ‹ƒg‚Ìƒtƒ@ƒCƒ‹•Û‘¶æ
-    // SDL_GetPrefPath(const char* org, const char* app) ‚ªg‚¦‚»‚¤
+    directory = "..\\"; // ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ
+    // SDL_GetPrefPath(const char* org, const char* app) ãŒä½¿ãˆãã†
 
     time_t t = time(nullptr);
     struct tm lt;
@@ -16,39 +16,39 @@ FilePass::FilePass() {
     s << std::setw(2) << std::setfill('0') << lt.tm_min;
     s << std::setw(2) << std::setfill('0') << lt.tm_sec;
 
-    name = s.str(); // ‚ğƒtƒ@ƒCƒ‹–¼‚Æ‚·‚é
+    name = s.str(); // æ™‚åˆ»ã‚’ãƒ•ã‚¡ã‚¤ãƒ«åã¨ã™ã‚‹
     
-    extension = ".txt"; // ƒfƒtƒHƒ‹ƒg‚Ìƒtƒ@ƒCƒ‹Šg’£q
+    extension = ".txt"; // ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ•ã‚¡ã‚¤ãƒ«æ‹¡å¼µå­
 }
 
-// FileName‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^(ƒpƒX‚ğw’è)
+// FileNameã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿(ãƒ‘ã‚¹ã‚’æŒ‡å®š)
 FilePass::FilePass  (std::string directory,
                      std::string name,
                      std::string extension) {
-    this->directory = directory;    // ƒtƒ@ƒCƒ‹•Û‘¶æ
-    this->name      = name;         // ƒtƒ@ƒCƒ‹‚Ì–¼‘O
-    this->extension = extension;    // ƒtƒ@ƒCƒ‹Šg’£q
+    this->directory = directory;    // ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜å…ˆ
+    this->name      = name;         // ãƒ•ã‚¡ã‚¤ãƒ«ã®åå‰
+    this->extension = extension;    // ãƒ•ã‚¡ã‚¤ãƒ«æ‹¡å¼µå­
 }
 
-// ƒfƒBƒŒƒNƒgƒŠ‚ğ•ÏX
+// ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’å¤‰æ›´
 FilePass FilePass::changeDirectory(std::string newDirectory) {
     FilePass newFilePass = FilePass(newDirectory, name, extension);
     return newFilePass;
 }
 
-// ƒtƒ@ƒCƒ‹‚Ì–¼‘O‚ğ•ÏX
+// ãƒ•ã‚¡ã‚¤ãƒ«ã®åå‰ã‚’å¤‰æ›´
 FilePass FilePass::changeName(std::string newName) {
     FilePass newFilePass = FilePass(directory, newName, extension);
     return newFilePass;
 }
 
-// Šg’£q‚ğ•ÏX
+// æ‹¡å¼µå­ã‚’å¤‰æ›´
 FilePass FilePass::changeExtension(std::string newExtension) {
     FilePass newFilePass = FilePass(directory, name, newExtension);
     return newFilePass;
 }
 
-// ƒtƒ@ƒCƒ‹‚ÌƒpƒX‚ğæ“¾
+// ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‘ã‚¹ã‚’å–å¾—
 std::string FilePass::getPass() {
     std::string pass = directory + name + extension;
     return pass;
