@@ -5,9 +5,9 @@ MyFile::MyFile() {
     filePass = FilePass();
 }
 
-// MyFileのコンストラクタ(Filenameでパスを指定)
-MyFile::MyFile(FilePass fileName) {
-    this->filePass = fileName;
+// MyFileのコンストラクタ(FilePassでパスを指定)
+MyFile::MyFile(FilePass filePass) {
+    this->filePass = filePass;
 }
 
 // MyFileのコンストラクタ(stringでそれぞれ指定)
@@ -20,11 +20,11 @@ MyFile::MyFile(std::string directory,
 void MyFile::errorOpeningFile() {
     // TODO:エラー処理
     // "ファイルのオープンに失敗しました。"
-    std::cerr << "ファイルのオープンに失敗しました。" << std::endl;
+    std::cout << "ファイルのオープンに失敗しました。" << std::endl;
 }
 
 void MyFile::errorReadingFile() {
     // TODO:エラー処理
     // "ファイルの読み込みに失敗しました。"
-    std::cerr << "ファイルの読み込みに失敗しました。" << std::endl;
+    std::cout << "ファイルの読み込みに失敗しました。" << std::endl;
 }

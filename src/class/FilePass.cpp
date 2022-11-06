@@ -1,5 +1,5 @@
 ﻿#include "FilePass.hpp"
-// FileNameのコンストラクタ(パスはデフォルト設定)
+// FilePassのコンストラクタ(パスはデフォルト設定)
 FilePass::FilePass() {
     directory = "..\\"; // デフォルトのファイル保存先
     // SDL_GetPrefPath(const char* org, const char* app) が使えそう
@@ -21,13 +21,19 @@ FilePass::FilePass() {
     extension = ".txt"; // デフォルトのファイル拡張子
 }
 
-// FileNameのコンストラクタ(パスを指定)
+// FilePassのコンストラクタ(パスを指定)
 FilePass::FilePass  (std::string directory,
                      std::string name,
                      std::string extension) {
     this->directory = directory;    // ファイル保存先
     this->name      = name;         // ファイルの名前
-    this->extension = extension;    // ファイル拡張子
+
+    if (name[0] == '.') {
+        this->extension = extension;    // ファイル拡張子
+    }
+    else {
+        this->extension = ".txt";
+    }
 }
 
 // ディレクトリを変更
