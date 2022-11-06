@@ -1,30 +1,27 @@
-#include "MyFile.hpp"
+﻿#include "MyFile.hpp"
 
-// MyFile�̃R���X�g���N�^
-MyFile::MyFile() {
-    filePass = FilePass();
+// MyFileのコンストラクタ
+MyFile::MyFile() { filePass = FilePass(); }
+
+// MyFileのコンストラクタ(Filenameでパスを指定)
+MyFile::MyFile(FilePass fileName) { this->filePass = fileName; }
+
+// MyFileのコンストラクタ(stringでそれぞれ指定)
+MyFile::MyFile(std::string directory, std::string name, std::string extension)
+{
+	filePass = FilePass(directory, name, extension);
 }
 
-// MyFile�̃R���X�g���N�^(Filename�Ńp�X���w��)
-MyFile::MyFile(FilePass fileName) {
-    this->filePass = fileName;
+void MyFile::errorOpeningFile()
+{
+	// TODO:エラー処理
+	// "ファイルのオープンに失敗しました。"
+	std::cerr << "ファイルのオープンに失敗しました。" << std::endl;
 }
 
-// MyFile�̃R���X�g���N�^(string�ł��ꂼ��w��)
-MyFile::MyFile(std::string directory,
-               std::string name,
-               std::string extension) {
-    filePass = FilePass(directory, name, extension);
-}
-
-void MyFile::errorOpeningFile() {
-    // TODO:�G���[����
-    // "�t�@�C���̃I�[�v���Ɏ��s���܂����B"
-    std::cerr << "�t�@�C���̃I�[�v���Ɏ��s���܂����B" << std::endl;
-}
-
-void MyFile::errorReadingFile() {
-    // TODO:�G���[����
-    // "�t�@�C���̓ǂݍ��݂Ɏ��s���܂����B"
-    std::cerr << "�t�@�C���̓ǂݍ��݂Ɏ��s���܂����B" << std::endl;
+void MyFile::errorReadingFile()
+{
+	// TODO:エラー処理
+	// "ファイルの読み込みに失敗しました。"
+	std::cerr << "ファイルの読み込みに失敗しました。" << std::endl;
 }

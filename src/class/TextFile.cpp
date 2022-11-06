@@ -1,46 +1,48 @@
 #include "TextFile.hpp"
 
-// ƒtƒ@ƒCƒ‹‚©‚çƒeƒLƒXƒg‚ğæ‚èo‚·
-std::list<std::string> TextFile::takeOutText() {
-    // ƒtƒ@ƒCƒ‹‚ÌƒpƒX‚ğæ“¾
-    std::string pass = filePass.getPass();
+// ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ãƒ†ã‚­ã‚¹ãƒˆã‚’å–ã‚Šå‡ºã™
+std::list<std::string> TextFile::takeOutText()
+{
+	// ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‘ã‚¹ã‚’å–å¾—
+	std::string pass = filePass.getPass();
 
-    // “Ç‚İ‚ñ‚¾ƒeƒLƒXƒg‚ğ•Û‘¶‚·‚éstringŒ^‚ÌƒŠƒXƒg
-    std::list<std::string> text;
+	// èª­ã¿è¾¼ã‚“ã ãƒ†ã‚­ã‚¹ãƒˆã‚’ä¿å­˜ã™ã‚‹stringå‹ã®ãƒªã‚¹ãƒˆ
+	std::list<std::string> text;
 
-    // ƒtƒ@ƒCƒ‹‚ğŠJ‚­(ifstream‚Í“Ç‚İ‚İê—p)
-    std::ifstream ifs = std::ifstream(pass);
-    if (!ifs) {
-        errorOpeningFile();
-        return text;
-    }
+	// ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã(ifstreamã¯èª­ã¿è¾¼ã¿å°‚ç”¨)
+	std::ifstream ifs = std::ifstream(pass);
+		if (!ifs) {
+			errorOpeningFile();
+			return text;
+		}
 
-    // 1s‚¸‚Â“Ç‚İ‚Ş
-    std::string buffer;
-    while (std::getline(ifs, buffer)) {
-        text.push_back(buffer);
-    }
+	// 1è¡Œãšã¤èª­ã¿è¾¼ã‚€
+	std::string buffer;
+		while (std::getline(ifs, buffer)) {
+			text.push_back(buffer);
+		}
 
-    return text;
+	return text;
 }
 
-// ƒtƒ@ƒCƒ‹‚ÉƒeƒLƒXƒg‚ğã‘‚«‚·‚é
-// ƒtƒ@ƒCƒ‹‚ª‚È‚¢ê‡‚ÍV‚µ‚­ì¬‚³‚ê‚é
-bool TextFile::overwriteText(std::list<std::string> text) {
-    // ƒtƒ@ƒCƒ‹‚ÌƒpƒX‚ğæ“¾
-    std::string pass = filePass.getPass();
-    
-    // ƒtƒ@ƒCƒ‹‚ğŠJ‚­(ofstream‚Í‘‚«‚İê—p)
-    std::ofstream ofs = std::ofstream(pass);
-    if (!ofs) {
-        errorOpeningFile();
-        return false;
-    }
+// ãƒ•ã‚¡ã‚¤ãƒ«ã«ãƒ†ã‚­ã‚¹ãƒˆã‚’ä¸Šæ›¸ãã™ã‚‹
+// ãƒ•ã‚¡ã‚¤ãƒ«ãŒãªã„å ´åˆã¯æ–°ã—ãä½œæˆã•ã‚Œã‚‹
+bool TextFile::overwriteText(std::list<std::string> text)
+{
+	// ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‘ã‚¹ã‚’å–å¾—
+	std::string pass = filePass.getPass();
 
-    // 1s‚¸‚Â‘‚«‚Ş
-    for (std::string x : text) {
-        ofs << x << std::endl;
-    }
+	// ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã(ofstreamã¯æ›¸ãè¾¼ã¿å°‚ç”¨)
+	std::ofstream ofs = std::ofstream(pass);
+		if (!ofs) {
+			errorOpeningFile();
+			return false;
+		}
 
-    return true;
+		// 1è¡Œãšã¤æ›¸ãè¾¼ã‚€
+		for (std::string x : text) {
+			ofs << x << std::endl;
+		}
+
+	return true;
 }
