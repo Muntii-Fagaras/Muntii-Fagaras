@@ -57,7 +57,17 @@ $(TARGET):
 C_drive:
 	windres icon.rc -O coff -o icon.res	
 	$(CC_gcc) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG icon.res
-	move le64.exe gui-base.exe
+	move le64.exe gui-base.exe > nul
 C_drive_clang:
 	$(CC_clang) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG
-	move le64.exe gui-base.exe
+	move le64.exe gui-base.exe > nul
+
+C_drive_Clion:
+	windres icon.rc -O coff -o icon.res
+	$(CC_gcc) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG icon.res
+	move le64.exe gui-base.exe > nul
+	.\gui-base.exe
+all:
+	C_drive_Clion
+clean:
+	del gui-base.exe > nul
