@@ -1,22 +1,19 @@
-#pragma once
+ï»¿#pragma once
+#include <iomanip>
 #include <iostream>
 #include <string>
-#include <iomanip>
 
-class FilePass
-{
-private:
-    std::string directory;  // ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ
-    std::string name;       // ƒtƒ@ƒCƒ‹‚Ì–¼‘O
-    std::string extension;  // ƒtƒ@ƒCƒ‹‚ÌŠg’£q
+class FilePass {
+   private:
+	std::string directory;	// ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
+	std::string name;		// ãƒ•ã‚¡ã‚¤ãƒ«ã®åå‰
+	std::string extension;	// ãƒ•ã‚¡ã‚¤ãƒ«ã®æ‹¡å¼µå­
 
-public:
-    FilePass();
-    FilePass(std::string directory,
-             std::string name,
-             std::string extension);
-    FilePass changeDirectory(std::string newDirectory);
-    FilePass changeName     (std::string newName);
-    FilePass changeExtension(std::string newExtension);
-    std::string getPass();
+   public:
+	FilePass();
+	FilePass(std::string directory, std::string name, std::string extension);
+	FilePass	changeDirectory(std::string newDirectory);
+	FilePass	changeName(std::string newName);
+	FilePass	changeExtension(std::string newExtension);
+	std::string getPass();
 };

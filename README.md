@@ -1,19 +1,34 @@
-
 <div align="center">
 <samp>
 
-# gui-base:sparkles:
+# gui-base:sparkles
 
 [SDL2](https://github.com/libsdl-org/SDL)でGUIのベースを作るプロジェクトです。本プロジェクトはSDL2のUIを提供します。  
 
 </samp>
 </div>
 
+## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Recent activity [![Time period](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_badge.svg)](https://repography.com)
+
+[![Timeline graph](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_timeline.svg)](https://github.com/312k/gui-base/commits)
+[![Issue status graph](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_issues.svg)](https://github.com/312k/gui-base/issues)
+[![Pull request status graph](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_prs.svg)](https://github.com/312k/gui-base/pulls)
+[![Trending topics](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_words.svg)](https://github.com/312k/gui-base/commits)
+[![Top contributors](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_users.svg)](https://github.com/312k/gui-base/graphs/contributors)
+
+## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Structure
+
+[![Structure](https://images.repography.com/30687787/312k/gui-base/structure/f96650c885281a688a793077761973f2_table.svg)](https://github.com/312k/gui-base)
+
+## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Top contributors
+
+[![Top contributors](https://images.repography.com/30687787/312k/gui-base/top-contributors/b67230c39379bd61f4d6ae004700cf0c_table.svg)](https://github.com/312k/gui-base/graphs/contributors)
+
 ## 動作デモ
 
 ### Windows 11
 
-https://user-images.githubusercontent.com/55316963/195095585-4b8619f5-6dd3-4a6a-ada5-68d91cdfc3b6.mp4
+<https://user-images.githubusercontent.com/55316963/195095585-4b8619f5-6dd3-4a6a-ada5-68d91cdfc3b6.mp4>
 
 ## 動作環境
 
@@ -62,6 +77,7 @@ freely, subject to the following restrictions:
 2. Altered source versions must be plainly marked as such, and must not be
    misrepresented as being the original software.
 3. This notice may not be removed or altered from any source distribution.
+
 </details>
 
 ### HackGen
@@ -171,6 +187,23 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
 </details>
 
+### .gitattributes
+
+.gitattributesについては、[alexkaratarakis/gitattributes](https://github.com/alexkaratarakis/gitattributes)を改変したものを使用しています。
+[MIT License](https://github.com/alexkaratarakis/gitattributes/blob/master/LICENSE.md)でライセンスされています。  
+Copyright (c) 2015 Alexander Karatarakis
+<details>
+<summary>ライセンス</summary>
+The MIT License (MIT)
+
+Copyright (c) 2015 Alexander Karatarakis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the righst to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</details>
 ### 使用している画像
 
 本ソフトウェアは、[Unsplash](https://unsplash.com/ja)で提供されている画像を使用しています。

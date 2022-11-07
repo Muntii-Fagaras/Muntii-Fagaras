@@ -1,4 +1,5 @@
 ﻿// クラスファイルのヘッダファイル
+#include "class/TextFile.hpp"
 #include "class/button.hpp"
 #include "class/checkbox.hpp"
 #include "class/font.hpp"
@@ -7,8 +8,6 @@
 #include "class/mouse.hpp"
 #include "class/text.hpp"
 #include "class/voice.hpp"
-#include "class/button.hpp"
-#include "class/TextFile.hpp"
 
 int main(int argc, char** argv)
 {
@@ -34,9 +33,8 @@ int main(int argc, char** argv)
 			SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
 			// 背景を黒にする
 			SDL_SetRenderDrawColor(renderer, 46, 52, 64, 255);
-
-			int tab_count = 0;
-			std::string window_title_at_setting = "gui-baseの設定画面 表示数:";
+			int			tab_count				= 0;
+			std::string window_title_at_setting = "gui-base 設定画面 表示数:";
 			// ウィンドウのタイトル名変更
 			SDL_SetWindowTitle(
 				window,

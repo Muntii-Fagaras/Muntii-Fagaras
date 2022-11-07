@@ -1,0 +1,44 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "making",
+			"command": "H:/msys2/usr/bin/make",
+			"args": [
+				"-B"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "コンパイラ: H:/msys2/mingw64/bin/g++.exe"
+		},
+		{
+			"type": "shell",
+			"label": "make_C",
+			"command": "make",
+			"args": [
+				"-B",
+				"C_drive"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "Cドライブでのmake"
+		}
+	]
+}
