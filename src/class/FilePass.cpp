@@ -1,4 +1,5 @@
-﻿#include "FilePass.hpp"
+#include "FilePass.hpp"
+
 // FilePassのコンストラクタ(パスはデフォルト設定)
 FilePass::FilePass() {
     directory = "..\\"; // デフォルトのファイル保存先

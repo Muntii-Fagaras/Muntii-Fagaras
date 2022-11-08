@@ -1,4 +1,4 @@
-﻿#include "TextFile.hpp"
+#include "TextFile.hpp"
 
 // ファイルからテキストを取り出す
 std::list<std::string> TextFile::takeOutText() {

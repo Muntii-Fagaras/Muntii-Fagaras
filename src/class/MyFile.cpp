@@ -1,4 +1,4 @@
-﻿#include "MyFile.hpp"
+#include "MyFile.hpp"
 
 // MyFileのコンストラクタ
 MyFile::MyFile() {

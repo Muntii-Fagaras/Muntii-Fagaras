@@ -1,4 +1,4 @@
-﻿#include "mouse.hpp"
+#include "mouse.hpp"
 
 bool mouse::is_cursor_in_box_with_click(int xl, int yu, int xr, int yd)
 {
@@ -29,6 +29,7 @@ bool mouse::is_cursor_in_box_with_click(int xl, int yu, int xr, int yd)
 		}
 	return false;
 }
+
 void mouse::update_cursor(std::string mouse_cursor)
 {
 		if (mouse_cursor == "HAND") {

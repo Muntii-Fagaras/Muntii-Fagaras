@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <fstream>
 #include "FilePass.hpp"
 
@@ -15,4 +15,3 @@ public:
     MyFile(std::string directory,
            std::string name,
            std::string extension);
-};
