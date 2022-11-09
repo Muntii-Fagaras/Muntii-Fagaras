@@ -11,8 +11,7 @@ public:
     FilePass filePass;
 
     MyFile();
-    MyFile(FilePass fileName);
+    MyFile(FilePass filePass);
     MyFile(std::string directory,
            std::string name,
            std::string extension);
-};
