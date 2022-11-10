@@ -7,6 +7,8 @@ class mouse {
    private:
 	// クリックボタン
 	Uint32 buttons;
+	// 終了イベント
+	SDL_Event left_clicked_event;
 	// カーソル
 	SDL_Cursor* cursor	= nullptr;
 	int			x_state = 0;
@@ -16,8 +18,7 @@ class mouse {
 	void update_cursor(std::string cursor_state);
 	bool clicked_left_down(SDL_Event left_clicked_event);
 	bool clicked_left_up(SDL_Event left_clicked_event);
-	// 終了イベント
-	SDL_Event left_clicked_event;
+
 
    public:
 	// 仮想的な四角形の中にマウスカーソルがあるかどうかを判断するメンバ関数

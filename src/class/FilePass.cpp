@@ -1,8 +1,8 @@
-#include "FilePass.hpp"
+﻿#include "FilePass.hpp"
 
 // FilePassのコンストラクタ(パスはデフォルト設定)
 FilePass::FilePass() {
-    directory = "..\\"; // デフォルトのファイル保存先
+    directory = "./"; // デフォルトのファイル保存先
     // SDL_GetPrefPath(const char* org, const char* app) が使えそう
 
     time_t t = time(nullptr);

@@ -1,4 +1,4 @@
-#include "mouse.hpp"
+﻿#include "mouse.hpp"
 
 bool mouse::is_cursor_in_box_with_click(int xl, int yu, int xr, int yd)
 {

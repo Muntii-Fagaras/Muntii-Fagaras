@@ -9,7 +9,7 @@
 #include "class/text.hpp"
 #include "class/voice.hpp"
 
-int main(int argc, char** argv)
+int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 {
 	// ウィンドウ
 	SDL_Window* window = nullptr;
@@ -33,13 +33,12 @@ int main(int argc, char** argv)
 			SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
 			// 背景を黒にする
 			SDL_SetRenderDrawColor(renderer, 46, 52, 64, 255);
-			int			tab_count				= 0;
-			std::string window_title_at_setting = "gui-base 設定画面 表示数:";
+			std::string window_title_at_setting = "gui-base 設定画面";
 			// ウィンドウのタイトル名変更
 			SDL_SetWindowTitle(
 				window,
-				(window_title_at_setting + std::to_string(tab_count)).c_str());
-				// メインループ
+				(window_title_at_setting).c_str());
+			// メインループ
 				while (1) {
 					// 背景をクリア
 					SDL_RenderClear(renderer);
@@ -51,6 +50,7 @@ int main(int argc, char** argv)
 					// 画面に反映させる
 					SDL_RenderPresent(renderer);
 					SDL_Delay(10);
+
 				}
 			//  ウィンドウを解放する
 			SDL_DestroyWindow(window);
@@ -65,5 +65,6 @@ int main(int argc, char** argv)
 									 exception.what(), window);
 			// SDL2を終了する
 			SDL_Quit();
+			return 0;
 		}
 }

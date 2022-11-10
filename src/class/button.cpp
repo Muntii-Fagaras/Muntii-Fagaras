@@ -9,7 +9,6 @@ button::button(std::vector<std::string> image_path, SDL_Renderer* renderer,
 		}
 	// falseの時は未チェック、trueの時はチェック
 	uncheck.load(image_path.at(0), renderer, x, y);
-	checked.load(image_path.at(1), renderer, x, y);
 }
 
 button::~button()
