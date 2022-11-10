@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #ifdef __GNUC__
 	#include "../stdafx.h"
