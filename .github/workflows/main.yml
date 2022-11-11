@@ -1,0 +1,17 @@
+on: [ pull_request ]
+
+jobs:
+  test-SDL2:
+    name: SDL2 build test
+    runs-on: windows-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: xmake
+        uses: xmake-io/github-action-setup-xmake@v1
+        with:
+            xmake-version: latest
+
+      - run: |
+          cd src
+          xmake -y
