@@ -1,4 +1,4 @@
-# 貢献の方法
+﻿# 貢献の方法
 
 ## このプロジェクトのビルド方法
 
@@ -103,3 +103,10 @@ $ clang-format *.cpp *.hpp *.h class/*.cpp class/*.hpp
 ### クラスについて
 
 クラスの使用方法については、class_desc内のファイルをご覧ください。
+
+#### Visual Studio Code編
+本プロジェクトは、Visual Studio Codeを使ってもビルドができます。  
+1. msys2からgccとmakeをインストールする。
+　　本プロジェクトではgccとmakeを使います。
+2. src直下をVisual Studio Codeのプロジェクトに追加してください。  
+3. CTRL+ALT+F5キーでビルドができます。

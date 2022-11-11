@@ -1,7 +1,7 @@
-<div align="center">
+﻿<div align="center">
 <samp>
 
-# gui-base:sparkles
+# gui-base:sparkles:
 
 [SDL2](https://github.com/libsdl-org/SDL)でGUIのベースを作るプロジェクトです。本プロジェクトはSDL2のUIを提供します。  
 
