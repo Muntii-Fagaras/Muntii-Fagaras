@@ -7,8 +7,11 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
-      - name: Add msbuild to PATH
-        uses: microsoft/setup-msbuild@v1.0.2
+      - name: xmake
+        uses: xmake-io/github-action-setup-xmake@v1
+        with:
+            xmake-version: latest
 
       - run: |
-          msbuild src/src.sln
+          cd src
+          xmake -y
