@@ -8,6 +8,17 @@
 </samp>
 </div>
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/312k/gui-base/test?style=flat-square)
+![GitHub repo file count](https://img.shields.io/github/directory-file-count/312k/gui-base?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/312k/gui-base?style=flat-square)
+![Lines of code](https://img.shields.io/tokei/lines/github/312k/gui-base)
+![GitHub issues](https://img.shields.io/github/issues/312k/gui-base)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/312k/gui-base)
+![GitHub watchers](https://img.shields.io/github/watchers/312k/gui-base?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/312k/gui-base?style=social)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/312k/gui-base)
+![GitHub last commit](https://img.shields.io/github/last-commit/312k/gui-base)
+
 ## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Recent activity [![Time period](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_badge.svg)](https://repography.com)
 
 [![Timeline graph](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_timeline.svg)](https://github.com/312k/gui-base/commits)
@@ -23,12 +34,6 @@
 ## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Top contributors
 
 [![Top contributors](https://images.repography.com/30687787/312k/gui-base/top-contributors/b67230c39379bd61f4d6ae004700cf0c_table.svg)](https://github.com/312k/gui-base/graphs/contributors)
-
-## 動作デモ
-
-### Windows 11
-
-<https://user-images.githubusercontent.com/55316963/195095585-4b8619f5-6dd3-4a6a-ada5-68d91cdfc3b6.mp4>
 
 ## 動作環境
 
@@ -204,6 +209,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </details>
+   
 ### 使用している画像
 
 本ソフトウェアは、[Unsplash](https://unsplash.com/ja)で提供されている画像を使用しています。

@@ -1,3 +1,4 @@
+name: test
 on: [ pull_request ]
 
 jobs:
@@ -6,7 +7,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: xmake
         uses: xmake-io/github-action-setup-xmake@v1
         with:
