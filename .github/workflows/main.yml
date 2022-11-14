@@ -9,8 +9,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
       - name: problemcheck
-         run: |
-           echo "::add-matcher::.github/c-problem-matcher.json"
+         run:echo "::add-matcher::.github/c-problem-matcher.json"
       - name: xmake
         uses: xmake-io/github-action-setup-xmake@v1
         with:
