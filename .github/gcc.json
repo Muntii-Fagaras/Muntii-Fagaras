@@ -4,14 +4,13 @@
       "owner": "gui-base",  
       "pattern": [
         {
-                    "regexp": "^(?:\\s+\\d+\\>)?([^\\s].*)\\((\\d+),?(\\d+)?(?:,\\d+,\\d+)?\\)\\s*:\\s+(Error|warning|info)\\s+(\\w{1,2}\\d+)\\s*:\\s*(.*)$",
-
+          "regexp": "^(?:\\s+\\d+\\>)?([^\\s].*)\\((\\d+),?(\\d+)?(?:,\\d+,\\d+)?\\)\\s*:\\s+(error|warning|info)\\s+(\\w{1,2}\\d+)\\s*:\\s*(.*)$",
           "file": 1,
           "line": 2,
           "column": 3,
           "severity": 4,
           "code": 5,
-                    "message": 6
+          "message": 6
         }
       ]
     }
