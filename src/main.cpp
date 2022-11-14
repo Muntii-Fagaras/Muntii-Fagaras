@@ -1,5 +1,3 @@
-j
-
 // クラスファイルのヘッダファイル
 #include "class/TextFile.hpp"
 #include "class/button.hpp"
