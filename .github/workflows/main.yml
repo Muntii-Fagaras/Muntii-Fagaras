@@ -12,8 +12,9 @@ jobs:
         uses: xmake-io/github-action-setup-xmake@v1
         with:
             xmake-version: latest
-
       - run: |
-          echo "::add-matcher::.github/workflows/c-problem-matcher.json"
           cd src
           xmake -y
+      - name: problemcheck
+        run: echo "::add-matcher::.github/workflows/c-problem-matcher.json"
+   
