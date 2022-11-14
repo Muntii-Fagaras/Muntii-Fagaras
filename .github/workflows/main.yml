@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-      - uses: ammaraskar/gcc-problem-matcher@master
-   
+      - name: checking
+        run: echo "::add-matcher::.github/gcc.json"  
       - name: xmake
         uses: xmake-io/github-action-setup-xmake@v1
         with:
