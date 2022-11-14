@@ -1,16 +1,15 @@
 {
   "problemMatcher": [
     {
-      "owner": "gui-base",
-      "severity": "warning",
+      "owner": "gui-base",  
       "pattern": [
         {
-          "regexp": "(?:fatal )?error:",
+          "regexp": "(?:error)",  
+          "message": 4,  
           "file": 1,
+          "fromPath": 1,
           "line": 2,
-          "column": 3,
-          "message": 5,
-          "code": 4
+          "column": 3
         }
       ]
     }
