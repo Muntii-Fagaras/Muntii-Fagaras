@@ -1,7 +1,7 @@
 {
   "problemMatcher": [
     {
-      "owner": "gui-base",
+      "owner": "xmake",
       "severity": "warning",
       "pattern": [
         {
