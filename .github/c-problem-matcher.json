@@ -4,7 +4,7 @@
       "owner": "gui-base",  
       "pattern": [
         {
-          "regexp": "^\\s*(info|warning|error)\\s•\\s(.*)\\s•\\s(.*):(\\d+):(\\d+)\\s•\\s(.*)$",
+          "regexp": "error",
           "message": 4,  
           "file": 1,
           "fromPath": 1,
