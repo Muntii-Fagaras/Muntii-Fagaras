@@ -1,4 +1,5 @@
-﻿// クラスファイルのヘッダファイル
+﻿
+// クラスファイルのヘッダファイル
 #include "class/TextFile.hpp"
 #include "class/button.hpp"
 #include "class/checkbox.hpp"

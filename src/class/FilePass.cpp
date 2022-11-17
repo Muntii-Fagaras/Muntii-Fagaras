@@ -8,8 +8,9 @@ FilePass::FilePass() {
     time_t t = time(nullptr);
     struct tm lt;
     localtime_s(&lt, &t);
+#if _MSC_VER >= 1930
+
     std::stringstream s;
-    
     s << lt.tm_year + 1900;
     s << std::setw(2) << std::setfill('0') << lt.tm_mon + 1;
     s << std::setw(2) << std::setfill('0') << lt.tm_mday;
@@ -18,7 +19,8 @@ FilePass::FilePass() {
     s << std::setw(2) << std::setfill('0') << lt.tm_sec;
 
     name = s.str(); // 時刻をファイル名とする
-    
+#endif
+
     extension = ".txt"; // デフォルトのファイル拡張子
 }
 
