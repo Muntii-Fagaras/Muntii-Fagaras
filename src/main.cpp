@@ -10,19 +10,10 @@
 #include "class/text.hpp"
 #include "class/voice.hpp"
 
-int test(int i){
-	for(;;){
-		i++;
-		if(i==0){
-		return 0;
-	}
-	}
-}
 int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 {
 	// ウィンドウ
 	SDL_Window* window = nullptr;
-	test(14);
 		try {
 			// 終了イベント
 			SDL_Event exit;
