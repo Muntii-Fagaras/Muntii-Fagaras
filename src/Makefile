@@ -1,5 +1,6 @@
 MAKEFLAGS=-j8
 MAKEFLAGS+= --no-builtin-rules
+.PHONY: all gui-base clean
 
 .SUFFIXES:	#サフィックス無効
 CC_gcc:=g++ #g++でビルドする
