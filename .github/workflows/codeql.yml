@@ -52,7 +52,7 @@ jobs:
     - name: Autobuild
       uses: github/codeql-action/autobuild@v2
       with:
-        working-directory: ./srcs
+        working-directory: srcs
         
 
       # ℹ️ Command-line programs to run using the OS shell.
