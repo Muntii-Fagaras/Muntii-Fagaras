@@ -14,6 +14,11 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 {
 	// ウィンドウ
 	SDL_Window* window = nullptr;
+	int			i	   = 0;
+	for (;;) {
+			i++;
+	}
+	
 		try {
 			// 終了イベント
 			SDL_Event exit;

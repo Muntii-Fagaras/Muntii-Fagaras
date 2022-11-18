@@ -7,8 +7,8 @@ FilePass::FilePass() {
 
     time_t t = time(nullptr);
     struct tm lt;
-#ifdef __MSC_VER__
-    localtime_s(&lt, &t);
+#ifdef _MSC_VER
+	localtime_s(&lt, &t);
 #endif
 #ifdef __GNUC__
     localtime_r(&t, &lt);
