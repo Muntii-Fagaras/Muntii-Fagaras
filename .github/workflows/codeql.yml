@@ -63,14 +63,10 @@ jobs:
 
     #   If the Autobuild fails above, remove it and uncomment the following three lines.
     #   modify them (or add more) to build your code if your project, please refer to the EXAMPLE below for guidance.
-    - name: xmake
-      uses: xmake-io/github-action-setup-xmake@v1
-      with:
-            xmake-version: latest
     - run: |
           cd src
           sudo apt install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
-          xmake -y
+          g++ -o gui-base  -Wall  -Wextra  -Wcast-align  -Wdouble-promotion  -Wconversion  -Weffc++  -Wfloat-equal  -Wlogical-op  -Wmissing-declarations  -Wmissing-include-dirs  -Wold-style-cast  -Wswitch-default  -Wunsafe-loop-optimizations  -Wshadow  -std=c++20  -pipe  stdafx.cpp class/*.cpp main.cpp -lSDL2main -lSDL2 -lSDL2_ttf  -lSDL2_mixer -lSDL2_image   -DSDL_MAIN_HANDLED
 
 
     - name: Perform CodeQL Analysis
