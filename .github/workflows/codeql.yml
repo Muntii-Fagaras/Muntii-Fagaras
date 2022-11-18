@@ -48,7 +48,7 @@ jobs:
       uses: github/codeql-action/init@v2
       with :
             languages: cpp
-
+            queries: security-and-quality	
       # Autobuild attempts to build any compiled languages (C/C++, C#, Go, or Java).
       # If this step fails, then you should remove it and run the build manually (see below).
     - name: Autobuild
