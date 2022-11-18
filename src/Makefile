@@ -51,9 +51,8 @@ LDFLAGS+=   -mwindows -lm -lpthread  -ole64  \
 -lwinpthread -lpthread
 
 $(TARGET):
-	windres icon.rc -O coff -o icon.res	
-	$(CC) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIR) $(LDFLAGS) -D$(DEFINE) icon.res
-	mv le64.exe gui-base.exe
+	g++-11 -o gui-base  -Wall  -Wextra  -Wcast-align  -Wdouble-promotion  -Wconversion  -Weffc++  -Wfloat-equal  -Wlogical-op  -Wmissing-declarations  -Wmissing-include-dirs  -Wold-style-cast  -Wswitch-default  -Wunsafe-loop-optimizations  -Wshadow  -std=c++20  -pipe  stdafx.cpp class/*.cpp main.cpp -lSDL2main -lSDL2 -lSDL2_ttf  -lSDL2_mixer -lSDL2_image   -DSDL_MAIN_HANDLED
+	
 C_drive:
 	windres icon.rc -O coff -o icon.res	
 	$(CC_gcc) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG icon.res
