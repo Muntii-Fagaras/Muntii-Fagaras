@@ -14,6 +14,9 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 {
 	// ウィンドウ
 	SDL_Window* window = nullptr;
+	char		a[10];
+	std::cout << a[10];
+	
 		try {
 			// 終了イベント
 			SDL_Event exit;
