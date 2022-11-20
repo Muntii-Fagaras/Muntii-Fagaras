@@ -23,7 +23,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 				}
 				// Windowの作成、TTF,mixerの初期化
 				if ((window = SDL_CreateWindow(
-						 "gui_base メイン画面", SDL_WINDOWPOS_UNDEFINED,
+						 "Muntii-Fagaras メイン画面", SDL_WINDOWPOS_UNDEFINED,
 						 SDL_WINDOWPOS_UNDEFINED, 1280, 720,
 						 SDL_WINDOW_RESIZABLE)) == nullptr ||
 					TTF_Init() == -1 ||
@@ -34,7 +34,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 			SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
 			// 背景を黒にする
 			SDL_SetRenderDrawColor(renderer, 46, 52, 64, 255);
-			std::string window_title_at_setting = "gui-base 設定画面";
+			std::string window_title_at_setting = "Muntii-Fagaras 設定画面";
 			// ウィンドウのタイトル名変更
 			SDL_SetWindowTitle(
 				window,
