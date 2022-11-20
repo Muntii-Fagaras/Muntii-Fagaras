@@ -1,3 +1,6 @@
 [submodule "src/assets"]
 	path = src/assets
 	url = https://github.com/Muntii-Fagaras/assets.git
+[submodule "src/library"]
+	path = src/library
+	url = https://github.com/Muntii-Fagaras/sdl2.git
