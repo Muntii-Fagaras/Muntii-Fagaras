@@ -1,4 +1,6 @@
 on:
+  push:
+    branches: [ "main" ]
   workflow_run:
     workflows:
       - CodeQL  # Replace with your test workflow's name
