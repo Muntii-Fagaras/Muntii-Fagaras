@@ -29,7 +29,7 @@
 
 ## ビルド方法
 
-CONTRIBUTING.mdをご覧ください。
+(https://muntii-fagaras.github.io/CONTRIBUTING/)[CONTRIBUTING.md]をご覧ください。
 
 ## ライセンス
 
