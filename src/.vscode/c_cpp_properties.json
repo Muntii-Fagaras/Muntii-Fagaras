@@ -4,8 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/SDL2/include/SDL2",
-                "${workspaceFolder}/SDL2_C/include/SDL2"
+                "${workspaceFolder}/library/SDL2/include",
+                "${workspaceFolder}/library/SDL2_C/include"
             ],
             "defines": [
                 "_DEBUG",
@@ -13,7 +13,7 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.17763.0",
-            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
+            "compilerPath": "H:/msys2/mingw64/bin/g++.exe",
             "cStandard": "c17",
             "cppStandard": "c++20",
             "intelliSenseMode": "windows-gcc-x64",

@@ -1,54 +1,26 @@
 ﻿<div align="center">
 <samp>
 
-# gui-base:sparkles:
+# Muntii-Fagaras:sparkles:
 
-[SDL2](https://github.com/libsdl-org/SDL)でGUIのベースを作るプロジェクトです。本プロジェクトはSDL2のUIを提供します。  
+[SDL2](https://github.com/libsdl-org/SDL)でテキストエディタを作るプロジェクトです
 
 </samp>
 </div>
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/312k/gui-base/test?style=flat-square)
-![GitHub repo file count](https://img.shields.io/github/directory-file-count/312k/gui-base?style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/312k/gui-base?style=flat-square)
-![Lines of code](https://img.shields.io/tokei/lines/github/312k/gui-base)
-![GitHub issues](https://img.shields.io/github/issues/312k/gui-base)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/312k/gui-base)
-![GitHub watchers](https://img.shields.io/github/watchers/312k/gui-base?style=social)
-![GitHub Repo stars](https://img.shields.io/github/stars/312k/gui-base?style=social)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/312k/gui-base)
-![GitHub last commit](https://img.shields.io/github/last-commit/312k/gui-base)
-
-## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Recent activity [![Time period](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_badge.svg)](https://repography.com)
-
-[![Timeline graph](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_timeline.svg)](https://github.com/312k/gui-base/commits)
-[![Issue status graph](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_issues.svg)](https://github.com/312k/gui-base/issues)
-[![Pull request status graph](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_prs.svg)](https://github.com/312k/gui-base/pulls)
-[![Trending topics](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_words.svg)](https://github.com/312k/gui-base/commits)
-[![Top contributors](https://images.repography.com/30687787/312k/gui-base/recent-activity/b67230c39379bd61f4d6ae004700cf0c_users.svg)](https://github.com/312k/gui-base/graphs/contributors)
-
-## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Structure
-
-[![Structure](https://images.repography.com/30687787/312k/gui-base/structure/f96650c885281a688a793077761973f2_table.svg)](https://github.com/312k/gui-base)
-
-## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Top contributors
-
-[![Top contributors](https://images.repography.com/30687787/312k/gui-base/top-contributors/b67230c39379bd61f4d6ae004700cf0c_table.svg)](https://github.com/312k/gui-base/graphs/contributors)
-
 ## 動作環境
 
-- Windows 10/11
-- Linux 5.0　以降
+- Windows XP 以降
+- Linux 5.0 以降
 
 ## 使い方
 
-1. gui-baseを起動します。
-2. UI上のアイコンを触ってみたりしてください!!
+1. Muntii-Fagarasを起動します。
 
 ## 特徴
 
 - クロスプラットフォーム
-- 最新のC++20の採用
+- C++17の採用
 
 ## メンバー
 
@@ -57,7 +29,7 @@
 
 ## ビルド方法
 
-CONTRIBUTING.mdをご覧ください。
+(https://muntii-fagaras.github.io/CONTRIBUTING/)[CONTRIBUTING.md]をご覧ください。
 
 ## ライセンス
 
@@ -415,6 +387,7 @@ problem matcherは[ ammaraskar /msvc-problem-matcher](https://github.com/ammaras
    See the License for the specific language governing permissions and
    limitations under the License.
 </details>
+
 ### 使用している画像
 
 本ソフトウェアは、[Unsplash](https://unsplash.com/ja)で提供されている画像を使用しています。

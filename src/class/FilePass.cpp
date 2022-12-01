@@ -10,7 +10,9 @@ FilePass::FilePass() {
 #ifdef _MSC_VER
 	localtime_s(&lt, &t);
 #endif
-#ifdef __GNUC__
+#ifdef __MINGW64__
+	localtime_s(&lt, &t);
+#elif __GNUC__	
     localtime_r(&t, &lt);
 #endif
 #if _MSC_VER >= 1930

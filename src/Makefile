@@ -30,10 +30,10 @@ WORKINGFLAGS:= -ftrapv #オーバーフロー
 WORKINGFLAGS+= -fstack-protector-all #領域外アクセス
 
 
-INC_DIR := -I SDL2/include #インクルードするディレクトリ
-INC_DIR+= -L SDL2/lib 
-INC_DIRC := -I SDL2_C/include #インクルードするディレクトリ
-INC_DIRC+= -L SDL2_C/lib 
+INC_DIR := -I library/SDL2/include #インクルードするディレクトリ
+INC_DIR+= -L library/SDL2/lib 
+INC_DIRC := -I library/SDL2_C/include #インクルードするディレクトリ
+INC_DIRC+= -L library/SDL2_C/lib 
 
 TARGET = gui-base #実行ファイルの名前
 
@@ -57,7 +57,7 @@ $(TARGET):
 C_drive:
 	windres icon.rc -O coff -o icon.res	
 	$(CC_gcc) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG icon.res
-	move le64.exe gui-base.exe > nul
+	mv le64.exe gui-base.exe > nul
 C_drive_clang:
 	$(CC_clang) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG
 	move le64.exe gui-base.exe > nul

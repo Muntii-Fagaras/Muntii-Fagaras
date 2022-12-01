@@ -7,7 +7,7 @@
         {
             "name": "Hドライブでmake",
             "type": "cppdbg",
-            "preLaunchTask": "making", // The name of the task defined above
+            "preLaunchTask": "make_C", // The name of the task defined above
             "request": "launch",
             "program": "${workspaceFolder}/gui-base.exe",
             "args": [],
