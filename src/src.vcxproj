@@ -43,7 +43,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -187,6 +187,7 @@
     <ClCompile Include="class\font.cpp" />
     <ClCompile Include="class\image.cpp" />
     <ClCompile Include="class\load_file.cpp" />
+    <ClCompile Include="class\MainScreen.cpp" />
     <ClCompile Include="class\mouse.cpp" />
     <ClCompile Include="class\MyFile.cpp" />
     <ClCompile Include="class\text.cpp" />
@@ -209,6 +210,7 @@
     <ClInclude Include="class\font.hpp" />
     <ClInclude Include="class\image.hpp" />
     <ClInclude Include="class\load_file.hpp" />
+    <ClInclude Include="class\MainScreen.h" />
     <ClInclude Include="class\mouse.hpp" />
     <ClInclude Include="class\MyFile.hpp" />
     <ClInclude Include="class\text.hpp" />

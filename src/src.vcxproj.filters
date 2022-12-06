@@ -40,6 +40,9 @@
     <ClCompile Include="class\MyFile.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
+    <ClCompile Include="class\MainScreen.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\font.hpp">
@@ -77,6 +80,9 @@
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
     <ClInclude Include="class\FilePass.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\MainScreen.h">
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
   </ItemGroup>
