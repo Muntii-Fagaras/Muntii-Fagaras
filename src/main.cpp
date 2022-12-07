@@ -1,5 +1,5 @@
 ﻿#include "stdafx.h"
-#include "class/MainScreen.h"
+#include "class/MainScreen.hpp"
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 {
@@ -24,17 +24,16 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 
 		// レンダラーを生成
 		renderer = SDL_CreateRenderer(window, -1, 0);
-		// 背景色を黒に設定
-		SDL_SetRenderDrawColor(renderer, 46, 52, 64, 255);
 	}
 	catch (std::runtime_error &exception) {
-		SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "エラーだよっ!",
-								 exception.what(), window);
+		SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
+								 "エラーだよっ!", exception.what(), window);
 		return -1;
 	}
 
-	MainScreen mainscreen = MainScreen(window, renderer);
-	mainscreen.run();
+	// 背景色は黒に設定
+	MainScreen mainscreen = MainScreen(window, renderer, {46, 52, 64, 255});
+	mainscreen.mainRoop();
 	
 	//  ウィンドウを解放する
 	SDL_DestroyWindow(window);

@@ -43,6 +43,12 @@
     <ClCompile Include="class\MainScreen.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
+    <ClCompile Include="class\Tile.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\TileSupportCharactor.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\font.hpp">
@@ -82,7 +88,13 @@
     <ClInclude Include="class\FilePass.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
-    <ClInclude Include="class\MainScreen.h">
+    <ClInclude Include="class\MainScreen.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Tile.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\TileSupportCharactor.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
   </ItemGroup>
