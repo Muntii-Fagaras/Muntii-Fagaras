@@ -28,7 +28,7 @@ MainScreen::~MainScreen()
 	}
 }
 
-int MainScreen::mainRoop()
+int MainScreen::mainLoop()
 {
 		// ƒƒCƒ“ƒ‹[ƒv
 		while (1) {

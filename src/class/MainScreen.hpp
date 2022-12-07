@@ -20,5 +20,5 @@ class MainScreen {
    public:
 	MainScreen(SDL_Window *window, SDL_Renderer *renderer, Color bgColor);
 	~MainScreen();
-	int mainRoop();
+	int mainLoop();
 };

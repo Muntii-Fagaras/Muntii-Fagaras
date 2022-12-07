@@ -33,7 +33,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 
 	// 背景色は黒に設定
 	MainScreen mainscreen = MainScreen(window, renderer, {46, 52, 64, 255});
-	mainscreen.mainRoop();
+	mainscreen.mainLoop();
 	
 	//  ウィンドウを解放する
 	SDL_DestroyWindow(window);
