@@ -9,5 +9,4 @@ class TileSupportCharactor : public Tile {
    public:
 	TileSupportCharactor(SDL_Window *window, SDL_Renderer *renderer);
 	~TileSupportCharactor();
-	int run() override;
 };

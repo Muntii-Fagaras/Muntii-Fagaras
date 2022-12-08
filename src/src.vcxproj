@@ -193,6 +193,7 @@
     <ClCompile Include="class\text.cpp" />
     <ClCompile Include="class\TextFile.cpp" />
     <ClCompile Include="class\Tile.cpp" />
+    <ClCompile Include="class\TileEditSpace.cpp" />
     <ClCompile Include="class\TileSupportCharactor.cpp" />
     <ClCompile Include="class\voice.cpp" />
     <ClCompile Include="main.cpp">
@@ -218,6 +219,7 @@
     <ClInclude Include="class\text.hpp" />
     <ClInclude Include="class\TextFile.hpp" />
     <ClInclude Include="class\Tile.hpp" />
+    <ClInclude Include="class\TileEditSpace.hpp" />
     <ClInclude Include="class\TileSupportCharactor.hpp" />
     <ClInclude Include="class\voice.hpp" />
     <ClInclude Include="resource.h" />

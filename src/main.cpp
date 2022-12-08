@@ -16,6 +16,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 		window = SDL_CreateWindow(
 			"Muntii-Fagaras メイン画面", SDL_WINDOWPOS_UNDEFINED,
 			SDL_WINDOWPOS_UNDEFINED, 1280, 720, SDL_WINDOW_RESIZABLE);
+		//SDL_SetWindowResizable(window, SDL_FALSE);
 
 		if (window == nullptr || TTF_Init() == -1 ||
 			Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) == -1) {
@@ -24,16 +25,15 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 
 		// レンダラーを生成
 		renderer = SDL_CreateRenderer(window, -1, 0);
+		// 背景色は黒に設定
+		MainScreen mainscreen = MainScreen(window, renderer, {46, 52, 64, 255});
+		mainscreen.mainLoop();
 	}
 	catch (std::runtime_error &exception) {
 		SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,
 								 "エラーだよっ!", exception.what(), window);
 		return -1;
 	}
-
-	// 背景色は黒に設定
-	MainScreen mainscreen = MainScreen(window, renderer, {46, 52, 64, 255});
-	mainscreen.mainLoop();
 	
 	//  ウィンドウを解放する
 	SDL_DestroyWindow(window);

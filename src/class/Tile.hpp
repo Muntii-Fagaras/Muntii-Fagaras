@@ -3,7 +3,7 @@
 	#include "../stdafx.h"
 #endif
 
-struct Color
+struct MuntiiColor
 {
 	Uint8 r;
 	Uint8 g;
@@ -17,13 +17,12 @@ class Tile {
 	SDL_Renderer *renderer;
 	SDL_Rect	  area;
 
-	Color baseColor = {0, 0, 0, 0};
+	MuntiiColor baseColor = {0, 0, 0, 0};
 
    public:
 	Tile(SDL_Window *window, SDL_Renderer *renderer);
 	virtual ~Tile();
 	void		 setArea(SDL_Rect area);
-	virtual void setBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a);
-	virtual int	 run();
+	virtual void setBackgroundColor(MuntiiColor color);
 	virtual int	 handleEvent(SDL_Event *event);
 };

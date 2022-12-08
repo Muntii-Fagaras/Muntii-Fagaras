@@ -11,16 +11,23 @@ Tile::~Tile() {}
 void Tile::setArea(SDL_Rect area)
 {
 	this->area = area;
+
+	// •`‰æ—Ìˆæ‚ğƒ^ƒCƒ‹‚Ì—Ìˆæ‚É‚·‚é
+	SDL_RenderSetViewport(renderer, &area);
+	// ƒ^ƒCƒ‹‚Ì”wŒiF
+	SDL_SetRenderDrawColor(renderer, baseColor.r, baseColor.g, baseColor.b,
+						   baseColor.a);
+	// ƒ^ƒCƒ‹‚ğ“h‚è‚Â‚Ô‚·
+	SDL_RenderFillRect(renderer, NULL);
+
+	// ‰æ–Ê‚É”½‰f‚³‚¹‚é
+	SDL_RenderPresent(renderer);
+
+	SDL_Delay(10);
 }
 
-void Tile::setBackgroundColor(Uint8 r, Uint8 g, Uint8 b, Uint8 a)
-{
-	baseColor = {r, g, b, a};
-}
-
-int Tile::run()
-{
-	return 0;
+void Tile::setBackgroundColor(MuntiiColor color) {
+	baseColor = color;
 }
 
 int Tile::handleEvent(SDL_Event *event) { return 0; }

@@ -49,6 +49,9 @@
     <ClCompile Include="class\TileSupportCharactor.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
+    <ClCompile Include="class\TileEditSpace.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\font.hpp">
@@ -95,6 +98,9 @@
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
     <ClInclude Include="class\TileSupportCharactor.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\TileEditSpace.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
   </ItemGroup>
