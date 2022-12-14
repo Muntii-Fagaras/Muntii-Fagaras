@@ -1,20 +1,20 @@
 #include "MainScreen.hpp"
 
-MainScreen::MainScreen(SDL_Window *window, SDL_Renderer *renderer,
-					   MuntiiColor bgColor)
+MainScreen::MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
+					   SDL_Renderer *renderer, SDL_Color bgColor)
 {
 	this->window   = window;
+	this->windowID = windowID;
+	this->eventPtr = eventPtr;
 	this->renderer = renderer;
 	this->bgColor  = bgColor;
-
-	windowID = SDL_GetWindowID(window);
 
 	// タイルを生成
 	TileEditSpace		 *tileEditSpace = new TileEditSpace(window, renderer);
 	TileSupportCharactor *tileSupportCharactor =
 		new TileSupportCharactor(window, renderer);
 
-	// タイルをリストに追加
+	// タイルをマップに追加
 	tiles.insert(std::make_pair("editSpace", tileEditSpace));
 	tiles.insert(std::make_pair("supportCharactor", tileSupportCharactor));
 
@@ -24,36 +24,10 @@ MainScreen::MainScreen(SDL_Window *window, SDL_Renderer *renderer,
 
 MainScreen::~MainScreen()
 {
-	// タイルを破棄
-	for (std::pair<const char *, Tile *> object : tiles) {
-		delete object.second;
-	}
-}
-
-int MainScreen::mainLoop()
-{
-	// メインループ イベントを処理
-	while (1) {
-		SDL_PollEvent(&event);
-		switch (event.type) {
-			case SDL_QUIT:	// 「閉じる」ボタンで終了
-				return 0;
-				break;
-			case SDL_WINDOWEVENT:
-				if (event.window.windowID == windowID) {
-					switch (event.window.event) {
-						case SDL_WINDOWEVENT_SIZE_CHANGED:
-							putTiles(event.window.data1, event.window.data2);
-							break;
-						case SDL_WINDOWEVENT_CLOSE:
-							event.type = SDL_QUIT;
-							SDL_PushEvent(&event);
-							break;
-					}
-				}
-				break;
+		// タイルを破棄
+		for (std::pair<const char *, Tile *> object : tiles) {
+			delete object.second;
 		}
-	}
 }
 
 void MainScreen::putTiles()
@@ -69,8 +43,27 @@ void MainScreen::putTiles(int winW, int winH)
 						   bgColor.a);
 	SDL_RenderClear(renderer);
 
-	tiles.at("editSpace")
-		->setArea({0, 50, winW / 5 * 4, winH});
+	tiles.at("editSpace")->put(SDL_Rect{0, 50, winW / 5 * 4, winH});
 	tiles.at("supportCharactor")
-		->setArea({winW / 5 * 4, winH / 3 * 2, winW / 5, winH / 3});
+		->put(SDL_Rect{winW / 5 * 4, winH / 3 * 2, winW / 5, winH / 3});
+}
+
+void MainScreen::handleEvent()
+{
+	switch (eventPtr->type) {
+		case SDL_WINDOWEVENT:
+			if (eventPtr->window.windowID == windowID) {
+				switch (eventPtr->window.event) {
+					case SDL_WINDOWEVENT_SIZE_CHANGED:
+						putTiles(eventPtr->window.data1,
+									eventPtr->window.data2);
+						break;
+					case SDL_WINDOWEVENT_CLOSE:
+						eventPtr->type = SDL_QUIT;
+						SDL_PushEvent(eventPtr);
+						break;
+				}
+			}
+			break;
+	}
 }

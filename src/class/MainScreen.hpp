@@ -3,8 +3,8 @@
 #ifdef __GNUC__
 	#include "../stdafx.h"
 #endif
-#include "TileEditSpace.hpp"
-#include "TileSupportCharactor.hpp"
+#include "Tile/TileEditSpace.hpp"
+#include "Tile/TileSupportCharactor.hpp"
 
 class MainScreen {
    private:
@@ -12,19 +12,21 @@ class MainScreen {
 	SDL_Window *window = nullptr;
 	Uint32		windowID;
 	// イベント
-	SDL_Event event;
+	SDL_Event *eventPtr;
 	// レンダラー
 	SDL_Renderer *renderer;
 	// タイルのマップ
 	std::map<const char *, Tile *> tiles;
 	// 背景色
-	MuntiiColor bgColor;
+	SDL_Color bgColor;
 
 	void putTiles();
 	void putTiles(int winW, int winH);
 
    public:
-	MainScreen(SDL_Window *window, SDL_Renderer *renderer, MuntiiColor bgColor);
+	MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
+			   SDL_Renderer *renderer, SDL_Color bgColor);
 	~MainScreen();
-	int mainLoop();
+
+	void handleEvent();
 };

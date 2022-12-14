@@ -19,17 +19,8 @@
     <ClCompile Include="class\image.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
-    <ClCompile Include="class\checkbox.cpp">
-      <Filter>ソースファイル\クラスファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="class\mouse.cpp">
-      <Filter>ソースファイル\クラスファイル</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>ソースファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="class\button.cpp">
-      <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
     <ClCompile Include="class\FilePass.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
@@ -43,13 +34,31 @@
     <ClCompile Include="class\MainScreen.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
-    <ClCompile Include="class\Tile.cpp">
+    <ClCompile Include="class\Tile\Tile.cpp">
+      <Filter>ソースファイル\クラスファイル\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Tile\TileEditSpace.cpp">
+      <Filter>ソースファイル\クラスファイル\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Tile\TileSupportCharactor.cpp">
+      <Filter>ソースファイル\クラスファイル\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="class\button.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
-    <ClCompile Include="class\TileSupportCharactor.cpp">
+    <ClCompile Include="class\checkbox.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
-    <ClCompile Include="class\TileEditSpace.cpp">
+    <ClCompile Include="class\mouse.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Control\Control.cpp">
+      <Filter>ソースファイル\クラスファイル\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Control\ControlButton.cpp">
+      <Filter>ソースファイル\クラスファイル\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="class\MuntiiFagaras.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -70,17 +79,8 @@
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="class\checkbox.hpp">
-      <Filter>ヘッダファイル\クラスファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="class\mouse.hpp">
-      <Filter>ヘッダファイル\クラスファイル</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>ヘッダファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="class\button.hpp">
-      <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
     <ClInclude Include="class\TextFile.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
@@ -94,13 +94,31 @@
     <ClInclude Include="class\MainScreen.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
-    <ClInclude Include="class\Tile.hpp">
+    <ClInclude Include="class\Tile\Tile.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Tile\TileEditSpace.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Tile\TileSupportCharactor.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="class\button.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
-    <ClInclude Include="class\TileSupportCharactor.hpp">
+    <ClInclude Include="class\checkbox.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
-    <ClInclude Include="class\TileEditSpace.hpp">
+    <ClInclude Include="class\mouse.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Control\Control.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Control\ControlButton.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="class\MuntiiFagaras.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
   </ItemGroup>
@@ -116,6 +134,18 @@
     </Filter>
     <Filter Include="ヘッダファイル\クラスファイル">
       <UniqueIdentifier>{46e34625-5632-4232-8cb3-92af275d95ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\クラスファイル\Tile">
+      <UniqueIdentifier>{0ce1f4da-d7f5-4c03-b44a-ed03b72b3b15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダファイル\クラスファイル\Tile">
+      <UniqueIdentifier>{1d4349a7-06bf-45c0-ac4f-a1acca0132bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\クラスファイル\Control">
+      <UniqueIdentifier>{80886efd-f12b-4d44-98b3-a9da47cc3707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダファイル\クラスファイル\Control">
+      <UniqueIdentifier>{545c3fb1-c8d3-414d-b95e-a7412ec5fc20}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -8,7 +8,7 @@ Tile::Tile(SDL_Window *window, SDL_Renderer *renderer)
 
 Tile::~Tile() {}
 
-void Tile::setArea(SDL_Rect area)
+void Tile::put(SDL_Rect area)
 {
 	this->area = area;
 
@@ -22,12 +22,8 @@ void Tile::setArea(SDL_Rect area)
 
 	// ‰æ–Ê‚É”½‰f‚³‚¹‚é
 	SDL_RenderPresent(renderer);
-
-	SDL_Delay(10);
 }
 
-void Tile::setBackgroundColor(MuntiiColor color) {
-	baseColor = color;
-}
+void Tile::setBaseColor(SDL_Color color) { baseColor = color; }
 
 int Tile::handleEvent(SDL_Event *event) { return 0; }
