@@ -7,6 +7,6 @@
 class TileEditSpace : public Tile {
    private:
    public:
-	TileEditSpace(SDL_Window *window, SDL_Renderer *renderer);
+	TileEditSpace(SDL_Window *window, SDL_Event *eventPtr, SDL_Renderer *renderer);
 	~TileEditSpace();
 };

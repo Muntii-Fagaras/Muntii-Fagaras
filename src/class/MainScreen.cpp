@@ -10,12 +10,16 @@ MainScreen::MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
 	this->bgColor  = bgColor;
 
 	// タイルを生成
-	TileEditSpace		 *tileEditSpace = new TileEditSpace(window, renderer);
+	TileEditSpace *tileEditSpace =
+		new TileEditSpace(window, eventPtr, renderer);
+	TileMenuBar *tileMenuBar =
+		new TileMenuBar(window, eventPtr, renderer);
 	TileSupportCharactor *tileSupportCharactor =
-		new TileSupportCharactor(window, renderer);
+		new TileSupportCharactor(window, eventPtr, renderer);
 
 	// タイルをマップに追加
 	tiles.insert(std::make_pair("editSpace", tileEditSpace));
+	tiles.insert(std::make_pair("menuBar", tileMenuBar));
 	tiles.insert(std::make_pair("supportCharactor", tileSupportCharactor));
 
 	// タイルを配置
@@ -24,10 +28,10 @@ MainScreen::MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
 
 MainScreen::~MainScreen()
 {
-		// タイルを破棄
-		for (std::pair<const char *, Tile *> object : tiles) {
-			delete object.second;
-		}
+	// タイルを破棄
+	for (std::pair<const char *, Tile *> object : tiles) {
+		delete object.second;
+	}
 }
 
 void MainScreen::putTiles()
@@ -44,26 +48,28 @@ void MainScreen::putTiles(int winW, int winH)
 	SDL_RenderClear(renderer);
 
 	tiles.at("editSpace")->put(SDL_Rect{0, 50, winW / 5 * 4, winH});
+	tiles.at("menuBar")
+		->put(SDL_Rect{0, 0, winW, 50});
 	tiles.at("supportCharactor")
 		->put(SDL_Rect{winW / 5 * 4, winH / 3 * 2, winW / 5, winH / 3});
 }
 
 void MainScreen::handleEvent()
 {
-	switch (eventPtr->type) {
-		case SDL_WINDOWEVENT:
-			if (eventPtr->window.windowID == windowID) {
-				switch (eventPtr->window.event) {
-					case SDL_WINDOWEVENT_SIZE_CHANGED:
-						putTiles(eventPtr->window.data1,
-									eventPtr->window.data2);
-						break;
-					case SDL_WINDOWEVENT_CLOSE:
-						eventPtr->type = SDL_QUIT;
-						SDL_PushEvent(eventPtr);
-						break;
+		switch (eventPtr->type) {
+			case SDL_WINDOWEVENT:
+				if (eventPtr->window.windowID == windowID) {
+					switch (eventPtr->window.event) {
+						case SDL_WINDOWEVENT_SIZE_CHANGED:
+							putTiles(eventPtr->window.data1,
+										eventPtr->window.data2);
+							break;
+						case SDL_WINDOWEVENT_CLOSE:
+							eventPtr->type = SDL_QUIT;
+							SDL_PushEvent(eventPtr);
+							break;
+					}
 				}
-			}
-			break;
-	}
+				break;
+		}
 }

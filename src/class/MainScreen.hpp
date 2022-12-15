@@ -4,6 +4,7 @@
 	#include "../stdafx.h"
 #endif
 #include "Tile/TileEditSpace.hpp"
+#include "Tile/TileMenuBar.hpp"
 #include "Tile/TileSupportCharactor.hpp"
 
 class MainScreen {

@@ -61,6 +61,9 @@
     <ClCompile Include="class\MuntiiFagaras.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
+    <ClCompile Include="class\Tile\TileMenuBar.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\font.hpp">
@@ -120,6 +123,9 @@
     </ClInclude>
     <ClInclude Include="class\MuntiiFagaras.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Tile\TileMenuBar.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Tile</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

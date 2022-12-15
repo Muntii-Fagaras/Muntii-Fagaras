@@ -1,5 +1,4 @@
 ﻿#pragma once
-
 #include "font.hpp"
 
 class text : public load_file {

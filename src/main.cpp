@@ -1,7 +1,7 @@
 ﻿#include "stdafx.h"
 #include "class/MuntiiFagaras.hpp"
 
-int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
+int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 {
 	SDL_Window *window = nullptr;
 	SDL_Renderer *renderer;

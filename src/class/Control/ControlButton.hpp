@@ -6,8 +6,9 @@
 
 class ControlButton : public Control {
    private:
-	std::string text	  = "";
-	SDL_Color slctColor = SDL_Color{50, 50, 0, 50};	// ボタンが選ばれたときに変化する色
+	std::string text = "";
+	SDL_Color	slctColor =
+		SDL_Color{50, 50, 0, 50};  // ボタンが選ばれたときに変化する色
 
    public:
 	ControlButton(SDL_Window *window, SDL_Renderer *renderer, std::string text);

@@ -1,8 +1,9 @@
 #include "Tile.hpp"
 
-Tile::Tile(SDL_Window *window, SDL_Renderer *renderer)
+Tile::Tile(SDL_Window *window, SDL_Event *eventPtr, SDL_Renderer *renderer)
 {
 	this->window   = window;
+	this->eventPtr = eventPtr;
 	this->renderer = renderer;
 }
 
@@ -26,4 +27,4 @@ void Tile::put(SDL_Rect area)
 
 void Tile::setBaseColor(SDL_Color color) { baseColor = color; }
 
-int Tile::handleEvent(SDL_Event *event) { return 0; }
+int Tile::handleEvent() { return 0; }
