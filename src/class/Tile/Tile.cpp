@@ -1,4 +1,4 @@
-#include "Tile.hpp"
+ï»¿#include "Tile.hpp"
 
 Tile::Tile(SDL_Window *window, SDL_Event *eventPtr, SDL_Renderer *renderer)
 {
@@ -13,15 +13,15 @@ void Tile::put(SDL_Rect area)
 {
 	this->area = area;
 
-	// •`‰æ—Ìˆæ‚ğƒ^ƒCƒ‹‚Ì—Ìˆæ‚É‚·‚é
+	// æç”»é ˜åŸŸã‚’ã‚¿ã‚¤ãƒ«ã®é ˜åŸŸã«ã™ã‚‹
 	SDL_RenderSetViewport(renderer, &area);
-	// ƒ^ƒCƒ‹‚Ì”wŒiF
+	// ã‚¿ã‚¤ãƒ«ã®èƒŒæ™¯è‰²
 	SDL_SetRenderDrawColor(renderer, baseColor.r, baseColor.g, baseColor.b,
 						   baseColor.a);
-	// ƒ^ƒCƒ‹‚ğ“h‚è‚Â‚Ô‚·
+	// ã‚¿ã‚¤ãƒ«ã‚’å¡—ã‚Šã¤ã¶ã™
 	SDL_RenderFillRect(renderer, NULL);
 
-	// ‰æ–Ê‚É”½‰f‚³‚¹‚é
+	// ç”»é¢ã«åæ˜ ã•ã›ã‚‹
 	SDL_RenderPresent(renderer);
 }
 

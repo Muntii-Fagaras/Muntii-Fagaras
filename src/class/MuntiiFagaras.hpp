@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #ifdef __GNUC__
 	#include "../stdafx.h"
 #endif
@@ -6,12 +6,12 @@
 
 class MuntiiFagaras {
    private:
-	// ƒEƒBƒ“ƒhƒE
+	// ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦
 	SDL_Window *window = nullptr;
 	Uint32		windowID;
-	// ƒCƒxƒ“ƒg
+	// ã‚¤ãƒ™ãƒ³ãƒˆ
 	SDL_Event event;
-	// ƒŒƒ“ƒ_ƒ‰[
+	// ãƒ¬ãƒ³ãƒ€ãƒ©ãƒ¼
 	SDL_Renderer *renderer;
 
 	MainScreen *mainScreen;

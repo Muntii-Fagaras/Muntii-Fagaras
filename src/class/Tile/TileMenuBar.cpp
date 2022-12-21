@@ -1,13 +1,32 @@
-#include "TileMenuBar.hpp"
+﻿#include "TileMenuBar.hpp"
 
-TileMenuBar::TileMenuBar(SDL_Window *window, SDL_Event *eventPtr, SDL_Renderer *renderer)
+TileMenuBar::TileMenuBar(SDL_Window *window, SDL_Event *eventPtr,
+						 SDL_Renderer *renderer)
 	: Tile(window, eventPtr, renderer)
 {
 	setBaseColor(SDL_Color{0, 0, 255, 255});
+
+	font			  = new Font();
+	fs::path fontPath = "assets/fonts/HackGen-Regular.ttf";
+	font->load(fontPath, 40, 0);
+
+	buttonSave = new ControlButton(window, renderer, "Save", font);
 }
 
-TileMenuBar::~TileMenuBar(){};
+TileMenuBar::~TileMenuBar()
+{
+	delete buttonSave;
+	delete font;
+};
 
-void TileMenuBar::putControls() {
+void TileMenuBar::put(SDL_Rect area)
+{
+	Tile::put(area);
+	putControls();
+}
 
+void TileMenuBar::putControls()
+{
+	SDL_Rect bSaveArea = {area.x, area.y, area.w / 10, area.h};
+	buttonSave->put(bSaveArea);
 }

@@ -1,4 +1,4 @@
-#include "Control.hpp"
+ï»¿#include "Control.hpp"
 
 Control::Control(SDL_Window* window, SDL_Renderer* renderer)
 {
@@ -8,20 +8,20 @@ Control::Control(SDL_Window* window, SDL_Renderer* renderer)
 
 Control::~Control() {}
 
-// ƒRƒ“ƒgƒ[ƒ‹‚²‚Æ‚ÉƒI[ƒo[ƒ‰ƒCƒh‚·‚é
+// ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã”ã¨ã«ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã™ã‚‹
 void Control::put(SDL_Rect area)
 {
 	this->area = area;
 
-	// •`‰æ—Ìˆæ‚ğƒRƒ“ƒgƒ[ƒ‹‚Ì—Ìˆæ‚É‚·‚é
+	// æç”»é ˜åŸŸã‚’ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®é ˜åŸŸã«ã™ã‚‹
 	SDL_RenderSetViewport(renderer, &area);
-	// ƒRƒ“ƒgƒ[ƒ‹‚Ì”wŒiF
+	// ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®èƒŒæ™¯è‰²
 	SDL_SetRenderDrawColor(renderer, baseColor.r, baseColor.g, baseColor.b,
 						   baseColor.a);
-	// ƒRƒ“ƒgƒ[ƒ‹‚ğ“h‚è‚Â‚Ô‚·
+	// ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã‚’å¡—ã‚Šã¤ã¶ã™
 	SDL_RenderFillRect(renderer, NULL);
 
-	// ‰æ–Ê‚É”½‰f‚³‚¹‚é
+	// ç”»é¢ã«åæ˜ ã•ã›ã‚‹
 	SDL_RenderPresent(renderer);
 }
 

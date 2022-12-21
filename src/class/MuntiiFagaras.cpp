@@ -1,4 +1,4 @@
-#include "MuntiiFagaras.hpp"
+﻿#include "MuntiiFagaras.hpp"
 
 MuntiiFagaras::MuntiiFagaras(SDL_Window* window, SDL_Renderer* renderer)
 {

@@ -1,17 +1,23 @@
-#pragma once
+ï»¿#pragma once
 #include <string>
-
-#include "../image.hpp"
+#ifdef __GNUC__
+	#include "../stdafx.h"
+#endif
 #include "Control.hpp"
+#include "ControlLabel.hpp"
 
 class ControlButton : public Control {
    private:
+	// è¡¨ç¤ºã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆ
 	std::string text = "";
-	SDL_Color	slctColor =
-		SDL_Color{50, 50, 0, 50};  // ƒ{ƒ^ƒ“‚ª‘I‚Î‚ê‚½‚Æ‚«‚É•Ï‰»‚·‚éF
+	// ãƒœã‚¿ãƒ³ãŒé¸ã°ã‚ŒãŸã¨ãã«å¤‰åŒ–ã™ã‚‹è‰²
+	SDL_Color slctColor = SDL_Color{50, 50, 0, 50};
+
+	ControlLabel *label;
 
    public:
-	ControlButton(SDL_Window *window, SDL_Renderer *renderer, std::string text);
+	ControlButton(SDL_Window *window, SDL_Renderer *renderer, std::string text,
+				  Font *font);
 	virtual ~ControlButton();
 	virtual void put(SDL_Rect area);
 	void		 setText(std::string text);

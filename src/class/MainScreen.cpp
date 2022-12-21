@@ -1,4 +1,4 @@
-#include "MainScreen.hpp"
+ï»¿#include "MainScreen.hpp"
 
 MainScreen::MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
 					   SDL_Renderer *renderer, SDL_Color bgColor)
@@ -9,7 +9,7 @@ MainScreen::MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
 	this->renderer = renderer;
 	this->bgColor  = bgColor;
 
-	// ƒ^ƒCƒ‹‚ğ¶¬
+	// ã‚¿ã‚¤ãƒ«ã‚’ç”Ÿæˆ
 	TileEditSpace *tileEditSpace =
 		new TileEditSpace(window, eventPtr, renderer);
 	TileMenuBar *tileMenuBar =
@@ -17,18 +17,18 @@ MainScreen::MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
 	TileSupportCharactor *tileSupportCharactor =
 		new TileSupportCharactor(window, eventPtr, renderer);
 
-	// ƒ^ƒCƒ‹‚ğƒ}ƒbƒv‚É’Ç‰Á
+	// ã‚¿ã‚¤ãƒ«ã‚’ãƒãƒƒãƒ—ã«è¿½åŠ 
 	tiles.insert(std::make_pair("editSpace", tileEditSpace));
 	tiles.insert(std::make_pair("menuBar", tileMenuBar));
 	tiles.insert(std::make_pair("supportCharactor", tileSupportCharactor));
 
-	// ƒ^ƒCƒ‹‚ğ”z’u
+	// ã‚¿ã‚¤ãƒ«ã‚’é…ç½®
 	putTiles();
 }
 
 MainScreen::~MainScreen()
 {
-	// ƒ^ƒCƒ‹‚ğ”jŠü
+	// ã‚¿ã‚¤ãƒ«ã‚’ç ´æ£„
 	for (std::pair<const char *, Tile *> object : tiles) {
 		delete object.second;
 	}

@@ -1,14 +1,17 @@
 ﻿#pragma once
-#include "load_file.hpp"
+#include <filesystem>
+#include <string>
+#ifdef __GNUC__
+	#include "../stdafx.h"
+#endif
 
-class font_load : public load_file {
+namespace fs = std::filesystem;
+
+class Font {
    public:
-	// フォント
-	TTF_Font* font;
-	// fontの読み込み
-	font_load(std::string font_path, int font_size);
-	// fontの廃棄
-	~font_load();
+	TTF_Font *font = nullptr;
+	fs::path  path;
 
-   private:
+	~Font();
+	void load(fs::path path, int ptSize, long faceIndex);
 };

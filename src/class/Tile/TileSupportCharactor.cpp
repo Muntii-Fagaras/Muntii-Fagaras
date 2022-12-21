@@ -1,4 +1,4 @@
-#include "TileSupportCharactor.hpp"
+﻿#include "TileSupportCharactor.hpp"
 
 TileSupportCharactor::TileSupportCharactor(SDL_Window	*window,
 										   SDL_Event	*eventPtr,

@@ -43,7 +43,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -185,15 +185,15 @@
     <ClCompile Include="class\checkbox.cpp" />
     <ClCompile Include="class\Control\Control.cpp" />
     <ClCompile Include="class\Control\ControlButton.cpp" />
+    <ClCompile Include="class\Control\ControlLabel.cpp" />
     <ClCompile Include="class\FilePass.cpp" />
-    <ClCompile Include="class\font.cpp" />
+    <ClCompile Include="class\Font.cpp" />
     <ClCompile Include="class\image.cpp" />
     <ClCompile Include="class\load_file.cpp" />
     <ClCompile Include="class\MainScreen.cpp" />
     <ClCompile Include="class\mouse.cpp" />
     <ClCompile Include="class\MuntiiFagaras.cpp" />
     <ClCompile Include="class\MyFile.cpp" />
-    <ClCompile Include="class\text.cpp" />
     <ClCompile Include="class\TextFile.cpp" />
     <ClCompile Include="class\Tile\Tile.cpp" />
     <ClCompile Include="class\Tile\TileEditSpace.cpp" />
@@ -215,15 +215,15 @@
     <ClInclude Include="class\checkbox.hpp" />
     <ClInclude Include="class\Control\Control.hpp" />
     <ClInclude Include="class\Control\ControlButton.hpp" />
+    <ClInclude Include="class\Control\ControlLabel.hpp" />
     <ClInclude Include="class\FilePass.hpp" />
-    <ClInclude Include="class\font.hpp" />
+    <ClInclude Include="class\Font.hpp" />
     <ClInclude Include="class\image.hpp" />
     <ClInclude Include="class\load_file.hpp" />
     <ClInclude Include="class\MainScreen.hpp" />
     <ClInclude Include="class\mouse.hpp" />
     <ClInclude Include="class\MuntiiFagaras.hpp" />
     <ClInclude Include="class\MyFile.hpp" />
-    <ClInclude Include="class\text.hpp" />
     <ClInclude Include="class\TextFile.hpp" />
     <ClInclude Include="class\Tile\Tile.hpp" />
     <ClInclude Include="class\Tile\TileEditSpace.hpp" />

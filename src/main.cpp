@@ -36,6 +36,8 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 	
 	//  ウィンドウを解放する
 	SDL_DestroyWindow(window);
+	// TrueTypeフォントAPIを終了
+	TTF_Quit();
 	// SDL2を終了する
 	SDL_Quit();
 

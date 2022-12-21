@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifdef __GNUC__
 	#include "../stdafx.h"
 #endif
@@ -9,7 +9,7 @@ class Control {
 	SDL_Renderer *renderer;
 	SDL_Rect	  area		= SDL_Rect{0, 0, 0, 0};
 	SDL_Color	  baseColor = SDL_Color{0, 0, 0, 0};
-	SDL_Color	  edgeColor = SDL_Color{255, 255, 255, 255};
+	SDL_Color	  edgeColor = SDL_Color{0, 0, 0, 0};
 
    public:
 	Control(SDL_Window *window, SDL_Renderer *renderer);
