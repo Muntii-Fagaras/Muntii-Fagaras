@@ -28,18 +28,18 @@ FilePass::FilePass() {
     name = s.str(); // 時刻をファイル名とする
 #endif
 
-    extension = ".txt"; // デフォルトのファイル拡張子
+    this->extension = ".txt"; // デフォルトのファイル拡張子
 }
 
 // FilePassのコンストラクタ(パスを指定)
-FilePass::FilePass  (std::string directory,
-                     std::string name,
-                     std::string extension) {
-    this->directory = directory;    // ファイル保存先
-    this->name      = name;         // ファイルの名前
+FilePass::FilePass  (std::string set_directory,
+                     std::string set_name,
+                     std::string set_extension) {
+    this->directory = set_directory;    // ファイル保存先
+    this->name      = set_name;         // ファイルの名前
 
     if (name[0] == '.') {
-        this->extension = extension;    // ファイル拡張子
+        this->extension = set_extension;    // ファイル拡張子
     }
     else {
         this->extension = ".txt";

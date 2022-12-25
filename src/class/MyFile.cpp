@@ -6,9 +6,7 @@ MyFile::MyFile() {
 }
 
 // MyFileのコンストラクタ(FilePassでパスを指定)
-MyFile::MyFile(FilePass filePass) {
-    this->filePass = filePass;
-}
+MyFile::MyFile(FilePass set_filePass) { this->filePass = set_filePass; }
 
 // MyFileのコンストラクタ(stringでそれぞれ指定)
 MyFile::MyFile(std::string directory,
