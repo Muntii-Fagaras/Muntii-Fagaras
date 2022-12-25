@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	// windowsの仕様?で日本語は直接postできないらしい...
 	system(
 		"curl -s -H  \"Content-Type: application/json\"  -X POST -d "
-		"@C:\\Users\\mazok\\Documents\\Muntii-Fagaras\\out.txt "
+		"@out.txt "
 		"\"localhost:50031/synthesis?speaker=0\" -o out.wav");
 
 	// curlの解放
