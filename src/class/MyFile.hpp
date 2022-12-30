@@ -11,6 +11,6 @@ class MyFile {
 	FilePass filePass;
 
 	MyFile();
-	MyFile(FilePass filePass);
+	MyFile(FilePass set_filePass);
 	MyFile(std::string directory, std::string name, std::string extension);
 };

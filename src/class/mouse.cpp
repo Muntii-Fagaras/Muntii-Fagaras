@@ -46,10 +46,10 @@ void mouse::update_cursor(std::string mouse_cursor)
 		}
 }
 
-bool mouse::clicked_left_down(SDL_Event left_clicked_event)
+bool mouse::clicked_left_down(SDL_Event update_left_clicked_event)
 {
-		if (left_clicked_event.button.button == SDL_BUTTON_LEFT &&
-			left_clicked_event.button.state == SDL_PRESSED) {
+		if (update_left_clicked_event.button.button == SDL_BUTTON_LEFT &&
+			update_left_clicked_event.button.state == SDL_PRESSED) {
 			update_cursor("ARROW");
 
 			return true;
@@ -58,10 +58,10 @@ bool mouse::clicked_left_down(SDL_Event left_clicked_event)
 			return false;
 		}
 }
-bool mouse::clicked_left_up(SDL_Event left_clicked_event)
+bool mouse::clicked_left_up(SDL_Event update_left_clicked_event)
 {
-		if (left_clicked_event.button.button == SDL_BUTTON_LEFT &&
-			left_clicked_event.button.state == SDL_RELEASED) {
+		if (update_left_clicked_event.button.button == SDL_BUTTON_LEFT &&
+			update_left_clicked_event.button.state == SDL_RELEASED) {
 			return true;
 		}
 		else {
