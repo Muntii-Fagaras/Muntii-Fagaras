@@ -43,31 +43,12 @@ SRCS+= main.cpp
 
 DEFINE=SDL_MAIN_HANDLED 
 
-LDFLAGS:= -Wl,-Bstatic -lSDL2main -lSDL2 -lSDL2_ttf  -lSDL2_mixer  \
--lSDL2_image -Wl,-Bdynamic -luser32 -lgdi32 -lwinmm -ldxguid 
-LDFLAGS+=   -mwindows -lm -lpthread  -ole64  \
--lgdi32 -lsetupapi -lhid -lole32  -limm32 -lversion -lwinmm  \
--lshell32 -limagehlp -ldinput8 -ldxguid -ldxerr8 -luser32 -l oleaut32 -luuid \
--lrpcrt4 -static -static-libgcc -static-libstdc++ -lstdc++ \
--lwinpthread -lpthread
+LDFLAGS:= -lSDL2main -lSDL2 -lSDL2_ttf  -lSDL2_mixer  \
+-lSDL2_image -mwindows
 
 $(TARGET):
 	g++-11 -o gui-base  -Wall  -Wextra  -Wcast-align  -Wdouble-promotion  -Wconversion  -Weffc++  -Wfloat-equal  -Wlogical-op  -Wmissing-declarations  -Wmissing-include-dirs  -Wold-style-cast  -Wswitch-default  -Wunsafe-loop-optimizations  -Wshadow  -std=c++20  -pipe  stdafx.cpp class/*.cpp main.cpp -lSDL2main -lSDL2 -lSDL2_ttf  -lSDL2_mixer -lSDL2_image   -DSDL_MAIN_HANDLED
 	
 C_drive:
 	windres icon.rc -O coff -o icon.res	
-	$(CC_gcc) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG icon.res
-	mv le64.exe gui-base.exe > nul
-C_drive_clang:
-	$(CC_clang) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG
-	move le64.exe gui-base.exe > nul
-
-C_drive_Clion:
-	windres icon.rc -O coff -o icon.res
-	$(CC_gcc) -o gui-base  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG icon.res
-	move le64.exe gui-base.exe > nul
-	.\gui-base.exe
-all:
-	C_drive_Clion
-clean:
-	del gui-base.exe > nul
+	$(CC_gcc) -o Muntii-Fagaras  $(CFLAGS) $(SRCS) $(INC_DIRC) $(LDFLAGS) $(WORKINGFLAGS) -D$(DEFINE) -D _GLIBCXX_DEBUG icon.res
