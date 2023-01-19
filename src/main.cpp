@@ -1,5 +1,4 @@
-﻿
-// クラスファイルのヘッダファイル
+﻿// クラスファイルのヘッダファイル
 #include "class/TextFile.hpp"
 #include "class/button.hpp"
 #include "class/checkbox.hpp"
@@ -40,18 +39,15 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 				window,
 				(window_title_at_setting).c_str());
 			// メインループ
-				while (1) {
+				while (SDL_WaitEvent(&exit)) {
 					// 背景をクリア
 					SDL_RenderClear(renderer);
 					// 閉じるボタンで閉じれるようにする
-					SDL_PollEvent(&exit);
 						if (exit.type == SDL_QUIT) {
 							break;
 						}
 					// 画面に反映させる
 					SDL_RenderPresent(renderer);
-					SDL_Delay(10);
-
 				}
 			//  ウィンドウを解放する
 			SDL_DestroyWindow(window);
