@@ -1,7 +1,7 @@
 ﻿<div align="center">
 <samp>
 
-# Muntii-Fagaras:sparkles
+# Muntii-Fagaras:sparkles:
 
 [SDL2](https://github.com/libsdl-org/SDL)でテキストエディタを作るプロジェクトです
 

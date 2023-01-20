@@ -36,11 +36,15 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 			SDL_SetRenderDrawColor(renderer, 46, 52, 64, 255);
 			// 逆ポーランド記法
 			reverse_polish_notation rpn;
-			rpn.create_reverse_polish_notation("121+1");
+			rpn.create_reverse_polish_notation("1+2+3");
+			std::string output;	
+			for (auto x : rpn.fixed_reverse_polish_notation_formula) {
+				output+=x;
+				}
 			// ウィンドウのタイトル名変更
 			SDL_SetWindowTitle(
 				window,
-				(rpn.reverse_polish_notation_formula.at(0).c_str()));
+				(output.c_str()));
 			// メインループ
 				while (SDL_WaitEvent(&exit)) {
 					// 背景をクリア
