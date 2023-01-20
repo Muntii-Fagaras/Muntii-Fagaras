@@ -8,6 +8,7 @@
 #include "class/mouse.hpp"
 #include "class/text.hpp"
 #include "class/voice.hpp"
+#include "class/rpn.hpp"
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 {
@@ -33,11 +34,13 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 			SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
 			// 背景を黒にする
 			SDL_SetRenderDrawColor(renderer, 46, 52, 64, 255);
-			std::string window_title_at_setting = "Muntii-Fagaras 設定画面";
+			// 逆ポーランド記法
+			reverse_polish_notation rpn;
+			rpn.create_reverse_polish_notation("121+1");
 			// ウィンドウのタイトル名変更
 			SDL_SetWindowTitle(
 				window,
-				(window_title_at_setting).c_str());
+				(rpn.reverse_polish_notation_formula.at(0).c_str()));
 			// メインループ
 				while (SDL_WaitEvent(&exit)) {
 					// 背景をクリア
