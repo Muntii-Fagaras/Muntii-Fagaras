@@ -1,21 +1,21 @@
-#pragma once
+ï»¿#pragma once
 
 #ifdef __GNUC__
 	#include "../stdafx.h"
 #endif
 class reverse_polish_notation {
    public:
-	// ‹tƒ|[ƒ‰ƒ“ƒh‹L–@‚Ö¡‚·‚½‚ß‚Ì®
+	// é€†ãƒãƒ¼ãƒ©ãƒ³ãƒ‰è¨˜æ³•ã¸æ²»ã™ãŸã‚ã®å¼
 	std::vector<std::string> reverse_polish_notation_formula;
-	// ‹tƒ|[ƒ‰ƒ“ƒh‹L–@‚É‚È‚Á‚½®
+	// é€†ãƒãƒ¼ãƒ©ãƒ³ãƒ‰è¨˜æ³•ã«ãªã£ãŸå¼
 	std::vector<std::string> fixed_reverse_polish_notation_formula;
 
 	void create_reverse_polish_notation(
 		std::string normal_notation_formula);
 
    private:
-	// ‹tƒ|[ƒ‰ƒ“ƒh‹L–@‚É’¼‚·‚½‚ß‚É®‚¦‚éƒƒ\ƒbƒh
+	// é€†ãƒãƒ¼ãƒ©ãƒ³ãƒ‰è¨˜æ³•ã«ç›´ã™ãŸã‚ã«æ•´ãˆã‚‹ãƒ¡ã‚½ãƒƒãƒ‰
 	void enable_polish_notation(std::string normal_notation_formula);
-	// ‹tƒ|[ƒ‰ƒ“ƒh‹L–@‚ÌŒvZ—pƒXƒ^ƒbƒN
+	// é€†ãƒãƒ¼ãƒ©ãƒ³ãƒ‰è¨˜æ³•ã®è¨ˆç®—ç”¨ã‚¹ã‚¿ãƒƒã‚¯
 	std::stack<std::string> calcurating_stack;
 };

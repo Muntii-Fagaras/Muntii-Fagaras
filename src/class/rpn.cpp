@@ -1,11 +1,11 @@
-#include "rpn.hpp"
+ï»¿#include "rpn.hpp"
 
 void reverse_polish_notation::create_reverse_polish_notation(
 	std::string normal_notation_formula)
 {
-	// ‹tƒ|[ƒ‰ƒ“ƒh‹L–@‚Å’¼‚·‚½‚ß‚É®‚ğ®‚¦‚é
+	// é€†ãƒãƒ¼ãƒ©ãƒ³ãƒ‰è¨˜æ³•ã§ç›´ã™ãŸã‚ã«å¼ã‚’æ•´ãˆã‚‹
 	enable_polish_notation(normal_notation_formula);
-	// ”Ô•º
+	// ç•ªå…µ
 	calcurating_stack.push("end");
 	std::string test;
 	for (int i = 0; i < reverse_polish_notation_formula.size(); i++) {
@@ -31,7 +31,7 @@ void reverse_polish_notation::create_reverse_polish_notation(
 	}
 }
 
-// ‹tƒ|[ƒ‰ƒ“ƒh‹L–@‚É’¼‚·‚½‚ß‚Ì‰º€”õ‚Æ‚µ‚Ävector‚É‚»‚ê‚¼‚ê‚ğŠi”[‚·‚é
+// é€†ãƒãƒ¼ãƒ©ãƒ³ãƒ‰è¨˜æ³•ã«ç›´ã™ãŸã‚ã®ä¸‹æº–å‚™ã¨ã—ã¦vectorã«ãã‚Œãã‚Œã‚’æ ¼ç´ã™ã‚‹
 void reverse_polish_notation::enable_polish_notation(
 	std::string normal_notation_formula)
 {
