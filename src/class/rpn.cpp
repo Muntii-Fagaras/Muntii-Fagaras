@@ -7,52 +7,136 @@ void reverse_polish_notation::create_reverse_polish_notation(
 	enable_polish_notation(normal_notation_formula);
 	// 番兵
 	calcurating_stack.push("end");
-	std::string test;
-	for (int i = 0; i < reverse_polish_notation_formula.size(); i++) {
-			test=reverse_polish_notation_formula.at(i);
-			if (test == "43") {
-					fixed_reverse_polish_notation_formula.push_back(
-						calcurating_stack.top());
-				calcurating_stack.pop();
-				calcurating_stack.push("+");
-			}
-			else {
-				calcurating_stack.push(test);
-			}
+	// スタックに積まれている一番上の値
+	std::string stack_top;
+	// 式の最後まで繰り返す
+		for (int i = 0; i < reverse_polish_notation_formula.size(); i++) {
+			// 式の因子が数字の時にはスタックに積む
+				if (reverse_polish_notation_formula.at(i) != "*" &&
+					reverse_polish_notation_formula.at(i) != "-" &&
+					reverse_polish_notation_formula.at(i) != "+" &&
+					reverse_polish_notation_formula.at(i) != "-") {
+					calcurating_stack.push(
+						reverse_polish_notation_formula.at(i));
+				}
+				// 式の因子が演算子の時
+				else {
+					// 演算子で*と/の時
+						if (reverse_polish_notation_formula.at(i) == "*" ||
+							reverse_polish_notation_formula.at(i) == "/") {
+							// 因子の優先順位よりスタックの一番上の優先順位が高いとき
+								while (1) {
+									stack_top = calcurating_stack.top();
+										if (stack_top == "end") {
+											break;
+										}
+										else if (stack_top == "-" ||
+												 stack_top == "+") {
+											break;
+										}
+										else {
+											calcurating_stack.pop();
+											fixed_reverse_polish_notation_formula
+												.push_back(stack_top);
+										}
+								}
+								// 演算子を積む
+								if (reverse_polish_notation_formula.at(i) ==
+									"*") {
+									calcurating_stack.push("*");
+								}
+								else {
+									calcurating_stack.push("/");
+								}
+						}
+						else if (reverse_polish_notation_formula.at(i) == "+" ||
+								 reverse_polish_notation_formula.at(i) == "-") {
+								while (1) {
+									stack_top = calcurating_stack.top();
+										if (stack_top == "end") {
+											break;
+										}
+										else {
+											calcurating_stack.pop();
+											fixed_reverse_polish_notation_formula
+												.push_back(stack_top);
+										}
+								}
+								if (reverse_polish_notation_formula.at(i) ==
+									"+") {
+									calcurating_stack.push("+");
+								}
+								else {
+									calcurating_stack.push("-");
+								}
+						}
+						else {
+							calcurating_stack.push(
+								reverse_polish_notation_formula.at(i));
+						}
+				}
 		}
+	// 式の最後になったとき式のスタックからすべて取り出す
+	// 式の因子の変数
 	std::string s;
-	while (1) {
-		s=calcurating_stack.top();
+		while (1) {
+			s = calcurating_stack.top();
 			calcurating_stack.pop();
-			if (s == "end") {
-				break;
-			}
+				if (s == "end") {
+					break;
+				}
 			fixed_reverse_polish_notation_formula.push_back(s);
-	}
+		}
 }
 
 // 逆ポーランド記法に直すための下準備としてvectorにそれぞれを格納する
 void reverse_polish_notation::enable_polish_notation(
 	std::string normal_notation_formula)
 {
+	// ポーランド記法での数字
 	int num = 0;
-	int			multiplier = 1;
-	std::string s;
+	// 10や100といった式で表すために倍数として計算している
+	int multiplier = 1;
+	// ポーランド記法に直すための下準備式の最後まで
 		for (int i = 0; i < normal_notation_formula.size(); i++) {
-				switch (normal_notation_formula.at(i) ){
+			// 演算子が現れた時
+				switch (normal_notation_formula.at(i)) {
 					case '+':
 					case '-':
 					case '*':
 					case '/':
+						// 前のループで計算してできた数字をvectorに追加する
 						reverse_polish_notation_formula.push_back(
 							std::to_string(num));
-						s=std::to_string(normal_notation_formula.at(i));
-						reverse_polish_notation_formula.push_back(s);
+						// それぞれの演算子で追加する
+							switch (normal_notation_formula.at(i)) {
+								case '+':
+									reverse_polish_notation_formula.push_back(
+										"+");
+									break;
+								case '-':
+									reverse_polish_notation_formula.push_back(
+										"-");
+									break;
+								case '*':
+									reverse_polish_notation_formula.push_back(
+										"*");
+									break;
+								case '/':
+									reverse_polish_notation_formula.push_back(
+										"/");
+									break;
+								default:
+									break;
+							}
 						multiplier = 1;
 						num		   = 0;
 						break;
 					default:
-						num =(normal_notation_formula.at(i)-48) * multiplier+num;
+						// 式の因子が数字の時、ループごとに倍数にして足して一つの場所へ格納する
+						num =
+							(normal_notation_formula.at(i) - 48) * multiplier +
+							num;
 						multiplier *= 10;
 						break;
 				}
