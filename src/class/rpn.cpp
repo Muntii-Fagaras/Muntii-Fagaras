@@ -15,7 +15,7 @@ void reverse_polish_notation::create_reverse_polish_notation(
 				if (reverse_polish_notation_formula.at(i) != "*" &&
 					reverse_polish_notation_formula.at(i) != "-" &&
 					reverse_polish_notation_formula.at(i) != "+" &&
-					reverse_polish_notation_formula.at(i) != "-") {
+					reverse_polish_notation_formula.at(i) != "/") {
 					calcurating_stack.push(
 						reverse_polish_notation_formula.at(i));
 				}
@@ -89,6 +89,79 @@ void reverse_polish_notation::create_reverse_polish_notation(
 		}
 }
 
+int reverse_polish_notation::calc(std::string notation)
+{
+	int ans = 0;
+	reverse_polish_notation::create_reverse_polish_notation(notation);
+	std::stack<std::string> calcurating_stack_rpn;
+	calcurating_stack_rpn.push("bottom");
+	std::string left, right;
+		for (int i = 0; i < fixed_reverse_polish_notation_formula.size(); i++) {
+				if (fixed_reverse_polish_notation_formula.at(i) != "+" &&
+					fixed_reverse_polish_notation_formula.at(i) != "-" &&
+					fixed_reverse_polish_notation_formula.at(i) != "*" &&
+					fixed_reverse_polish_notation_formula.at(i) != "/") {
+					calcurating_stack_rpn.push(
+						fixed_reverse_polish_notation_formula.at(i));
+				}
+				else {
+						if (fixed_reverse_polish_notation_formula.at(i) ==
+							"+") {
+							left = calcurating_stack_rpn.top();
+							calcurating_stack_rpn.pop();
+							right = calcurating_stack_rpn.top();
+								if (right == "bottom") {
+									right = "0";
+								}
+								else {
+									calcurating_stack_rpn.pop();
+								}
+							ans = std::stoi(left) + std::stoi(right) + ans;
+						}
+						else if (fixed_reverse_polish_notation_formula.at(i) ==
+								 "-") {
+							left = calcurating_stack_rpn.top();
+							calcurating_stack_rpn.pop();
+							right = calcurating_stack_rpn.top();
+								if (right == "bottom") {
+									right = "0";
+								}
+								else {
+									calcurating_stack_rpn.pop();
+								}
+							ans = std::stoi(right) - std::stoi(left) + ans;
+						}
+						else if (fixed_reverse_polish_notation_formula.at(i) ==
+								 "*") {
+							left = calcurating_stack_rpn.top();
+							calcurating_stack_rpn.pop();
+							right = calcurating_stack_rpn.top();
+								if (right == "bottom") {
+									right = "0";
+								}
+								else {
+									calcurating_stack_rpn.pop();
+								}
+							ans = std::stoi(right) * std::stoi(left) + ans;
+						}
+						else if (fixed_reverse_polish_notation_formula.at(i) ==
+								 "/") {
+							left = calcurating_stack_rpn.top();
+							calcurating_stack_rpn.pop();
+							right = calcurating_stack_rpn.top();
+								if (right == "bottom") {
+									right = "0";
+								}
+								else {
+									calcurating_stack_rpn.pop();
+								}
+							ans = std::stoi(right) / std::stoi(left) + ans;
+						}
+				}
+		}
+	return ans;
+}
+
 // 逆ポーランド記法に直すための下準備としてvectorにそれぞれを格納する
 void reverse_polish_notation::enable_polish_notation(
 	std::string normal_notation_formula)
@@ -134,9 +207,8 @@ void reverse_polish_notation::enable_polish_notation(
 						break;
 					default:
 						// 式の因子が数字の時、ループごとに倍数にして足して一つの場所へ格納する
-						num =
-							(normal_notation_formula.at(i) - 48) * multiplier +
-							num;
+						num = num * multiplier +
+							  (normal_notation_formula.at(i) - 48);
 						multiplier *= 10;
 						break;
 				}

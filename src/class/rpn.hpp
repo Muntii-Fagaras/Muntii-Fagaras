@@ -11,6 +11,7 @@ class reverse_polish_notation {
 	std::vector<std::string> fixed_reverse_polish_notation_formula;
 
 	void create_reverse_polish_notation(std::string normal_notation_formula);
+	int	 calc(std::string notation);
 
    private:
 	// 逆ポーランド記法に直すために整えるメソッド
