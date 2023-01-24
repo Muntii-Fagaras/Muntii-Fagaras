@@ -7,9 +7,9 @@ class Control {
    protected:
 	SDL_Window	 *window;
 	SDL_Renderer *renderer;
-	SDL_Rect	  area		= SDL_Rect{0, 0, 0, 0};
-	SDL_Color	  baseColor = SDL_Color{0, 0, 0, 0};
-	SDL_Color	  edgeColor = SDL_Color{0, 0, 0, 0};
+	SDL_Rect area = SDL_Rect{0, 0, 0, 0};  // ウィンドウに対しての領域
+	SDL_Color baseColor = SDL_Color{0, 0, 0, 0};
+	SDL_Color edgeColor = SDL_Color{0, 0, 0, 0};
 
    public:
 	Control(SDL_Window *window, SDL_Renderer *renderer);

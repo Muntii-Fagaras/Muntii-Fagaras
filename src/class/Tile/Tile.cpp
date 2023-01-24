@@ -27,4 +27,19 @@ void Tile::put(SDL_Rect area)
 
 void Tile::setBaseColor(SDL_Color color) { baseColor = color; }
 
-int Tile::handleEvent() { return 0; }
+bool Tile::selectedByMouse()
+{
+	SDL_Point mouseCosorPosition =
+		SDL_Point{eventPtr->motion.x, eventPtr->motion.y};
+	return selectedByMouse(mouseCosorPosition);
+}
+
+bool Tile::selectedByMouse(SDL_Point mouseCursorPosition)
+{
+	return SDL_PointInRect(&mouseCursorPosition, &area);
+}
+
+void Tile::handleEventMOUSEMOTION() {}
+void Tile::handleEventMOUSEBUTTONDOWN() {}
+void Tile::handleEventMOUSEBUTTONUP() {}
+void Tile::handleEventMOUSEWHEEL() {}

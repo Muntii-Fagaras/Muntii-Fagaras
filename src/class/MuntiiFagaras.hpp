@@ -3,6 +3,8 @@
 	#include "../stdafx.h"
 #endif
 #include "MainScreen.hpp"
+#include "ManageTexts.hpp"
+#include "Task/Task.hpp"
 
 class MuntiiFagaras {
    private:
@@ -14,7 +16,10 @@ class MuntiiFagaras {
 	// レンダラー
 	SDL_Renderer *renderer;
 
-	MainScreen *mainScreen;
+	std::list<Task> tasks;
+
+	MainScreen  *mainScreen;
+	ManageTexts *manageTexts;
 
    public:
 	MuntiiFagaras(SDL_Window *window, SDL_Renderer *renderer);

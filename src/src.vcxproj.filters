@@ -64,6 +64,18 @@
     <ClCompile Include="class\Control\ControlLabel.cpp">
       <Filter>ソースファイル\クラスファイル\Control</Filter>
     </ClCompile>
+    <ClCompile Include="class\ManageTexts.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Text.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Control\ControlEditSpace.cpp">
+      <Filter>ソースファイル\クラスファイル\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Control\ControlTag.cpp">
+      <Filter>ソースファイル\クラスファイル\Control</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\load_file.hpp">
@@ -127,6 +139,33 @@
     <ClInclude Include="class\Control\ControlLabel.hpp">
       <Filter>ヘッダファイル\クラスファイル\Control</Filter>
     </ClInclude>
+    <ClInclude Include="class\Task\Task.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Task\TaskMainScreen.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Task\TaskManageTexts.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Task\TaskSupport.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Task\TaskKind.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="class\ManageTexts.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Text.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Control\ControlEditSpace.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Control\ControlTag.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Control</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="ソースファイル">
@@ -152,6 +191,9 @@
     </Filter>
     <Filter Include="ヘッダファイル\クラスファイル\Control">
       <UniqueIdentifier>{545c3fb1-c8d3-414d-b95e-a7412ec5fc20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダファイル\クラスファイル\Task">
+      <UniqueIdentifier>{e28fa224-6064-4fa1-a47f-345845374148}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

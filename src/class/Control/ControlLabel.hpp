@@ -18,6 +18,6 @@ class ControlLabel : public Control {
 	ControlLabel(SDL_Window *window, SDL_Renderer *renderer,
 				 std::string text, Font *font);
 	virtual ~ControlLabel();
-	virtual void put(SDL_Rect area);
+	virtual void put(SDL_Rect area) override;
 	virtual void setTextColor(SDL_Color color);
 };

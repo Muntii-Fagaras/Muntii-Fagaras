@@ -7,7 +7,7 @@ TileMenuBar::TileMenuBar(SDL_Window *window, SDL_Event *eventPtr,
 	setBaseColor(SDL_Color{0, 0, 255, 255});
 
 	font			  = new Font();
-	fs::path fontPath = "assets/fonts/HackGen-Regular.ttf";
+	fs::path fontPath = fs::path("assets/fonts/HackGen-Regular.ttf");
 	font->load(fontPath, 40, 0);
 
 	buttonSave = new ControlButton(window, renderer, "Save", font);
