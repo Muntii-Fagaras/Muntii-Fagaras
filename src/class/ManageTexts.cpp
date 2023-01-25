@@ -28,5 +28,11 @@ void ManageTexts::runTask()
 		case TASK_KIND_ManageTexts::DELETE_CHAR:
 			texts.at(0)->deleteChar();
 			break;
+		case TASK_KIND_ManageTexts::MAKE_NEW_LINE: {
+			texts.at(0)->makeNewLine();
+			PresentText *newTask = new PresentText(texts.at(0));
+			tasks->push_back(newTask);
+			}
+			break;
 	}
 }

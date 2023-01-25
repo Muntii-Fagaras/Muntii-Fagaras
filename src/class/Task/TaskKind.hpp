@@ -20,7 +20,8 @@ enum class TASK_KIND_ManageTexts
 	INSERT_STR,
 	DELETE_STR,
 	INSERT_CHAR,
-	DELETE_CHAR
+	DELETE_CHAR,
+	MAKE_NEW_LINE
 };
 
 enum class TASK_KIND_Support

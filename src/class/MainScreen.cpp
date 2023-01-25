@@ -118,13 +118,21 @@ void MainScreen::handleEvent()
 							}
 					}
 				break;
+			case SDL_KEYDOWN:
+				switch (eventPtr->key.keysym.sym) {
+					case SDLK_RETURN: {	// メインキーボードのリターンキー
+							MakeNewLine *newTask = new MakeNewLine();
+								tasks->push_back(newTask);
+						}
+						break;
+				}
 			case SDL_TEXTEDITING:
 				// tileAcceptingTyping->
 				break;
 			case SDL_TEXTINPUT: {
-				// tileAcceptingTyping->
+					// tileAcceptingTyping->
 					InsertStr *newTask = new InsertStr(eventPtr->text.text);
-				tasks->push_back(newTask);
+					tasks->push_back(newTask);
 				}
 				break;
 		}

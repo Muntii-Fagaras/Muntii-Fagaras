@@ -26,15 +26,20 @@ void Text::insertChar(char c)
 	list<string>::iterator it = next(text.begin(), line - 1);
 
 	if (c == '\n') {
-		string newLine = it->substr(pos);
-		it->erase(pos);
-		text.insert(next(it, 1), newLine);
-		line++; pos = 1;
-		return;
+		makeNewLine();
 	}
 
 	it->insert(pos - 1, string{c});
 	pos++;
+}
+
+void Text::makeNewLine() {
+	list<string>::iterator it = next(text.begin(), line - 1);
+	string *newLine = new string(it->substr(pos-1));
+	it->erase(pos-1);
+	text.insert(next(it, 1), *newLine);
+	line++;
+	pos = 1;
 }
 
 void Text::deleteChar()

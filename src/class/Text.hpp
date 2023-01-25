@@ -23,6 +23,7 @@ class Text {
 	void		  getPos(int &line, int &pos);
 	void		  insertStr(string str);
 	void		  insertChar(char c);
+	void		  makeNewLine();
 	void		  deleteChar();
 	void		  deleteLine(int line);
 	void		  deleteLine(list<string>::iterator it);

@@ -31,3 +31,8 @@ struct DeleteChar : TaskManageTexts
 {
 	DeleteChar() { kind = TASK_KIND_ManageTexts::DELETE_CHAR; }
 };
+
+struct MakeNewLine : TaskManageTexts
+{
+	MakeNewLine() { kind = TASK_KIND_ManageTexts::MAKE_NEW_LINE; }
+};
