@@ -18,7 +18,7 @@ class Text {
 
    public:
 	Text();
-	list<string> &ref();
+	list<string> *ref();
 	int			  line = 1, pos = 1;
 	void		  getPos(int &line, int &pos);
 	void		  insertStr(string str);

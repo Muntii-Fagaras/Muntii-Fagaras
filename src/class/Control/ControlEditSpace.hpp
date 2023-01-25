@@ -17,6 +17,6 @@ class ControlEditSpace : public Control {
 	~ControlEditSpace();
 	void put(SDL_Rect area) override;
 	void presentText();
-	void presentText(Text &text);
+	void presentText(Text *text);
 	void setTextColor(SDL_Color color);
 };

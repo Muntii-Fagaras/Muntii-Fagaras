@@ -9,10 +9,10 @@
 
 class ManageTexts {
    private:
-	std::vector<Text> texts;
-	list<Task> &tasks;
+	std::vector<Text *> texts;
+	list<Task *> *tasks;
 
    public:
-	ManageTexts(list<Task> &tasks);
+	ManageTexts(list<Task *> *tasks);
 	void runTask();
 };

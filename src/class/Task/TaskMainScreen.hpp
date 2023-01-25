@@ -13,9 +13,9 @@ struct TaskMainScreen : Task
 
 struct PresentText : TaskMainScreen
 {
-	Text &text;
+	Text *text;
 
-	PresentText(Text &text) : text(text)
+	PresentText(Text *text) : text(text)
 	{
 		kind = TASK_KIND_MainScreen::PRESENT_TEXT;
 	};

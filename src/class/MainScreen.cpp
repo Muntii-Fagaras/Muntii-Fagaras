@@ -2,7 +2,7 @@
 
 MainScreen::MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
 					   SDL_Renderer *renderer, SDL_Color bgColor,
-					   list<Task> &tasks)
+					   list<Task *> *tasks)
 	: tasks(tasks)
 {
 	this->window   = window;
@@ -121,21 +121,23 @@ void MainScreen::handleEvent()
 			case SDL_TEXTEDITING:
 				// tileAcceptingTyping->
 				break;
-			case SDL_TEXTINPUT:
+			case SDL_TEXTINPUT: {
 				// tileAcceptingTyping->
-				tasks.push_back(InsertStr(eventPtr->text.text));
+					InsertStr *newTask = new InsertStr(eventPtr->text.text);
+				tasks->push_back(newTask);
+				}
 				break;
 		}
 }
 
 void MainScreen::runTask()
 {
-	TaskMainScreen &task = (TaskMainScreen &)tasks.front();
+	TaskMainScreen *task = dynamic_cast<TaskMainScreen *>(tasks->front());
 
-	switch (task.kind) {
+	switch (task->kind) {
 		case TASK_KIND_MainScreen::PRESENT_TEXT:
 			((TileEditSpace *)(tiles.at("editSpace")))
-				->present((PresentText &)task);
+				->present((PresentText *)task);
 			break;
 	}
 }

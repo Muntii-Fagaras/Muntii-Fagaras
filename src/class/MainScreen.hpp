@@ -19,7 +19,7 @@ class MainScreen {
 	// レンダラー
 	SDL_Renderer *renderer;
 	// タスク
-	list<Task> &tasks;
+	list<Task *> *tasks;
 	// タイルのマップ
 	std::map<const char *, Tile *> tiles;
 	// 背景色
@@ -34,7 +34,7 @@ class MainScreen {
 
    public:
 	MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
-			   SDL_Renderer *renderer, SDL_Color bgColor, list<Task> &tasks);
+			   SDL_Renderer *renderer, SDL_Color bgColor, list<Task *> *tasks);
 	~MainScreen();
 
 	void handleEvent();

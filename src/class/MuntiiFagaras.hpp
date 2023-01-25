@@ -16,7 +16,7 @@ class MuntiiFagaras {
 	// レンダラー
 	SDL_Renderer *renderer;
 
-	std::list<Task> tasks;
+	std::list<Task *> tasks;
 
 	MainScreen  *mainScreen;
 	ManageTexts *manageTexts;

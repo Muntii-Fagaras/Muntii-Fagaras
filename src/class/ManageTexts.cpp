@@ -1,30 +1,32 @@
 #include "ManageTexts.hpp"
 
-ManageTexts::ManageTexts(list<Task> &tasks) : tasks(tasks)
+ManageTexts::ManageTexts(list<Task *> *tasks) : tasks(tasks)
 {
-	texts.push_back(Text());
-	tasks.push_back(PresentText(texts[0]));
+	Text *text = new Text();
+	texts.push_back(text);
+	PresentText *newTask = new PresentText(text);
+	tasks->push_back(newTask);
 }
 
 void ManageTexts::runTask()
 {
-	TaskManageTexts &task = (TaskManageTexts &)tasks.front();
+	TaskManageTexts *task = dynamic_cast<TaskManageTexts *> (tasks->front());
+	// ‚±‚±‚ğ‰ğÁ‚·‚é‚æ‚¤‚ÉƒvƒƒOƒ‰ƒ€‚ğ•ÏX
 
-	texts[0].insertStr(((InsertStr &)task).str);
-	tasks.push_back(PresentText(texts[0]));
-
-	switch (task.kind) {
-		case TASK_KIND_ManageTexts::INSERT_STR:
-			texts[0].insertStr(((InsertStr &)task).str);
-			tasks.push_back(PresentText(texts[0]));
+	switch (task->kind) {
+		case TASK_KIND_ManageTexts::INSERT_STR: {
+			texts.at(0)->insertStr(((InsertStr *)task)->str);
+			PresentText *newTask = new PresentText(texts.at(0));
+			tasks->push_back(newTask);
+			}
 			break;
 		case TASK_KIND_ManageTexts::DELETE_STR:
 			break;
 		case TASK_KIND_ManageTexts::INSERT_CHAR:
-			texts[0].insertChar(((InsertChar &)task).c);
+			texts.at(0)->insertChar(((InsertChar *)task)->c);
 			break;
 		case TASK_KIND_ManageTexts::DELETE_CHAR:
-			texts[0].deleteChar();
+			texts.at(0)->deleteChar();
 			break;
 	}
 }

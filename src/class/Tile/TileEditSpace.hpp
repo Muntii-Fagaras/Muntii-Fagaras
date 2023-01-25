@@ -18,5 +18,5 @@ class TileEditSpace : public Tile {
 	~TileEditSpace();
 
 	void put(SDL_Rect area) override;
-	void present(PresentText &task);
+	void present(PresentText *task);
 };

@@ -8,8 +8,8 @@ MuntiiFagaras::MuntiiFagaras(SDL_Window* window, SDL_Renderer* renderer)
 	windowID = SDL_GetWindowID(window);
 
 	mainScreen = new MainScreen(window, windowID, &event, renderer,
-								SDL_Color{50, 50, 0, 255}, tasks);
-	manageTexts = new ManageTexts(tasks);
+								SDL_Color{50, 50, 0, 255}, &tasks);
+	manageTexts = new ManageTexts(&tasks);
 }
 
 MuntiiFagaras::~MuntiiFagaras()
@@ -26,7 +26,7 @@ int MuntiiFagaras::mainloop()
 		mainScreen->handleEvent();
 
 		while (!(tasks.empty())) {
-			switch (tasks.front().receiver) {
+			switch (tasks.front()->receiver) {
 				case RECEIVER::MAIN_SCREEN :
 					mainScreen->runTask();
 					break;
@@ -37,6 +37,7 @@ int MuntiiFagaras::mainloop()
 					break;
 			}
 
+			delete tasks.front();
 			tasks.pop_front();
 		}
 	}

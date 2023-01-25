@@ -31,8 +31,8 @@ void TileEditSpace::putControls()
 	editSpace->put(eaArea);
 }
 
-void TileEditSpace::present(PresentText &task)
+void TileEditSpace::present(PresentText *task)
 {
-	text = &(task.text);
-	editSpace->presentText(task.text);
+	text = task->text;
+	editSpace->presentText(task->text);
 }

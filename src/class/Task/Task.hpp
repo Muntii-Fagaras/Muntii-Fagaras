@@ -7,4 +7,5 @@
 struct Task
 {
 	RECEIVER receiver;
+	virtual ~Task() {}
 };

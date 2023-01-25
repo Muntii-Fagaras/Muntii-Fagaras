@@ -5,7 +5,7 @@ Text::Text()
 	text.push_back("");
 }
 
-list<string> &Text::ref() { return text; }
+list<string> *Text::ref() { return &text; }
 
 void Text::getPos(int &line, int &pos)
 {
@@ -33,7 +33,7 @@ void Text::insertChar(char c)
 		return;
 	}
 
-	it->insert(pos, string{c});
+	it->insert(pos - 1, string{c});
 	pos++;
 }
 
