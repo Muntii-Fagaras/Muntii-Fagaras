@@ -25,67 +25,75 @@ void ControlEditSpace::presentText(Text *text)
 	list<string> *rText = text->ref();
 	int			  line = text->line, pos = text->pos;
 
-	int w, h;	// 'M' の幅と高さを取得
-	const char *testStr = "M";
-	SDL_Surface *testSurface = TTF_RenderUTF8_Blended(font->font, testStr, textColor);
-		
-	SDL_Texture *testTexture = SDL_CreateTextureFromSurface(renderer, testSurface);
+	int			 w, h;	// 'M' の幅と高さを取得
+	const char	*testStr = "M";
+	SDL_Surface *testSurface =
+		TTF_RenderUTF8_Blended(font->font, testStr, textColor);
+
+	SDL_Texture *testTexture =
+		SDL_CreateTextureFromSurface(renderer, testSurface);
 	SDL_QueryTexture(testTexture, NULL, NULL, &w, &h);
 	SDL_FreeSurface(testSurface);
 	SDL_DestroyTexture(testTexture);
 
 	int numLine = area.h / h;
+	int startDrawLine;
 
 	list<string>::iterator it, endDraw;
 
-	if (numLine >= rText->size()) {
-		it = rText->begin();
-		endDraw = rText->end();
-	}
-	else if (line + numLine / 2 >= rText->size()) {
-		it = next(rText->end(), - numLine);
-		endDraw = rText->end();
-	}
-	else {
-		it = next(rText->begin(), line - numLine / 2);
-		endDraw = next(rText->begin(), line + numLine / 2);
-	}
-	
+		if (numLine >= rText->size()) {
+			it			  = rText->begin();
+			endDraw		  = rText->end();
+			startDrawLine = 1;
+		}
+		else if (line + numLine / 2 >= rText->size()) {
+			it			  = next(rText->begin(), line - numLine / 3);
+			endDraw		  = rText->end();
+			startDrawLine = line - numLine / 3 + 1;
+		}
+		else {
+			it			  = next(rText->begin(), line - numLine / 2);
+			endDraw		  = next(rText->begin(), line + numLine / 2);
+			startDrawLine = line - numLine / 2 + 1;
+		}
+
 	list<SDL_Texture *> textures;
 
 	int count = 0;
-	while (it != endDraw) {
-		if (strcmp(it->c_str(), "") != 0) {
-			// サーフェイスを生成
-			SDL_Surface *surface =
-				TTF_RenderUTF8_Blended(font->font, it->c_str(), textColor);
+		while (it != endDraw) {
+				if (strcmp(it->c_str(), "") != 0) {
+					// サーフェイスを生成
+					SDL_Surface *surface = TTF_RenderUTF8_Blended(
+						font->font, it->c_str(), textColor);
 
-			if (surface == NULL) {	// サーフェイスの生成失敗
-				throw std::invalid_argument(SDL_GetError());
-			}
+						if (surface == NULL) {	// サーフェイスの生成失敗
+							throw std::invalid_argument(SDL_GetError());
+						}
 
-			// テクスチャを生成
-			SDL_Texture *newTexture =
-				SDL_CreateTextureFromSurface(renderer, surface);
-			textures.push_back(newTexture);
-			SDL_SetTextureBlendMode(newTexture, SDL_BLENDMODE_MUL);
-			SDL_FreeSurface(surface);
+					// テクスチャを生成
+					SDL_Texture *newTexture =
+						SDL_CreateTextureFromSurface(renderer, surface);
+					textures.push_back(newTexture);
+					SDL_SetTextureBlendMode(newTexture, SDL_BLENDMODE_MUL);
+					SDL_FreeSurface(surface);
 
-			SDL_Rect dstrect = {0, h * count, w * it->length(), h};
-			SDL_RenderCopy(renderer, newTexture, NULL, &dstrect);
+					SDL_Rect dstrect = {0, h * count, w * it->length(), h};
+					SDL_RenderCopy(renderer, newTexture, NULL, &dstrect);
+				}
+
+			count++;
+			it++;
 		}
-		
-		count++; it++;
-	}
 
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 127);
-	SDL_RenderDrawLine(renderer, w * (pos-1), h * (line-1), w * (pos-1), h * line);
+	SDL_RenderDrawLine(renderer, w * (pos - 1), h * (line - startDrawLine),
+					   w * (pos - 1), h * (line - startDrawLine + 1));
 
 	SDL_RenderPresent(renderer);
 
-	for (SDL_Texture *texture : textures) {
-		SDL_DestroyTexture(texture);
-	}
+		for (SDL_Texture *texture : textures) {
+			SDL_DestroyTexture(texture);
+		}
 }
 
 void ControlEditSpace::put(SDL_Rect area)
