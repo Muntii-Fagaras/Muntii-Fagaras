@@ -122,7 +122,32 @@ void MainScreen::handleEvent()
 				switch (eventPtr->key.keysym.sym) {
 					case SDLK_RETURN: {	// メインキーボードのリターンキー
 							MakeNewLine *newTask = new MakeNewLine();
-								tasks->push_back(newTask);
+							tasks->push_back(newTask);
+						}
+						break;
+					case SDLK_BACKSPACE: {	// メインキーボードのバックスペース
+							DeleteChar *newTask = new DeleteChar();
+							tasks->push_back(newTask);
+						}
+						break;
+					case SDLK_RIGHT: {
+							MoveCursor *newTask = new MoveCursor(+1, 0);
+							tasks->push_back(newTask);
+						}
+						break;
+					case SDLK_LEFT: {
+							MoveCursor *newTask = new MoveCursor(-1, 0);
+							tasks->push_back(newTask);
+						}
+						break;
+					case SDLK_UP: {
+							MoveCursor *newTask = new MoveCursor(0, -1);
+							tasks->push_back(newTask);
+						}
+						break;
+					case SDLK_DOWN: {
+							MoveCursor *newTask = new MoveCursor(0, +1);
+							tasks->push_back(newTask);
 						}
 						break;
 				}

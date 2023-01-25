@@ -13,7 +13,10 @@ struct TaskManageTexts : Task
 struct InsertStr : TaskManageTexts
 {
 	string str;
-	InsertStr(string str) : str(str) { kind = TASK_KIND_ManageTexts::INSERT_STR; }
+	InsertStr(string str) : str(str)
+	{
+		kind = TASK_KIND_ManageTexts::INSERT_STR;
+	}
 };
 
 struct DeleteStr : TaskManageTexts
@@ -35,4 +38,13 @@ struct DeleteChar : TaskManageTexts
 struct MakeNewLine : TaskManageTexts
 {
 	MakeNewLine() { kind = TASK_KIND_ManageTexts::MAKE_NEW_LINE; }
+};
+
+struct MoveCursor : TaskManageTexts
+{
+	int right, down;
+	MoveCursor(int right, int down) : right(right), down(down)
+	{
+		kind = TASK_KIND_ManageTexts::MOVE_CURSOR;
+	}
 };

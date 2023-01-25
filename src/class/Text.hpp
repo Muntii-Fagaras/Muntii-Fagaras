@@ -28,4 +28,5 @@ class Text {
 	void		  deleteLine(int line);
 	void		  deleteLine(list<string>::iterator it);
 	void		  deleteLinesFT(int from, int to);
+	void		  moveCursor(int right, int upper);
 };

@@ -25,11 +25,22 @@ void ManageTexts::runTask()
 		case TASK_KIND_ManageTexts::INSERT_CHAR:
 			texts.at(0)->insertChar(((InsertChar *)task)->c);
 			break;
-		case TASK_KIND_ManageTexts::DELETE_CHAR:
+		case TASK_KIND_ManageTexts::DELETE_CHAR: {
 			texts.at(0)->deleteChar();
+			PresentText *newTask = new PresentText(texts.at(0));
+			tasks->push_back(newTask);
+			}
 			break;
 		case TASK_KIND_ManageTexts::MAKE_NEW_LINE: {
 			texts.at(0)->makeNewLine();
+			PresentText *newTask = new PresentText(texts.at(0));
+			tasks->push_back(newTask);
+			}
+			break;
+		case TASK_KIND_ManageTexts::MOVE_CURSOR: {
+			int			 right	 = ((MoveCursor *)task)->right;
+			int			 down	 = ((MoveCursor *)task)->down;
+			texts.at(0)->moveCursor(right, down);
 			PresentText *newTask = new PresentText(texts.at(0));
 			tasks->push_back(newTask);
 			}

@@ -21,7 +21,9 @@ enum class TASK_KIND_ManageTexts
 	DELETE_STR,
 	INSERT_CHAR,
 	DELETE_CHAR,
-	MAKE_NEW_LINE
+	MAKE_NEW_LINE,
+
+	MOVE_CURSOR
 };
 
 enum class TASK_KIND_Support

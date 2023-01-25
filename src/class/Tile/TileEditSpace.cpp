@@ -8,7 +8,7 @@ TileEditSpace::TileEditSpace(SDL_Window *window, SDL_Event *eventPtr,
 
 	font			  = new Font();
 	fs::path fontPath = fs::path("assets/fonts/HackGen-Regular.ttf");
-	font->load(fontPath, 40, 0);
+	font->load(fontPath, 20, 0);
 
 	editSpace = new ControlEditSpace(window, renderer, font);
 }

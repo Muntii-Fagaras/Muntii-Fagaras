@@ -78,6 +78,9 @@ void ControlEditSpace::presentText(Text *text)
 		count++; it++;
 	}
 
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 127);
+	SDL_RenderDrawLine(renderer, w * (pos-1), h * (line-1), w * (pos-1), h * line);
+
 	SDL_RenderPresent(renderer);
 
 	for (SDL_Texture *texture : textures) {
