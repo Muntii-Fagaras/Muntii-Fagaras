@@ -146,7 +146,7 @@ void MainScreen::handleEvent()
 							} break;
 						case SDLK_s:
 								if (eventPtr->key.keysym.mod == KMOD_LCTRL) {
-									*newTask = new Save();
+									Save *newTask = new Save();
 									tasks->push_back(newTask);
 								}
 							break;
