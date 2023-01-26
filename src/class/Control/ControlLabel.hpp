@@ -3,7 +3,7 @@
 #ifdef __GNUC__
 	#include "../../stdafx.h"
 #endif
-#include "../Font.hpp"
+#include "../font.hpp"
 #include "Control.hpp"
 
 class ControlLabel : public Control {
