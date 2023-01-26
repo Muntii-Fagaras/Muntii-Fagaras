@@ -33,11 +33,14 @@ void TileMenuBar::putControls()
 
 void TileMenuBar::handleEventMOUSEBUTTONDOWN(list<Task *> *tasks)
 {
+	voice	  tired("assets/voice/periodical/tired.wav");
 	SDL_Point mouseCursorPosition =
 		SDL_Point{eventPtr->button.x, eventPtr->button.y};
-
-	if (buttonSave->selectedByMouse(mouseCursorPosition)) {
-		Save *newTask = new Save();
-		tasks->push_back(newTask);
-	}
+		if (buttonSave->selectedByMouse(mouseCursorPosition)) {
+			Save *newTask = new Save();
+			tasks->push_back(newTask);
+		}
+		else {
+			tired.play();
+		}
 }

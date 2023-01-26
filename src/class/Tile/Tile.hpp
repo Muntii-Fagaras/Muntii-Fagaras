@@ -17,6 +17,7 @@ class Tile {
 	Tile(SDL_Window *window, SDL_Event *eventPtr, SDL_Renderer *renderer);
 	virtual ~Tile();
 	virtual void put(SDL_Rect area);
+	virtual void put_withimg(SDL_Rect area);
 	virtual void setBaseColor(SDL_Color color);
 	virtual bool selectedByMouse();
 	virtual bool selectedByMouse(SDL_Point mouseCorsorPosition);

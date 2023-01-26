@@ -18,7 +18,7 @@ class MuntiiFagaras {
 
 	std::list<Task *> tasks;
 
-	MainScreen  *mainScreen;
+	MainScreen	*mainScreen;
 	ManageTexts *manageTexts;
 
    public:

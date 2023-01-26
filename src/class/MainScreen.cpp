@@ -1,5 +1,7 @@
 ﻿#include "MainScreen.hpp"
 
+#include "image.hpp"
+
 MainScreen::MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
 					   SDL_Renderer *renderer, SDL_Color bgColor,
 					   list<Task *> *tasks)
@@ -19,9 +21,9 @@ MainScreen::MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
 		new TileSupportCharactor(window, eventPtr, renderer);
 
 	// タイルをマップに追加
+	tiles.insert(std::make_pair("supportCharactor", tileSupportCharactor));
 	tiles.insert(std::make_pair("editSpace", tileEditSpace));
 	tiles.insert(std::make_pair("menuBar", tileMenuBar));
-	tiles.insert(std::make_pair("supportCharactor", tileSupportCharactor));
 
 	tileAcceptingTyping = tileEditSpace;
 
@@ -56,7 +58,7 @@ void MainScreen::putTiles(int winW, int winH)
 	tiles.at("editSpace")->put(SDL_Rect{0, 50, winW / 5 * 4, winH});
 	tiles.at("menuBar")->put(SDL_Rect{0, 0, winW, 50});
 	tiles.at("supportCharactor")
-		->put(SDL_Rect{winW / 5 * 4, winH / 3 * 2, winW / 5, winH / 3});
+		->put_withimg(SDL_Rect{winW / 5 * 4, winH / 3 * 2, winW / 5, winH / 3});
 }
 
 void MainScreen::handleEvent()
@@ -94,8 +96,10 @@ void MainScreen::handleEvent()
 							if (pair.second->selectedByMouse(
 									mouseCursorPosition)) {
 								pair.second->handleEventMOUSEBUTTONDOWN(tasks);
+
 								break;
 							}
+						pair.second->handleEventMOUSEBUTTONDOWN(tasks);
 					}
 				break;
 			case SDL_MOUSEBUTTONUP:
@@ -105,8 +109,10 @@ void MainScreen::handleEvent()
 							if (pair.second->selectedByMouse(
 									mouseCursorPosition)) {
 								pair.second->handleEventMOUSEBUTTONUP(tasks);
+
 								break;
 							}
+						pair.second->handleEventMOUSEBUTTONUP(tasks);
 					}
 				break;
 			case SDL_MOUSEWHEEL:

@@ -21,7 +21,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 				if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
 					throw std::runtime_error(SDL_GetError());
 				}
-
+			IMG_Init(IMG_INIT_PNG);
 			// Windowの作成、TTF,mixerの初期化
 			window = SDL_CreateWindow("Muntii-Fagaras", SDL_WINDOWPOS_UNDEFINED,
 									  SDL_WINDOWPOS_UNDEFINED, 1280, 720,

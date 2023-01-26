@@ -3,6 +3,7 @@
 	#include "../../stdafx.h"
 #endif
 #include "../Control/ControlButton.hpp"
+#include "../voice.hpp"
 #include "Tile.hpp"
 
 class TileMenuBar : public Tile {
