@@ -1,5 +1,4 @@
-﻿
-#include "load_file.hpp"
+﻿#include "load_file.hpp"
 
 std::string load_file::load(std::string file) { return file; }
 

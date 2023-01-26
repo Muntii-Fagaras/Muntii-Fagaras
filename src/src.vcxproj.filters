@@ -1,17 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="class\font.cpp">
-      <Filter>ソースファイル\クラスファイル</Filter>
-    </ClCompile>
     <ClCompile Include="class\load_file.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>ソースファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="class\text.cpp">
-      <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
     <ClCompile Include="class\voice.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
@@ -19,17 +13,8 @@
     <ClCompile Include="class\image.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
-    <ClCompile Include="class\checkbox.cpp">
-      <Filter>ソースファイル\クラスファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="class\mouse.cpp">
-      <Filter>ソースファイル\クラスファイル</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>ソースファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="class\button.cpp">
-      <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
     <ClCompile Include="class\FilePass.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
@@ -43,15 +28,60 @@
     <ClCompile Include="class\rpn.cpp">
       <Filter>ソースファイル\クラスファイル</Filter>
     </ClCompile>
+    <ClCompile Include="class\MainScreen.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Tile\Tile.cpp">
+      <Filter>ソースファイル\クラスファイル\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Tile\TileEditSpace.cpp">
+      <Filter>ソースファイル\クラスファイル\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Tile\TileSupportCharactor.cpp">
+      <Filter>ソースファイル\クラスファイル\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="class\button.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\checkbox.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\mouse.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Control\Control.cpp">
+      <Filter>ソースファイル\クラスファイル\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Control\ControlButton.cpp">
+      <Filter>ソースファイル\クラスファイル\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="class\MuntiiFagaras.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Tile\TileMenuBar.cpp">
+      <Filter>ソースファイル\クラスファイル\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Font.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Control\ControlLabel.cpp">
+      <Filter>ソースファイル\クラスファイル\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="class\ManageTexts.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Text.cpp">
+      <Filter>ソースファイル\クラスファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Control\ControlEditSpace.cpp">
+      <Filter>ソースファイル\クラスファイル\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Control\ControlTag.cpp">
+      <Filter>ソースファイル\クラスファイル\Control</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="class\font.hpp">
-      <Filter>ヘッダファイル\クラスファイル</Filter>
-    </ClInclude>
     <ClInclude Include="class\load_file.hpp">
-      <Filter>ヘッダファイル\クラスファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="class\text.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
     <ClInclude Include="class\voice.hpp">
@@ -61,17 +91,8 @@
       <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="class\checkbox.hpp">
-      <Filter>ヘッダファイル\クラスファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="class\mouse.hpp">
-      <Filter>ヘッダファイル\クラスファイル</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>ヘッダファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="class\button.hpp">
-      <Filter>ヘッダファイル\クラスファイル</Filter>
     </ClInclude>
     <ClInclude Include="class\TextFile.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
@@ -84,6 +105,72 @@
     </ClInclude>
     <ClInclude Include="class\rpn.hpp">
       <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\MainScreen.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Tile\Tile.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Tile\TileEditSpace.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Tile\TileSupportCharactor.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="class\button.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\checkbox.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\mouse.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Control\Control.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Control\ControlButton.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="class\MuntiiFagaras.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Tile\TileMenuBar.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Font.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Control\ControlLabel.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Task\Task.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Task\TaskMainScreen.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Task\TaskManageTexts.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Task\TaskSupport.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Task\TaskKind.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="class\ManageTexts.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Text.hpp">
+      <Filter>ヘッダファイル\クラスファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Control\ControlEditSpace.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Control\ControlTag.hpp">
+      <Filter>ヘッダファイル\クラスファイル\Control</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +185,21 @@
     </Filter>
     <Filter Include="ヘッダファイル\クラスファイル">
       <UniqueIdentifier>{46e34625-5632-4232-8cb3-92af275d95ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\クラスファイル\Tile">
+      <UniqueIdentifier>{0ce1f4da-d7f5-4c03-b44a-ed03b72b3b15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダファイル\クラスファイル\Tile">
+      <UniqueIdentifier>{1d4349a7-06bf-45c0-ac4f-a1acca0132bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソースファイル\クラスファイル\Control">
+      <UniqueIdentifier>{80886efd-f12b-4d44-98b3-a9da47cc3707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダファイル\クラスファイル\Control">
+      <UniqueIdentifier>{545c3fb1-c8d3-414d-b95e-a7412ec5fc20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダファイル\クラスファイル\Task">
+      <UniqueIdentifier>{e28fa224-6064-4fa1-a47f-345845374148}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
