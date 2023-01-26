@@ -1,9 +1,12 @@
 ﻿#include "MuntiiFagaras.hpp"
+SDL_TimerID id;
 
 Uint32 call(Uint32 interval, void* param)
 {
 	voice tired("assets/voice/periodical/minutes5.wav");
 	tired.play();
+	SDL_RemoveTimer(id);
+	id = SDL_AddTimer(300000, &call, NULL);
 
 	return 0;
 }
@@ -28,7 +31,7 @@ MuntiiFagaras::~MuntiiFagaras()
 
 int MuntiiFagaras::mainloop()
 {
-	SDL_TimerID id = SDL_AddTimer(50000, &call, NULL);
+	id = SDL_AddTimer(300000, &call, NULL);
 
 		while (true) {
 			SDL_PollEvent(&event);
