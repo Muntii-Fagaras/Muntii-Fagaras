@@ -16,4 +16,5 @@ class TileMenuBar : public Tile {
 				SDL_Renderer *renderer);
 	~TileMenuBar();
 	void put(SDL_Rect area) override;
+	void handleEventMOUSEBUTTONDOWN(list<Task *> *tasks) override;
 };

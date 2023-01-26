@@ -5,6 +5,7 @@
 #include <list>
 #include <string>
 #include <tuple>
+#include "TextFile.hpp"
 
 using std::list;
 using std::next;
@@ -15,6 +16,7 @@ class Text {
    private:
 	string		 name;
 	list<string> text;
+	TextFile	 textFile;
 
    public:
 	Text();
@@ -29,4 +31,6 @@ class Text {
 	void		  deleteLine(list<string>::iterator it);
 	void		  deleteLinesFT(int from, int to);
 	void		  moveCursor(int right, int upper);
+
+	void save();
 };

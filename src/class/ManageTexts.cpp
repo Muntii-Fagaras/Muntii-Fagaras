@@ -11,7 +11,6 @@ ManageTexts::ManageTexts(list<Task *> *tasks) : tasks(tasks)
 void ManageTexts::runTask()
 {
 	TaskManageTexts *task = dynamic_cast<TaskManageTexts *> (tasks->front());
-	// ‚±‚±‚ğ‰ğÁ‚·‚é‚æ‚¤‚ÉƒvƒƒOƒ‰ƒ€‚ğ•ÏX
 
 	switch (task->kind) {
 		case TASK_KIND_ManageTexts::INSERT_STR: {
@@ -44,6 +43,9 @@ void ManageTexts::runTask()
 			PresentText *newTask = new PresentText(texts.at(0));
 			tasks->push_back(newTask);
 			}
+			break;
+		case TASK_KIND_ManageTexts::SAVE:
+			texts.at(0)->save();
 			break;
 	}
 }

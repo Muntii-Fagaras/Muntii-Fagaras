@@ -1,6 +1,10 @@
 #include "Text.hpp"
 
-Text::Text() { text.push_back(""); }
+Text::Text()
+{
+	text.push_back("");
+	textFile = TextFile();
+}
 
 list<string> *Text::ref() { return &text; }
 
@@ -76,48 +80,52 @@ void Text::deleteLinesFT(int from, int to)
 
 void Text::moveCursor(int right, int down)
 {
-	switch (right) {
-		case -1:
-			if (pos > 1) {
-				pos--;
-			}
-			else if (line > 1) {
-				line--;
-				list<string>::iterator it = next(text.begin(), line - 1);
-				pos = (int) it->length() + 1;
-			}
-			break;
-		case +1: {
-				list<string>::iterator it = next(text.begin(), line - 1);
-				if (pos <= it->length()) {
-					pos++;
-				}
-				else if (next(it, 1) != text.end()){
-					line++;
-					pos = 1;
-				}
-			}
-			break;
-	}
+		switch (right) {
+			case -1:
+					if (pos > 1) {
+						pos--;
+					}
+					else if (line > 1) {
+						line--;
+						list<string>::iterator it =
+							next(text.begin(), line - 1);
+						pos = (int)it->length() + 1;
+					}
+				break;
+				case +1: {
+					list<string>::iterator it = next(text.begin(), line - 1);
+						if (pos <= it->length()) {
+							pos++;
+						}
+						else if (next(it, 1) != text.end()) {
+							line++;
+							pos = 1;
+						}
+				} break;
+		}
 
-	switch (down) {
-		case -1:
-			if (line > 1) {
-				line--;
-				list<string>::iterator it = next(text.begin(), line - 1);
-				if (pos > it->length()) {
-					pos = (int) it->length() + 1;
-				}
-			}
-			break;
-		case +1:
-			if (line < text.size()) {
-				line++;
-				list<string>::iterator it = next(text.begin(), line - 1);
-				if (pos > it->length()) {
-					pos = (int) it->length() + 1;
-				}
-			}
-			break;
-	}
+		switch (down) {
+			case -1:
+					if (line > 1) {
+						line--;
+						list<string>::iterator it =
+							next(text.begin(), line - 1);
+							if (pos > it->length()) {
+								pos = (int)it->length() + 1;
+							}
+					}
+				break;
+			case +1:
+					if (line < text.size()) {
+						line++;
+						list<string>::iterator it =
+							next(text.begin(), line - 1);
+							if (pos > it->length()) {
+								pos = (int)it->length() + 1;
+							}
+					}
+				break;
+		}
 }
+
+void Text::save() { textFile.overwriteText(text); }

@@ -48,3 +48,8 @@ struct MoveCursor : TaskManageTexts
 		kind = TASK_KIND_ManageTexts::MOVE_CURSOR;
 	}
 };
+
+struct Save : TaskManageTexts
+{
+	Save() { kind = TASK_KIND_ManageTexts::SAVE; }
+};

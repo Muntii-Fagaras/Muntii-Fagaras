@@ -23,7 +23,8 @@ enum class TASK_KIND_ManageTexts
 	DELETE_CHAR,
 	MAKE_NEW_LINE,
 
-	MOVE_CURSOR
+	MOVE_CURSOR,
+	SAVE
 };
 
 enum class TASK_KIND_Support

@@ -2,6 +2,8 @@
 #ifdef __GNUC__
 	#include "../stdafx.h"
 #endif
+#include "../Task/TaskMainScreen.hpp"
+#include "../Task/TaskManageTexts.hpp"
 
 class Tile {
    protected:
@@ -20,8 +22,8 @@ class Tile {
 	virtual bool selectedByMouse(SDL_Point mouseCorsorPosition);
 
 	// イベント処理
-	virtual void handleEventMOUSEMOTION();
-	virtual void handleEventMOUSEBUTTONDOWN();
-	virtual void handleEventMOUSEBUTTONUP();
-	virtual void handleEventMOUSEWHEEL();
+	virtual void handleEventMOUSEMOTION(list<Task *> *tasks);
+	virtual void handleEventMOUSEBUTTONDOWN(list<Task *> *tasks);
+	virtual void handleEventMOUSEBUTTONUP(list<Task *> *tasks);
+	virtual void handleEventMOUSEWHEEL(list<Task *> *tasks);
 };

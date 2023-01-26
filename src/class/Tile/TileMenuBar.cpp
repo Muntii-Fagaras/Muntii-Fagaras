@@ -30,3 +30,14 @@ void TileMenuBar::putControls()
 	SDL_Rect bSaveArea = {area.x, area.y, area.w / 10, area.h};
 	buttonSave->put(bSaveArea);
 }
+
+void TileMenuBar::handleEventMOUSEBUTTONDOWN(list<Task *> *tasks)
+{
+	SDL_Point mouseCursorPosition =
+		SDL_Point{eventPtr->button.x, eventPtr->button.y};
+
+	if (buttonSave->selectedByMouse(mouseCursorPosition)) {
+		Save *newTask = new Save();
+		tasks->push_back(newTask);
+	}
+}

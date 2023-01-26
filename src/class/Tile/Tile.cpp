@@ -39,7 +39,7 @@ bool Tile::selectedByMouse(SDL_Point mouseCursorPosition)
 	return SDL_PointInRect(&mouseCursorPosition, &area);
 }
 
-void Tile::handleEventMOUSEMOTION() {}
-void Tile::handleEventMOUSEBUTTONDOWN() {}
-void Tile::handleEventMOUSEBUTTONUP() {}
-void Tile::handleEventMOUSEWHEEL() {}
+void Tile::handleEventMOUSEMOTION(list<Task *> *tasks) {}
+void Tile::handleEventMOUSEBUTTONDOWN(list<Task *> *tasks) {}
+void Tile::handleEventMOUSEBUTTONUP(list<Task *> *tasks) {}
+void Tile::handleEventMOUSEWHEEL(list<Task *> *tasks) {}

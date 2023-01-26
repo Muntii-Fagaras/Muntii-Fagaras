@@ -82,7 +82,7 @@ void MainScreen::handleEvent()
 					for (std::pair<const char *, Tile *> pair : tiles) {
 							if (pair.second->selectedByMouse(
 									mouseCursorPosition)) {
-								pair.second->handleEventMOUSEMOTION();
+								pair.second->handleEventMOUSEMOTION(tasks);
 								break;
 							}
 					}
@@ -93,7 +93,7 @@ void MainScreen::handleEvent()
 					for (std::pair<const char *, Tile *> pair : tiles) {
 							if (pair.second->selectedByMouse(
 									mouseCursorPosition)) {
-								pair.second->handleEventMOUSEBUTTONDOWN();
+								pair.second->handleEventMOUSEBUTTONDOWN(tasks);
 								break;
 							}
 					}
@@ -104,7 +104,7 @@ void MainScreen::handleEvent()
 					for (std::pair<const char *, Tile *> pair : tiles) {
 							if (pair.second->selectedByMouse(
 									mouseCursorPosition)) {
-								pair.second->handleEventMOUSEBUTTONUP();
+								pair.second->handleEventMOUSEBUTTONUP(tasks);
 								break;
 							}
 					}
@@ -113,7 +113,7 @@ void MainScreen::handleEvent()
 					for (std::pair<const char *, Tile *> pair : tiles) {
 							if (pair.second->selectedByMouse(
 									mouseCursorPosition)) {
-								pair.second->handleEventMOUSEWHEEL();
+								pair.second->handleEventMOUSEWHEEL(tasks);
 								break;
 							}
 					}
@@ -147,6 +147,12 @@ void MainScreen::handleEvent()
 						break;
 					case SDLK_DOWN: {
 							MoveCursor *newTask = new MoveCursor(0, +1);
+							tasks->push_back(newTask);
+						}
+						break;
+					case SDLK_s:
+						if (eventPtr->key.keysym.mod == KMOD_LCTRL) {
+							Save *newTask = new Save();
 							tasks->push_back(newTask);
 						}
 						break;
