@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <string>
 #ifdef __GNUC__
-	#include "../stdafx.h"
+	#include "../../stdafx.h"
 #endif
 #include "../Font.hpp"
 #include "Control.hpp"
@@ -15,8 +15,8 @@ class ControlLabel : public Control {
 	int			 textureW, textureH;
 
    public:
-	ControlLabel(SDL_Window *window, SDL_Renderer *renderer,
-				 std::string text, Font *font);
+	ControlLabel(SDL_Window *window, SDL_Renderer *renderer, std::string text,
+				 Font *font);
 	virtual ~ControlLabel();
 	virtual void put(SDL_Rect area) override;
 	virtual void setTextColor(SDL_Color color);

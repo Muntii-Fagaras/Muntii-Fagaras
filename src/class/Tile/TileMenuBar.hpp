@@ -1,6 +1,6 @@
 ﻿#pragma once
 #ifdef __GNUC__
-	#include "../stdafx.h"
+	#include "../../stdafx.h"
 #endif
 #include "../Control/ControlButton.hpp"
 #include "Tile.hpp"

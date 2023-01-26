@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <string>
 #ifdef __GNUC__
-	#include "../stdafx.h"
+	#include "../../stdafx.h"
 #endif
 #include "Control.hpp"
 #include "ControlLabel.hpp"

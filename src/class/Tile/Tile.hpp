@@ -1,6 +1,6 @@
 ﻿#pragma once
 #ifdef __GNUC__
-	#include "../stdafx.h"
+	#include "../../stdafx.h"
 #endif
 #include "../Task/TaskMainScreen.hpp"
 #include "../Task/TaskManageTexts.hpp"
@@ -10,8 +10,8 @@ class Tile {
 	SDL_Window	 *window;
 	SDL_Event	 *eventPtr;
 	SDL_Renderer *renderer;
-	SDL_Rect	  area		= SDL_Rect{0, 0, 0, 0};	// ウィンドウに対しての領域
-	SDL_Color	  baseColor = SDL_Color{0, 0, 0, 0};
+	SDL_Rect area = SDL_Rect{0, 0, 0, 0};  // ウィンドウに対しての領域
+	SDL_Color baseColor = SDL_Color{0, 0, 0, 0};
 
    public:
 	Tile(SDL_Window *window, SDL_Event *eventPtr, SDL_Renderer *renderer);

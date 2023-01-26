@@ -1,6 +1,6 @@
 ﻿#pragma once
 #ifdef __GNUC__
-	#include "../stdafx.h"
+	#include "../../stdafx.h"
 #endif
 
 class Control {

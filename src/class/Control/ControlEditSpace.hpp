@@ -1,6 +1,6 @@
 #pragma once
 #ifdef __GNUC__
-	#include "../stdafx.h"
+	#include "../../stdafx.h"
 #endif
 #include "../Font.hpp"
 #include "../Text.hpp"
@@ -9,7 +9,7 @@
 class ControlEditSpace : public Control {
    private:
 	SDL_Color textColor = SDL_Color{255, 255, 255, 255};
-	Text     *text;
+	Text	 *text;
 	Font	 *font;
 
    public:
