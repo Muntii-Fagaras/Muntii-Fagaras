@@ -39,14 +39,17 @@ TARGET = Muntii-Fagaras #実行ファイルの名前
 
 SRCS:=	stdafx.cpp
 SRCS+=	class/*.cpp
-SRCS+= main.cpp
+SRCS+=  main.cpp
+SRCS+=  class/Control/*.cpp
+SRCS+=  class/Task/*.cpp
+SRCS+=  class/Tile/*.cpp
 
 DEFINE=SDL_MAIN_HANDLED 
 
 LDFLAGS:= -lSDL2main -lSDL2 -lSDL2_ttf  -lSDL2_mixer -lSDL2_image -mwindows
 
 $(TARGET):
-	g++-11 -o gui-base  -Wall  -Wextra  -Wcast-align  -Wdouble-promotion  -Wconversion  -Weffc++  -Wfloat-equal  -Wlogical-op  -Wmissing-declarations  -Wmissing-include-dirs  -Wold-style-cast  -Wswitch-default  -Wunsafe-loop-optimizations  -Wshadow  -std=c++20  -pipe  stdafx.cpp class/*.cpp main.cpp -lSDL2main -lSDL2 -lSDL2_ttf  -lSDL2_mixer -lSDL2_image   -DSDL_MAIN_HANDLED
+	g++-11 -o gui-base  -Wall  -Wextra  -Wcast-align  -Wdouble-promotion  -Wconversion  -Weffc++  -Wfloat-equal  -Wlogical-op  -Wmissing-declarations  -Wmissing-include-dirs  -Wold-style-cast  -Wswitch-default  -Wunsafe-loop-optimizations  -Wshadow  -std=c++20  -pipe  stdafx.cpp class/*.cpp class/Control/*.cpp class/Task/*.cpp class/Tile/*.cpp main.cpp -lSDL2main -lSDL2 -lSDL2_ttf  -lSDL2_mixer -lSDL2_image   -DSDL_MAIN_HANDLED
 	
 C_drive:
 	windres icon.rc -O coff -o icon.res	
