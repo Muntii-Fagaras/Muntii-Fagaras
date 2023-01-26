@@ -34,10 +34,10 @@ MainScreen::MainScreen(SDL_Window *window, Uint32 windowID, SDL_Event *eventPtr,
 
 MainScreen::~MainScreen()
 {
-	// タイルを破棄
-	for (std::pair<const char *, Tile *> pair : tiles) {
-		delete pair.second;
-	}
+		// タイルを破棄
+		for (std::pair<const char *, Tile *> pair : tiles) {
+			delete pair.second;
+		}
 }
 
 void MainScreen::putTiles()
@@ -119,53 +119,46 @@ void MainScreen::handleEvent()
 					}
 				break;
 			case SDL_KEYDOWN:
-				switch (eventPtr->key.keysym.sym) {
-					case SDLK_RETURN: {	// メインキーボードのリターンキー
-							MakeNewLine *newTask = new MakeNewLine();
-							tasks->push_back(newTask);
-						}
-						break;
-					case SDLK_BACKSPACE: {	// メインキーボードのバックスペース
-							DeleteChar *newTask = new DeleteChar();
-							tasks->push_back(newTask);
-						}
-						break;
-					case SDLK_RIGHT: {
-							MoveCursor *newTask = new MoveCursor(+1, 0);
-							tasks->push_back(newTask);
-						}
-						break;
-					case SDLK_LEFT: {
-							MoveCursor *newTask = new MoveCursor(-1, 0);
-							tasks->push_back(newTask);
-						}
-						break;
-					case SDLK_UP: {
-							MoveCursor *newTask = new MoveCursor(0, -1);
-							tasks->push_back(newTask);
-						}
-						break;
-					case SDLK_DOWN: {
-							MoveCursor *newTask = new MoveCursor(0, +1);
-							tasks->push_back(newTask);
-						}
-						break;
-					case SDLK_s:
-						if (eventPtr->key.keysym.mod == KMOD_LCTRL) {
-							Save *newTask = new Save();
-							tasks->push_back(newTask);
-						}
-						break;
-				}
+					switch (eventPtr->key.keysym.sym) {
+							case SDLK_RETURN: {	 // メインキーボードのリターンキー
+								MakeNewLine *newTask = new MakeNewLine();
+								tasks->push_back(newTask);
+							} break;
+							case SDLK_BACKSPACE: {	// メインキーボードのバックスペース
+								DeleteChar *newTask = new DeleteChar();
+								tasks->push_back(newTask);
+							} break;
+							case SDLK_RIGHT: {
+								MoveCursor *newTask = new MoveCursor(+1, 0);
+								tasks->push_back(newTask);
+							} break;
+							case SDLK_LEFT: {
+								MoveCursor *newTask = new MoveCursor(-1, 0);
+								tasks->push_back(newTask);
+							} break;
+							case SDLK_UP: {
+								MoveCursor *newTask = new MoveCursor(0, -1);
+								tasks->push_back(newTask);
+							} break;
+							case SDLK_DOWN: {
+								MoveCursor *newTask = new MoveCursor(0, +1);
+								tasks->push_back(newTask);
+							} break;
+						case SDLK_s:
+								if (eventPtr->key.keysym.mod == KMOD_LCTRL) {
+									*newTask = new Save();
+									tasks->push_back(newTask);
+								}
+							break;
+					}
 			case SDL_TEXTEDITING:
 				// tileAcceptingTyping->
 				break;
-			case SDL_TEXTINPUT: {
+				case SDL_TEXTINPUT: {
 					// tileAcceptingTyping->
 					InsertStr *newTask = new InsertStr(eventPtr->text.text);
 					tasks->push_back(newTask);
-				}
-				break;
+				} break;
 		}
 }
 
@@ -173,10 +166,10 @@ void MainScreen::runTask()
 {
 	TaskMainScreen *task = dynamic_cast<TaskMainScreen *>(tasks->front());
 
-	switch (task->kind) {
-		case TASK_KIND_MainScreen::PRESENT_TEXT:
-			((TileEditSpace *)(tiles.at("editSpace")))
-				->present((PresentText *)task);
-			break;
-	}
+		switch (task->kind) {
+			case TASK_KIND_MainScreen::PRESENT_TEXT:
+				((TileEditSpace *)(tiles.at("editSpace")))
+					->present((PresentText *)task);
+				break;
+		}
 }
