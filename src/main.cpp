@@ -1,5 +1,6 @@
 ﻿// クラスファイルのヘッダファイル
 #include "class/MuntiiFagaras.hpp"
+#include "class/Text.hpp"
 #include "class/TextFile.hpp"
 #include "class/button.hpp"
 #include "class/checkbox.hpp"
@@ -8,7 +9,6 @@
 #include "class/load_file.hpp"
 #include "class/mouse.hpp"
 #include "class/rpn.hpp"
-#include "class/text.hpp"
 #include "class/voice.hpp"
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
