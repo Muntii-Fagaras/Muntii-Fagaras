@@ -48,7 +48,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -104,7 +104,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)library\SDL2\include;%(AdditionalIncludeDirectories);$(SolutionDir)library\include;</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -162,8 +162,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)library\SDL2\include;%(AdditionalIncludeDirectories);$(SolutionDir)library\include;</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <EnableModules>true</EnableModules>
@@ -177,20 +177,36 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)library\SDL2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(SolutionDir)library\SDL2\lib\x64\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)library\SDL2\lib\x64\*.lib;$(SolutionDir)library\libcurl-x64\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>COPY "$(ProjectDir)library\SDL2\lib\x64\*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="class\button.cpp" />
     <ClCompile Include="class\checkbox.cpp" />
+    <ClCompile Include="class\Control\Control.cpp" />
+    <ClCompile Include="class\Control\ControlButton.cpp" />
+    <ClCompile Include="class\Control\ControlEditSpace.cpp" />
+    <ClCompile Include="class\Control\ControlLabel.cpp" />
+    <ClCompile Include="class\Control\ControlTag.cpp" />
     <ClCompile Include="class\FilePass.cpp" />
-    <ClCompile Include="class\font.cpp" />
+    <ClCompile Include="class\Font.cpp" />
     <ClCompile Include="class\image.cpp" />
     <ClCompile Include="class\load_file.cpp" />
+    <ClCompile Include="class\MainScreen.cpp" />
+    <ClCompile Include="class\ManageTexts.cpp" />
     <ClCompile Include="class\mouse.cpp" />
+    <ClCompile Include="class\MuntiiFagaras.cpp" />
     <ClCompile Include="class\MyFile.cpp" />
-    <ClCompile Include="class\text.cpp" />
+    <ClCompile Include="class\rpn.cpp" />
+    <ClCompile Include="class\Text.cpp" />
     <ClCompile Include="class\TextFile.cpp" />
+    <ClCompile Include="class\Tile\Tile.cpp" />
+    <ClCompile Include="class\Tile\TileEditSpace.cpp" />
+    <ClCompile Include="class\Tile\TileMenuBar.cpp" />
+    <ClCompile Include="class\Tile\TileSupportCharactor.cpp" />
     <ClCompile Include="class\voice.cpp" />
     <ClCompile Include="main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
@@ -205,14 +221,32 @@
   <ItemGroup>
     <ClInclude Include="class\button.hpp" />
     <ClInclude Include="class\checkbox.hpp" />
+    <ClInclude Include="class\Control\Control.hpp" />
+    <ClInclude Include="class\Control\ControlButton.hpp" />
+    <ClInclude Include="class\Control\ControlEditSpace.hpp" />
+    <ClInclude Include="class\Control\ControlLabel.hpp" />
+    <ClInclude Include="class\Control\ControlTag.hpp" />
     <ClInclude Include="class\FilePass.hpp" />
-    <ClInclude Include="class\font.hpp" />
+    <ClInclude Include="class\Font.hpp" />
     <ClInclude Include="class\image.hpp" />
     <ClInclude Include="class\load_file.hpp" />
+    <ClInclude Include="class\MainScreen.hpp" />
+    <ClInclude Include="class\ManageTexts.hpp" />
     <ClInclude Include="class\mouse.hpp" />
+    <ClInclude Include="class\MuntiiFagaras.hpp" />
     <ClInclude Include="class\MyFile.hpp" />
-    <ClInclude Include="class\text.hpp" />
+    <ClInclude Include="class\rpn.hpp" />
+    <ClInclude Include="class\Task\Task.hpp" />
+    <ClInclude Include="class\Task\TaskKind.hpp" />
+    <ClInclude Include="class\Task\TaskMainScreen.hpp" />
+    <ClInclude Include="class\Task\TaskManageTexts.hpp" />
+    <ClInclude Include="class\Task\TaskSupport.hpp" />
+    <ClInclude Include="class\Text.hpp" />
     <ClInclude Include="class\TextFile.hpp" />
+    <ClInclude Include="class\Tile\Tile.hpp" />
+    <ClInclude Include="class\Tile\TileEditSpace.hpp" />
+    <ClInclude Include="class\Tile\TileMenuBar.hpp" />
+    <ClInclude Include="class\Tile\TileSupportCharactor.hpp" />
     <ClInclude Include="class\voice.hpp" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />

@@ -13,7 +13,7 @@ button::button(std::vector<std::string> image_path, SDL_Renderer* renderer,
 
 button::~button()
 {
-	// チェックボックスの画像サーフェスを解放する
+	// ボタンの画像サーフェスを解放する
 	SDL_FreeSurface(image_surface);
 	// テクスチャを解放する
 	SDL_DestroyTexture(texture);

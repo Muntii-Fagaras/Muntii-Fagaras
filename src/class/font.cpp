@@ -1,19 +1,30 @@
 ﻿#include "font.hpp"
 
-font_load::font_load(std::string font_path, int font_size)
+void Font::load(fs::path path, int ptSize, long faceIndex)
 {
-		// フォントファイルの存在確認
-		if (chk(font_path) == false) {
+	this->path = path;
+
+		if (font != nullptr) {
+			// フォントをメモリから解放する
+			TTF_CloseFont(font);
+		}
+
+		// フォントファイルの存在を確認
+		if (!fs::exists(path)) {
 			throw std::invalid_argument(SDL_GetError());
 		}
-		// フォントをメモリに読み込む
-		if ((font_load::font = TTF_OpenFont(font_path.c_str(), font_size)) ==
-			nullptr) {
+
+	std::string pathStr = path.string();
+
+	// フォントをメモリに書き込む
+	font = TTF_OpenFont(pathStr.c_str(), ptSize);
+
+		if (font == nullptr) {
 			throw std::invalid_argument(SDL_GetError());
 		}
 }
 
-font_load::~font_load()
+Font::~Font()
 {
 	// フォントをメモリから解放する
 	TTF_CloseFont(font);
